@@ -13,6 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 
+
 bundle.js
 bundle.js.map
 .byebug_history
