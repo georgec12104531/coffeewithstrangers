@@ -23,9 +23,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack",
-    "webpack": "webpack --mode=development --watch"
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -35,6 +33,10 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/georgec12104531/coffeewithstrangers/issues"
+  },
+  "engines": {
+    "node": "8.4.0",
+    "npm": "6.1.0"
   },
   "homepage": "https://github.com/georgec12104531/coffeewithstrangers#readme"
 }
