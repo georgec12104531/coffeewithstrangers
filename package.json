@@ -23,7 +23,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "webpack"
+    "postinstall": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
