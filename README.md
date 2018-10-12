@@ -1,3 +1,3 @@
 # README
 
-This is my rendition on teawithstrangers.com!
+This is my rendition on teawithstrangers.com
