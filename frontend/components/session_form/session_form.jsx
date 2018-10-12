@@ -16,6 +16,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearSessionErrors();
+  }
+
   updateUsername(e) {
     this.setState({username: e.target.value});
   }
