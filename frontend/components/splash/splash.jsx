@@ -7,10 +7,12 @@ class Splash extends React.Component {
   render() {
     return (
       <div>
+
         <div className="splash-container">
           <div className="background-film">
             <div className="background-text-group">
-              <h1 className="header-text">Everyone is Interesting</h1>
+              <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"/>
+              <h1 className="header-text">Everyone is interesting</h1>
               <h2 className="header-2-text">...but you don't discover that when you're staring a screen</h2>
             </div>
           </div>
@@ -24,6 +26,7 @@ class Splash extends React.Component {
             <h2 className="descrition-main-3">See what happens</h2>
           </div>
           <div className="description">
+            <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"/>
             <h3 className="description-1">You and a few others join a host at a cafe.</h3>
             <h3 className="description-2">&nbsp; &nbsp; You talk for two hours about anything.</h3>
             <h3 className="descrition-3">&emsp; &nbsp; That's it. No strings attached.</h3>

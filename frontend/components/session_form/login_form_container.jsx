@@ -12,7 +12,9 @@ const mSP = ({ errors }) => {
   return {
     errors: errors.session,
     formType: 'login',
-    navLink: <Link to="/signup">sign up instead</Link>
+    navLink: <Link to="/signup">sign up instead</Link>,
+    welcomeIntro: "Hey Stranger!",
+    welcomeMessage: "1000s of strangers across the world have sat together for conversations. Create an account and you'll be on your way to join the community."
   };
 };
 

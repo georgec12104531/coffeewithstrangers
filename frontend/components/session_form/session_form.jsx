@@ -50,12 +50,17 @@ class SessionForm extends React.Component {
   render() {
 
     return (
-      <div>
+      <div class="form-page-container">
 
         <form onSubmit={this.handleSubmit}>
           {this.props.formType} or {this.props.navLink}
           <br/>
           {this.renderErrors()}
+          <div>
+            <h1 className="welcome-intro">{this.props.welcomeIntro}</h1>
+            <br/>
+            {this.props.welcomeMessage}
+          </div>
           <label>Username:
             <input type="text"
               onChange={this.updateUsername}

@@ -10,10 +10,11 @@ class CoffeeNav extends React.Component {
         {/* font from google fonts */}
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet"/>
 
-        <Link to="/splash">
-          <h1 className ="main-header">coffee with strangers</h1>
+        <Link className="coffee-nav-link" to="/splash">
+          <img className="coffee-bean-logo" src="https://static.thenounproject.com/png/4115-200.png"></img>
+          <h1 className ="main-header">Coffee With Strangers</h1>
+
         </Link>
-        
       </header>
 
     );
