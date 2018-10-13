@@ -1,5 +1,6 @@
 import React from 'react';
 import WelcomeContainer from './welcome/welcome_container';
+import CoffeeNav from './nav/coffee_nav';
 import Splash from './splash/splash';
 import {
   Route,
@@ -15,13 +16,12 @@ import SignupFormContainer from './session_form/signup_form_container';
 
 const App = () => (
   <div>
-    {/* fddfdfdf*/  }
-    <header>
-        <Link to="/">
-          <h1 classname ="main-header">coffeewithstrangers</h1>
-        </Link>
+
+    <nav className="nav">
+
+        <CoffeeNav/>
         <WelcomeContainer/>
-    </header>
+    </nav>
 
     <Switch>
       {/* //at the exact path of '/'*/}

@@ -2,7 +2,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", "sans-serif";
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
 }
 
 .splash-container {
@@ -10,6 +10,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 411px;
+}
+
+.background-film {
+  background: rgba(247,191,77,0.87);
+  opacity: 1.2;
   height: 411px;
 
 }
@@ -36,26 +42,23 @@ body {
   height: 143px;
 }
 
-.background-film {
-  background: #EF6236;
-  height: 411px;
-}
-
 .description-main {
   display: flex;
   justify-content: space-evenly;
 
   color: #EF6236;
-  font-size: 18px;
+  font-size: 1.125em;
   padding-top: 20px;
-  margin-bottom: 2px;
+  padding-bottom: 20px;
 
+  height: 30px;
 }
 
 .description {
+  margin-top: 0px;
+  padding-top: 0px;
   color: black;
   display: flex;
   justify-content: space-evenly;
-
-  font-size: 12px;
+  font-size: 13px;
 }
