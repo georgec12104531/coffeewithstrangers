@@ -41,6 +41,7 @@ group :development, :test do
   gem 'annotate'
   gem 'better_errors'
   gem 'pry-rails'
+  gem 'guard-livereload', '~> 2.5', require: false
 end
 
 group :development do
