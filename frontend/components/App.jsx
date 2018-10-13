@@ -16,9 +16,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 
 const App = () => (
   <div>
-
     <nav className="nav">
-
         <CoffeeNav/>
         <WelcomeContainer/>
     </nav>
@@ -27,13 +25,13 @@ const App = () => (
       {/* //at the exact path of '/'*/}
       {/* //will have to replace render with */}
 
-      {/*// <Route exact path='/' render={() => null}/>8/*}
+
         {/* auth routes only seen when not logged in*/}
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/splash" component={Splash} />
         {/* protected routes only seen when logged in*/}
-        <Redirect to="/splash" />
+        {/* <Redirect to="/splash"  */}
     </Switch>
   </div>
 );

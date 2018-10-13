@@ -7,7 +7,8 @@ class CoffeeNav extends React.Component {
   render() {
     return (
       <header>
-        <Link to="/">
+        
+        <Link to="/splash">
           <h1 className ="main-header">coffeewithstrangers</h1>
         </Link>
       </header>
