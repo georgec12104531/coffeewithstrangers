@@ -9,7 +9,9 @@ const mSP = ({ errors }) => {
   return {
     errors: errors.session,
     formType: 'signup',
-    navLink: <Link to="/login">login instead</Link>
+    navLink: <Link className="session-form-alt-login" to="/login">If you already signed up before, click here to log in</Link>,
+    welcomeIntro: "Join for coffee and conversation",
+    welcomeMessage: "1000s of strangers across the world have sat together for conversations. Create an account and you'll be on your way to join the community."
   };
 };
 

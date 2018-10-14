@@ -46,11 +46,9 @@ class SessionForm extends React.Component {
     );
   }
 
-
   render() {
-
     return (
-      <div class="form-page-container">
+      <div className="form-page-container">
 
         <form onSubmit={this.handleSubmit}>
           {/* Sign In or Sign Up Button */}
