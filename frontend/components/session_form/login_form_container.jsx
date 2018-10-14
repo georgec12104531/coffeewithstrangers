@@ -11,10 +11,10 @@ import { clearSessionErrors } from '../../actions/session_actions';
 const mSP = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'login',
-    navLink: <Link to="/signup">sign up instead</Link>,
-    welcomeIntro: "Hey Stranger!",
-    welcomeMessage: "1000s of strangers across the world have sat together for conversations. Create an account and you'll be on your way to join the community."
+    formType: 'SIGN IN',
+    navLink: <Link className="session-form-alt-signup" to="/signup">If you've never signed up before, click here to do that</Link>,
+    welcomeIntro: "Hey stranger!",
+    welcomeMessage: "It's good to have you back. Sign in here and sign up for your next coffee with strangers!"
   };
 };
 

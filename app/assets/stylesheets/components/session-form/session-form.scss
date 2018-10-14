@@ -1,7 +1,69 @@
 .form-page-container {
+  font-size: 17px;
+  padding-left: 470px;
+  padding-top: 16px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
   background-color: rgb(250, 249, 233);
   height: 501.88px;
+}
+
+.username-form {
+  height: 50px;
+  width: 661px;
+  border-radius: 4px;
+}
+
+
+.password-form {
+  height: 50px;
+  width: 661px;
+  border-radius: 4px;
+}
+
+
+input[type=text] {
+  font-size: 17px;
+  padding-left: 12px;
+  font-family: 'Raleway', sans-serif;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+input[type=password] {
+  font-size: 17px;
+  padding-left: 12px;
+  font-family: 'Raleway', sans-serif;
+}
+
+input[type=password]:focus {
+  outline: none;
+}
+
+
+.form-submit {
+  height: 58px;
+  width: 678px;
+  border-radius: 10px;
+  background-color: rgb(241, 97, 56);
+  border: none;
+}
+
+input[type=submit] {
+  color: white;
+  font-size: 17px;
+  font-family: 'Raleway', sans-serif;
+  outline: none;
+}
+
+.session-form-alt-signup {
+  text-decoration: none;
+}
+
+.session-form-alt-signup-main {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
 }

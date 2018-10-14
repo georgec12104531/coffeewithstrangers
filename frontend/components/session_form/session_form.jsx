@@ -53,31 +53,46 @@ class SessionForm extends React.Component {
       <div class="form-page-container">
 
         <form onSubmit={this.handleSubmit}>
-          {this.props.formType} or {this.props.navLink}
+          {/* Sign In or Sign Up Button */}
+
+
           <br/>
           {this.renderErrors()}
-          <div>
-            <h1 className="welcome-intro">{this.props.welcomeIntro}</h1>
+
+          <div className="welcome-container">
+            <h2 className="welcome-intro">{this.props.welcomeIntro}</h2>
             <br/>
-            {this.props.welcomeMessage}
+            <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+            <div className="welcome-message">{this.props.welcomeMessage}</div>
           </div>
-          <label>Username:
-            <input type="text"
+          <br/>
+          <label>
+            <input
+              type="text"
+              className="username-form"
               onChange={this.updateUsername}
               value={this.state.username}
+              placeholder="Username"
               />
           </label>
           <br/>
-          <label>Password:
-            <input type="password"
+          <br/>
+          <label>
+            <input
+              className="password-form"
+              type="password"
               onChange={this.updatePassword}
               value={this.state.password}
+              placeholder="Password"
               />
           </label>
           <br/>
-          <input type="submit" value={this.props.formType}/>
+          <br/>
+          <input className="form-submit" type="submit" value={this.props.formType}/>
+          <br/>
+          {/* {this.props.formType} */}
+          <div className="session-form-alt-signup-main">{this.props.navLink}</div>
         </form>
-
       </div>
     );
   }

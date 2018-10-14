@@ -1,6 +1,8 @@
 .login-signup {
   padding-top: 24px;
+  padding-left: 20px;
   padding-right: 300px;
+  margin-left: 20px;
   color: white;
   font-family: 'Poppins', sans-serif;
 
@@ -12,9 +14,12 @@
   font-size: 15px;
 
   padding-right: 40px;
+  padding-left: 0px;
+  margin-left: 0px;
 }
 
 .signup-button {
+  border: 1px solid rgba(247,191,77,0.87);
   background-color: white;
   color: rgba(247,191,77,0.87);
   font-size: 15px;
@@ -23,8 +28,10 @@
   border-radius: 5px;
   transition-duration: 0.2s;
 
+
 }
 .signup-button:hover {
   color: white;
   background: none;
+  border: 1px solid white;
 }
