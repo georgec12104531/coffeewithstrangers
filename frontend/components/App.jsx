@@ -31,7 +31,8 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/splash" component={Splash} />
         {/* protected routes only seen when logged in*/}
-        {/* <Redirect to="/splash"  */}
+        {/* <Redirect to="/splash"/>  */}
+        <Redirect to="/splash"/> 
     </Switch>
   </div>
 );

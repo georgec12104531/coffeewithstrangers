@@ -9,6 +9,22 @@
   height: 501.88px;
 }
 
+.session-list {
+  list-style-type: none;
+}
+
+.session-errors {
+  padding: 10px;
+  margin-left: -37px;
+  margin-right: 122px;
+  padding-left: 18px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+
 .username-form {
   height: 50px;
   width: 661px;
@@ -18,7 +34,7 @@
 
 .password-form {
   height: 50px;
-    width: 661px;
+  width: 661px;
   border-radius: 4px;
 }
 

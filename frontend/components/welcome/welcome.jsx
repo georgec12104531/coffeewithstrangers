@@ -53,8 +53,7 @@ class Welcome extends React.Component {
 
     const personalWelcome = () => (
       <nav className="header">
-        <h2 className="header-1">Hi, {this.props.currentUser.username}!</h2>
-        <button onClick={this.props.logout}>Logout</button>
+        <button type="button" className="signout-button" onClick={this.props.logout}>SIGN OUT</button>
       </nav>
     );
 

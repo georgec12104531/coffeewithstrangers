@@ -1,6 +1,6 @@
 class Api::LocationsController < ApplicationController
 
-  def create
+  def create(location)
     @location = Location.new(location_params)
 
     if @location.save

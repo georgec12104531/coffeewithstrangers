@@ -16,27 +16,27 @@
   padding-right: 19px;
   padding-left: 0px;
   margin-left: 0px;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
 }
 
 .signin-button:hover {
-  font-size: 16 px;
+  font-size: 16px;
 }
 
 .signup-button {
-  border: 1px solid rgba(247,191,77,0.87);
+  border: 2px solid white;
   background-color: white;
   color: rgba(247,191,77,0.87);
   font-size: 15px;
   text-decoration: none;
-  padding: 9px 18px;
+  padding: 8px 17px;
   border-radius: 5px;
   transition-duration: 0.2s;
 }
 .signup-button:hover {
   color: white;
   background: none;
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 .demo-button {
@@ -44,8 +44,8 @@
   font-family: 'Poppins', sans-serif;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   margin-left: 47px;
   margin-right: 10px;
   margin-top: 10px;
@@ -61,4 +61,31 @@
 .demo-button:hover {
   color: rgba(247,191,77,0.87);
   background: white;
+}
+
+
+.signout-button {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 19px;
+  padding-bottom: 6px;
+  margin-left: 47px;
+  margin-right: 315px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background: none;
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.signout-button:hover {
+  font-size: 16px;
+}
+
+.signout-button[type=button]:focus {
+  outline: none;
 }
