@@ -58,6 +58,10 @@
   text-decoration: none;
 }
 
+.demo-button[type=button]:focus {
+  outline: none;
+}
+
 .demo-button:hover {
   color: rgba(247,191,77,0.87);
   background: white;

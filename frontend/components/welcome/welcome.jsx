@@ -47,7 +47,7 @@ class Welcome extends React.Component {
         &emsp;&emsp;
         <Link className= "signup-button" to='/signup'>SIGN UP</Link>
         {/* */}
-        <button className= "demo-button" onClick={this.handleDemoLogin}>DEMO</button>
+        <button type="button" className= "demo-button" onClick={this.handleDemoLogin}>DEMO</button>
       </nav>
     );
 
@@ -56,9 +56,6 @@ class Welcome extends React.Component {
         <button type="button" className="signout-button" onClick={this.props.logout}>SIGN OUT</button>
       </nav>
     );
-
-
-
     return this.props.currentUser ? personalWelcome() : sessionLinks();
   }
 

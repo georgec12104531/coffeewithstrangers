@@ -9,8 +9,9 @@ class Api::UsersController < ApplicationController
       #or dashboard
     else
       render json: @user.errors.full_messages, status: 422
+
     end
-  end 
+  end
 
   private
 

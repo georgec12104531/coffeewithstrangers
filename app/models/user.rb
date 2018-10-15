@@ -4,6 +4,19 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :hosted_coffee_times,
+  foreign_key: :host_id,
+  class_name: :CoffeeTime
+
+  has_many :coffee_times,
+  through: :attendence,
+  class_name: :coffee_time
+
+  has_many :attendence,
+  foreign_key: :user_id,
+  class_name: :CoffeeTimeAttendence
+
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)
