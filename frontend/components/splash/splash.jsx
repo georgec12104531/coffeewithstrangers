@@ -28,8 +28,8 @@ class Splash extends React.Component {
           <div className="description">
             <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"/>
             <h3 className="description-1">You and a few others join a host at a cafe.</h3>
-            <h3 className="description-2">&nbsp; &nbsp; You talk for two hours about anything.</h3>
-            <h3 className="descrition-3">&emsp; &nbsp; That's it. No strings attached.</h3>
+            <h3 className="description-2"> You talk for two hours about anything.</h3>
+            <h3 className="descrition-3"> That's it. No strings attached.</h3>
           </div>
         </div>
       </div>

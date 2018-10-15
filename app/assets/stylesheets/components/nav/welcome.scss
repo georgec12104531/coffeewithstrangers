@@ -16,6 +16,11 @@
   padding-right: 19px;
   padding-left: 0px;
   margin-left: 0px;
+  transition-duration: 0.2s;
+}
+
+.signin-button:hover {
+  font-size: 16 px;
 }
 
 .signup-button {
@@ -50,7 +55,7 @@
   background: none;
   border: 2px solid white;
   color: white;
-
+  text-decoration: none;
 }
 
 .demo-button:hover {
