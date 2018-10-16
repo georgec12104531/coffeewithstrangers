@@ -16,7 +16,7 @@
 
 class CoffeeTime < ApplicationRecord
 
-  validates :date, :address, :introduction, :capacity, :host_id, :location_id, presence: true
+  validates :date, :address, :introduction, :host_id, :location_id, presence: true
 
   belongs_to :host,
   foreign_key: :host_id,
@@ -28,7 +28,7 @@ class CoffeeTime < ApplicationRecord
 
   has_many :coffee_time_attendees,
   foreign_key: :coffee_time_id,
-  class_name: :CoffeeTimeAttendence
+  class_name: :CoffeeTimeAttendance
 
   has_many :users,
   through: :coffee_time_attendees,

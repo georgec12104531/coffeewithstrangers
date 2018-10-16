@@ -1,0 +1,2 @@
+module Api::CoffeeTimesHelper
+end

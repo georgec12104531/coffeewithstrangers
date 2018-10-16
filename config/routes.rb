@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
 
     resources :locations, only: [:create, :index]
-    
+
+    resources :coffee_times do
+      resources :coffee_time_attendance
+    end
+
   end
 
   root to: "static_pages#root"

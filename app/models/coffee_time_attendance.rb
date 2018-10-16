@@ -1,4 +1,11 @@
-class CoffeeTimeAttendence < ApplicationRecord
+
+
+
+
+
+class CoffeeTimeAttendance < ApplicationRecord
+
+  validates :user_id, :coffee_time_id, presence: true
 
   belongs_to :user,
   foreign_key: :user_id,

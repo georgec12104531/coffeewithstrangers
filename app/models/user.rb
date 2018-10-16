@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint(8)        not null, primary key
+#  username        :string           not null
+#  session_token   :string           not null
+#  password_digest :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  name            :string
+#  email           :string
+#  phone_number    :string
+#  string          :string
+#
+
 class User < ApplicationRecord
   validates :username, :session_token, :password_digest, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
@@ -9,12 +25,12 @@ class User < ApplicationRecord
   class_name: :CoffeeTime
 
   has_many :coffee_times,
-  through: :attendence,
+  through: :attendance,
   class_name: :coffee_time
 
-  has_many :attendence,
+  has_many :attendance,
   foreign_key: :user_id,
-  class_name: :CoffeeTimeAttendence
+  class_name: :CoffeeTimeAttendance
 
 
   after_initialize :ensure_session_token
