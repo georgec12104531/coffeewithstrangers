@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :locations, only: [:create, :index]
 
     resources :coffee_times do
-      resources :coffee_time_attendance
+      resources :coffee_time_attendances
     end
 
   end

@@ -1,4 +1,4 @@
-class Api::CoffeeTimeAttendanceController < ApplicationController
+class Api::CoffeeTimeAttendancesController < ApplicationController
 
   def create
     @coffee_time_attendance = CoffeeTimeAttendance.new(coffee_time_attendance_params)
@@ -12,12 +12,13 @@ class Api::CoffeeTimeAttendanceController < ApplicationController
 
   def show
     @coffee_time_attendance = CoffeeTimeAttendance.find(params[:id])
+    render "api/coffee_time_attendance/show"
   end
 
   def update
     @coffee_time_attendance = CoffeeTimeAttendance.find(params[:id])
     if @coffee_time_attendance.update_attributes(coffee_time_attendance_params)
-      render :show
+      render "api/coffee_time_attendance/show"
     else
       render json: @coffee_time_attendance.errors.full_messages, status: 422
     end
@@ -25,6 +26,7 @@ class Api::CoffeeTimeAttendanceController < ApplicationController
 
   def destroy
     @coffee_time_attendance = CoffeeTimeAttendance.find(params[:id])
+    @coffee_time_attendance.destroy
   end
 
   def coffee_time_attendance_params

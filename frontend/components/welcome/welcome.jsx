@@ -33,7 +33,7 @@ class Welcome extends React.Component {
 
 
   handleDemoLogin(e) {
-    const demoUser = {username: "password", password: "password"};
+    const demoUser = {username: "Stranger", password: "password"};
     this.props.login(demoUser, () => {
     this.props.history.push('/splash');
     });
