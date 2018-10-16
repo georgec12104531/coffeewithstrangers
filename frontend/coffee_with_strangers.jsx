@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { login, logout, signup } from './actions/session_actions';
-import { fetchLocations, createLocation } from './api_util/location_api_util';
+
+import { fetchCoffeeTimes } from './api_util/coffee_time_api_util';
 
 import configureStore from './store/store';
 import Root from './components/root';
@@ -25,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.store = store;
-
-  window.fetchLocations = fetchLocations();
-  window.createLocation = createLocation();
+  window.fetchCoffeeTimes = fetchCoffeeTimes;
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={ store }/>, root);
