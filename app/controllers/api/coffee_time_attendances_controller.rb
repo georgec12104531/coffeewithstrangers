@@ -30,7 +30,7 @@ class Api::CoffeeTimeAttendancesController < ApplicationController
   end
 
   def coffee_time_attendance_params
-    params.require(:coffee_time_attendance).permit(:user_id, :coffee_time_id)
+    params.require(:attendance).permit(:user_id, :coffee_time_id)
   end
 
 end

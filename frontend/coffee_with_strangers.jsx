@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { login, logout, signup } from './actions/session_actions';
 
-import { fetchCoffeeTimes, fetchCoffeeTime, createCoffeeTime, updateCoffeeTime, deleteCoffeeTime } from './actions/coffee_time_actions';
+import { receiveCoffeeTime, fetchCoffeeTimes, fetchCoffeeTime, createCoffeeTime, updateCoffeeTime, deleteCoffeeTime } from './actions/coffee_time_actions';
 
 import configureStore from './store/store';
 import Root from './components/root';
@@ -24,8 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.store = store;
-  window.fetchCoffeeTime = updateCoffeeTime;
 
+  window.updateCoffeeTime = updateCoffeeTime;
+  window.deleteCoffeeTime = deleteCoffeeTime;
+  window.receiveCoffeeTime = receiveCoffeeTime;
 
 
   const root = document.getElementById("root");

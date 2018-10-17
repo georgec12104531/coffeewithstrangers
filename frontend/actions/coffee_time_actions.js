@@ -2,7 +2,7 @@ import * as APIUtil from '../api_util/coffee_time_api_util';
 
 export const RECEIVE_COFFEE_TIMES = 'RECEIVE_COFFEE_TIMES';
 export const RECEIVE_COFFEE_TIME = 'RECEIVE_COFFEE_TIME';
-export const DELETE_COFFEE_TIME = 'DELETE_COFFEE_TIME';
+export const REMOVE_COFFEE_TIME = 'REMOVE_COFFEE_TIME';
 export const RECEIVE_COFFEE_TIME_ERRORS = 'RECEIVE_COFFEE_TIME_ERRORS';
 
 
@@ -21,7 +21,7 @@ export const receiveCoffeeTime = (coffeeTime) => {
 
 export const removeCoffeeTime = (id) => {
   return {
-    type: DELETE_COFFEE_TIME,
+    type: REMOVE_COFFEE_TIME,
     coffeeTimeId: id
   };
 };
@@ -66,8 +66,8 @@ export const updateCoffeeTime = (coffeeTime) => dispatch => (
 );
 
 export const deleteCoffeeTime = (id) => dispatch => (
-  APIUtil.updateCoffeeTime(id).then( idBack => (
-    dispatch(receiveCoffeeTime(idBack))
+  APIUtil.deleteCoffeeTime(id).then( () => (
+    dispatch(removeCoffeeTime(id))
   ), err => (
     dispatch(receiveCoffeeTimeErrors(err.responseJSON))
   ))

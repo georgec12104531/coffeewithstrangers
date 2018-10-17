@@ -10,7 +10,7 @@ export const updateAttendance = (attendance) => {
   return $.ajax({
     method: 'PATCH',
     url: `/api/coffee_time_attendances/${attendance.id}`,
-    data: { attendance}
+    data: { attendance }
   });
 };
 

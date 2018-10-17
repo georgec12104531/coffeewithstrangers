@@ -32,7 +32,6 @@ export const updateCoffeeTime = (coffeeTime) => {
 export const deleteCoffeeTime = (id) => {
   $.ajax({
     method: 'DELETE',
-    url: `/api/coffeetimes/${id}`
-
+    url: `/api/coffee_times/${id}`
   });
 };
