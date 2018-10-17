@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { login, logout, signup } from './actions/session_actions';
 
 import { receiveCoffeeTime, fetchCoffeeTimes, fetchCoffeeTime, createCoffeeTime, updateCoffeeTime, deleteCoffeeTime } from './actions/coffee_time_actions';
-
+import { createAttendance, updateAttendance, deleteAttendance} from './actions/coffee_time_attendance';
 import configureStore from './store/store';
 import Root from './components/root';
 
@@ -25,10 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.store = store;
 
-  window.updateCoffeeTime = updateCoffeeTime;
-  window.deleteCoffeeTime = deleteCoffeeTime;
-  window.receiveCoffeeTime = receiveCoffeeTime;
-
+  window.createAttendance = createAttendance;
+  window.updateAttendance = updateAttendance;
+  window.deleteAttendance = deleteAttendance;
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={ store }/>, root);

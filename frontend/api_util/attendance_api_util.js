@@ -1,7 +1,7 @@
 export const createAttendance = (attendance) => {
   return $.ajax({
     method: 'POST',
-    url: `/api/${attendance.coffee_time_id}/coffee_time_attendances`,
+    url: `/api/coffee_times/${attendance.coffee_time_id}/coffee_time_attendances`,
     data: { attendance }
   });
 };

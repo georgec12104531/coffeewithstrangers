@@ -11,7 +11,6 @@ export const receiveCoffeeTimes = (coffeeTimes) => ({
   coffeeTimes
 });
 
-
 export const receiveCoffeeTime = (coffeeTime) => {
   return {
     type: RECEIVE_COFFEE_TIME,
