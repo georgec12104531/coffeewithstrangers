@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { login, logout, signup } from './actions/session_actions';
 
-import { fetchCoffeeTimes } from './api_util/coffee_time_api_util';
+import { fetchCoffeeTimes, fetchCoffeeTime, createCoffeeTime, updateCoffeeTime, deleteCoffeeTime } from './actions/coffee_time_actions';
 
 import configureStore from './store/store';
 import Root from './components/root';
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -26,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.store = store;
-  window.fetchCoffeeTimes = fetchCoffeeTimes;
+  window.fetchCoffeeTime = updateCoffeeTime;
+
+
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={ store }/>, root);

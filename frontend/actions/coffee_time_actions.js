@@ -1,17 +1,16 @@
-import * as APIUtil from '../api_util/session_api_util';
-
+import * as APIUtil from '../api_util/coffee_time_api_util';
 
 export const RECEIVE_COFFEE_TIMES = 'RECEIVE_COFFEE_TIMES';
 export const RECEIVE_COFFEE_TIME = 'RECEIVE_COFFEE_TIME';
 export const DELETE_COFFEE_TIME = 'DELETE_COFFEE_TIME';
 export const RECEIVE_COFFEE_TIME_ERRORS = 'RECEIVE_COFFEE_TIME_ERRORS';
 
-export const receiveCoffeeTimes = (coffeeTimes) => {
-  return {
-    type: RECEIVE_COFFEE_TIME,
-    coffeeTimes
-  };
-};
+
+export const receiveCoffeeTimes = (coffeeTimes) => ({
+  type: RECEIVE_COFFEE_TIMES,
+  coffeeTimes
+});
+
 
 export const receiveCoffeeTime = (coffeeTime) => {
   return {
@@ -34,7 +33,6 @@ export const receiveCoffeeTimeErrors = (errors) => {
   };
 };
 
-
 export const fetchCoffeeTimes = () => dispatch => (
   APIUtil.fetchCoffeeTimes().then( coffeeTimes => (
     dispatch(receiveCoffeeTimes(coffeeTimes))
@@ -43,8 +41,8 @@ export const fetchCoffeeTimes = () => dispatch => (
   ))
 );
 
-export const fetchCoffeeTime = (coffeeTime) => dispatch => (
-  APIUtil.fetchCoffeeTime(coffeeTime).then( coffeeTimeBack => (
+export const fetchCoffeeTime = (id) => dispatch => (
+  APIUtil.fetchCoffeeTime(id).then( coffeeTimeBack => (
     dispatch(receiveCoffeeTime(coffeeTimeBack))
   ), err => (
     dispatch(receiveCoffeeTimeErrors(err.responseJSON))

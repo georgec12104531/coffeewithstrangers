@@ -31,7 +31,6 @@ class Welcome extends React.Component {
     this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
-
   handleDemoLogin(e) {
     const demoUser = {username: "Stranger", password: "password"};
     this.props.login(demoUser, () => {
@@ -58,7 +57,6 @@ class Welcome extends React.Component {
     );
     return this.props.currentUser ? personalWelcome() : sessionLinks();
   }
-
 }
 
 export default Welcome;
