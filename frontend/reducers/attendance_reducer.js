@@ -1,6 +1,6 @@
 import {
   RECEIVE_ATTENDANCE_ERRORS
-} from '../actions/coffee_time_attendance';
+} from '../actions/attendance_actions';
 
 export default (state = [], action) => {
   Object.freeze(state);

@@ -31,6 +31,7 @@ const App = () => (
         <AuthRoute exact path="/splash" component={Splash} />
         {/* protected routes only seen when logged in*/}
         {/* <Redirect to="/splash"/>  */}
+        <Route exact path="/coffee-times" render={() => <h1>Coffee Time Page!</h1>}/>
         <Redirect to="/splash"/>
     </Switch>
   </div>

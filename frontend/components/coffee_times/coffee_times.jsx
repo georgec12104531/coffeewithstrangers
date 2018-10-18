@@ -8,39 +8,9 @@ class CoffeeTimes extends React.Component {
   }
 
   render (){
-
-    const coffeeTimesSF = this.props.coffee_times.filter( (coffeeTime) => (
-      coffeeTime.location_id === 19
+    const locations = this.props.locations.map((location) => (
+      <Link to={`/coffee-times/${location.name}`}>{location.name}</Link>
     ));
-
-    const coffeeTimesNY = this.props.coffee_times.filter( (coffeeTime) => (
-      coffeeTime.location_id === 20
-    ));
-
-    const coffeeTimesBoston = this.props.coffee_times.filter( (coffeeTime) => (
-      coffeeTime.location_id === 21
-    ));
-
-    const coffeeTimesLondon = this.props.coffee_times.filter( (coffeeTime) => (
-      coffeeTime.location_id === 22
-    ));
-
-    const coffeeTimesChicago = this.props.coffee_times.filter( (coffeeTime) => (
-      coffeeTime.location_id === 23
-    ));
-
-    const coffeeTimesSeattle = this.props.coffee_times.filter( (coffeeTime) => (
-      coffeeTime.location_id === 24
-    ));
-
-    const coffeeTimesLosAngeles = this.props.coffee_times.filter( (coffeeTime) => (
-      coffeeTime.location_id === 25
-    ));
-
-
-    <div>
-      
-    </div>
 
 
   }
