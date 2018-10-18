@@ -24,10 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.store = store;
-
-  window.createAttendance = createAttendance;
-  window.updateAttendance = updateAttendance;
-  window.deleteAttendance = deleteAttendance;
+  window.signup = signup;
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={ store }/>, root);

@@ -5,7 +5,6 @@ export const RECEIVE_COFFEE_TIME = 'RECEIVE_COFFEE_TIME';
 export const REMOVE_COFFEE_TIME = 'REMOVE_COFFEE_TIME';
 export const RECEIVE_COFFEE_TIME_ERRORS = 'RECEIVE_COFFEE_TIME_ERRORS';
 
-
 export const receiveCoffeeTimes = (coffeeTimes) => ({
   type: RECEIVE_COFFEE_TIMES,
   coffeeTimes

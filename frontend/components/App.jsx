@@ -25,14 +25,13 @@ const App = () => (
       {/* //at the exact path of '/'*/}
       {/* //will have to replace render with */}
 
-
         {/* auth routes only seen when not logged in*/}
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/splash" component={Splash} />
         {/* protected routes only seen when logged in*/}
         {/* <Redirect to="/splash"/>  */}
-        <Redirect to="/splash"/> 
+        <Redirect to="/splash"/>
     </Switch>
   </div>
 );
