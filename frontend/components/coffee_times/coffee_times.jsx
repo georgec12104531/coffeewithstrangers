@@ -31,6 +31,11 @@ class CoffeeTimes extends React.Component {
                 {coffeeTime.date}
               <br/>
                 {coffeeTime.address}
+              <br/>
+                {coffeeTime.introduction}
+              <br/>
+                {coffeeTime.capacity}
+              <br/>
               </div>
             ))}
         </div>

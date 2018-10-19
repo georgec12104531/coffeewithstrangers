@@ -1,28 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-{/*
-  const Welcome  = ( { currentUser, logout } ) => {
-  const sessionLinks = () => (
-    <nav className="login-signup">
-      <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
-      <Link className = "signin-button" to="/login">SIGN IN</Link>
-      &emsp;&emsp;
-      <Link className= "signup-button" to='/signup'>SIGN UP</Link>
-    </nav>
-  );
-
-  const personalWelcome = () => (
-    <nav className="header">
-      <h2 className="header-1">Hi, {currentUser.username}!</h2>
-      <button onClick={logout}>Logout</button>
-    </nav>
-  );
-
-  return currentUser ? personalWelcome() : sessionLinks();
-
-}; */}
-
+import {  withRouter } from 'react-router-dom';
 
 class Welcome extends React.Component {
 
@@ -33,9 +11,9 @@ class Welcome extends React.Component {
 
   handleDemoLogin(e) {
     const demoUser = {username: "Stranger", password: "password"};
-    this.props.login(demoUser, () => {
-    this.props.history.push('/splash');
-    });
+    this.props.login(demoUser).then(() => (
+      this.props.history.push('/coffee-times')
+    ));
   }
 
   render() {
@@ -59,4 +37,4 @@ class Welcome extends React.Component {
   }
 }
 
-export default Welcome;
+export default withRouter(Welcome);
