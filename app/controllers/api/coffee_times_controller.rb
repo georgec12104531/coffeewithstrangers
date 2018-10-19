@@ -2,7 +2,7 @@ class Api::CoffeeTimesController < ApplicationController
 
   def index
     @coffee_times = CoffeeTime.all
-    render json: @coffee_times
+    render :index
   end
 
   def create

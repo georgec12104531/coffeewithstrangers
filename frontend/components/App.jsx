@@ -13,6 +13,7 @@ import { AuthRoute } from '../api_util/route_util';
 
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+import CoffeeTimesContainer from './coffee_times/coffee_times_container';
 
 const App = () => (
   <div>
@@ -31,7 +32,7 @@ const App = () => (
         <AuthRoute exact path="/splash" component={Splash} />
         {/* protected routes only seen when logged in*/}
         {/* <Redirect to="/splash"/>  */}
-        <Route exact path="/coffee-times" render={() => <h1>Coffee Time Page!</h1>}/>
+        <Route exact path="/coffee-times" component={CoffeeTimesContainer}/>
         <Redirect to="/splash"/>
     </Switch>
   </div>

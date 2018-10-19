@@ -1,1 +1,5 @@
-json.extract! @location, :id, :name
+@locations.each do |location|
+  json.set! location.id do
+    json.extract! location, :id, :name
+  end
+end
