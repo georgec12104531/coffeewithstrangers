@@ -21,24 +21,45 @@ class CoffeeTimes extends React.Component {
 
     return (
       <div>
-        <div className="locations">
-        {locations()}
+        <div className="index-container">
+          <div className="ct-background-film">
+            <div className="ct-background-text-group">
+              <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"/>
+              <h1 className="ct-header-text">GOOD CONVERSATIONS</h1>
+              <h2 className="ct-header-2-text">THEY ARE HARD TO FIND.</h2>
+            </div>
+          </div>
         </div>
 
-        <div className="test">
-          {this.props.coffeeTimesSF.map((coffeeTime) => (
+        <div className="ct-page-container">
+          <div className="ct-page-intro">
+            <div className="ct-page-header">Coffee With Strangers is coffee, with strangers</div>
+            <div className="ct-page-intro-message">
+              For two hours, five-ish strangers sit at a cafe (or some other public place) with a host to talk. Not about anything in particular. The circumstances are unusual, but that's the point.
+            </div>
+          </div>
+
+          <div className="locations">
+            {locations()}
+          </div>
+
+          <div className="test">
+            {this.props.coffeeTimesSF.map((coffeeTime) => (
               <div>
                 {coffeeTime.date}
-              <br/>
+                <br/>
                 {coffeeTime.address}
-              <br/>
+                <br/>
                 {coffeeTime.introduction}
-              <br/>
+                <br/>
                 {coffeeTime.capacity}
-              <br/>
+                <br/>
               </div>
             ))}
+          </div>
+
         </div>
+
 
       </div>
     );

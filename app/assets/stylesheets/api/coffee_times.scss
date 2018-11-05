@@ -1,0 +1,55 @@
+.index-container {
+  background-image: url(https://images.unsplash.com/photo-1527964275784-5ce8ddab3d8e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f34a9187966d2291d5bda8a6ff296f99&auto=format&fit=crop&w=1500&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 248.5px;
+}
+
+.ct-background-film {
+  background: rgba(247,191,77,0.87);
+  opacity: 1.2;
+  height: 249px;
+}
+
+.ct-background-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  display: flex;
+
+
+  .ct-header-text {
+    padding-top:50px;
+    font-size: 40px;
+  }
+
+  .ct-header-2-text {
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+}
+
+.ct-page-container {
+  background-color: rgb(250, 247, 230);
+  height: 2990.64px;
+}
+
+.ct-page-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: 'Nunito Sans', sans-serif;
+  .ct-page-header {
+    padding-top: 50px;
+    font-size: 31px;
+    color: rgb(255, 85, 0);
+
+  }
+
+  .ct-page-intro-message {
+    width: 640px;
+    line-height:1.7;
+  }
+}
