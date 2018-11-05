@@ -13,8 +13,6 @@ body {
   height: 411px;
 }
 
-
-
 .background-film {
   background: rgba(247,191,77,0.87);
   opacity: 1.2;
@@ -27,8 +25,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  display: flex;
-  width: 1420px;
+
   height: 377px;
 
   .header-text {
@@ -36,8 +33,7 @@ body {
   }
 
   .header-2-text {
-    margin-top: 0px;
-    padding-top: 0px;
+
     font-size: 20px;
     font-family: 'Nunito Sans', sans-serif;
     padding-bottom: 10px;
@@ -84,4 +80,13 @@ body {
   justify-content: space-evenly;
   font-size: 15px;
   font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }

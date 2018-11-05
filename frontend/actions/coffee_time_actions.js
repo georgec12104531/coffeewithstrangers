@@ -13,21 +13,21 @@ export const receiveCoffeeTimes = (coffeeTimes) => ({
 export const receiveCoffeeTime = (coffeeTime) => {
   return {
     type: RECEIVE_COFFEE_TIME,
-    coffeeTime
+    coffeeTime,
   };
 };
 
 export const removeCoffeeTime = (id) => {
   return {
     type: REMOVE_COFFEE_TIME,
-    coffeeTimeId: id
+    coffeeTimeId: id,
   };
 };
 
 export const receiveCoffeeTimeErrors = (errors) => {
   return {
     type: RECEIVE_COFFEE_TIME_ERRORS,
-    errors
+    errors,
   };
 };
 

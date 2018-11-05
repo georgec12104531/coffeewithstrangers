@@ -25,7 +25,11 @@
     "lib": "lib",
     "test": "test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
   "scripts": {
     "postinstall": "webpack --mode=production",
     "webpack": "webpack --mode=development --watch"
@@ -43,5 +47,6 @@
     "node": "8.4.0",
     "npm": "6.1.0"
   },
-  "homepage": "https://github.com/georgec12104531/coffeewithstrangers#readme"
+  "homepage": "https://github.com/georgec12104531/coffeewithstrangers#readme",
+  "keywords": []
 }
