@@ -25,15 +25,16 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-
-  height: 377px;
+  
+  height: 411px;
 
   .header-text {
     font-size: 40px;
   }
 
   .header-2-text {
-
+    margin-top: 0px;
+    padding-top: 0px;
     font-size: 20px;
     font-family: 'Nunito Sans', sans-serif;
     padding-bottom: 10px;
@@ -55,38 +56,33 @@ body {
   }
 }
 
-.description-background {
+
+.description-container {
+  display: flex;
+  justify-content: space-evenly;
   background: #F3ECCE;
   height: 143px;
 }
 
 .description-main {
   display: flex;
-  justify-content: space-evenly;
-
-  color: #EF6236;
-  font-size: 1.125em;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  height: 30px;
-}
-
-.description {
-  margin-top: 0px;
-  padding-top: 0px;
-  color: black;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 15px;
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-
-.test {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
 
+.description-header {
+  display: flex;
+  justify-content: space-evenly;
+  color: #EF6236;
+  font-size: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+}
+
+.description-message {
+  display: flex;
+  color: black;
+  justify-content: space-evenly;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
 }
