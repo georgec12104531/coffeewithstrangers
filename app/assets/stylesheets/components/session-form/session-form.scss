@@ -1,12 +1,15 @@
 .form-page-container {
   font-size: 17px;
-  padding-left: 380px;
-  padding-top: 16px;
-
   display: flex;
-  // justify-content: center;
-  background-color: rgb(250, 249, 233);
-  height: 501.88px;
+  justify-content: center;
+  background-color: #faf9e9;
+  height: 525px;
+}
+
+form {
+  width: 679px;
+  display: flex;
+  flex-direction: column;
 }
 
 .session-list {
@@ -23,7 +26,6 @@
   margin-bottom: 15px;
   border-radius: 8px;
 }
-
 
 .username-form {
   height: 50px;
@@ -71,7 +73,6 @@ input[type=password]:focus {
 
 .form-submit:hover {
   background-color: rgb(216, 40, 0);
-
 }
 
 input[type=submit] {
@@ -91,12 +92,10 @@ input[type=submit] {
   color: rgb(216, 40, 0)
 }
 
-
 .session-form-alt-signup-main {
-  padding-left: 50px;
-  padding-top: 20px;
-  padding-left: 150px;
-
+    padding-top: 20px;
+    width: 678px;
+    text-align: center;
 }
 
 .session-form-alt-login {

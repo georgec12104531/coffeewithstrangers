@@ -34,7 +34,6 @@ class SessionForm extends React.Component {
     this.props.processForm( user ).then(() => (
       this.props.history.push('/coffee-times')
     ));
-
   }
 
   renderErrors() {
@@ -52,20 +51,13 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="form-page-container">
-
         <form onSubmit={this.handleSubmit}>
-          {/* Sign In or Sign Up Button */}
-
-
           <br/>
           {this.renderErrors()}
-
-          <div className="welcome-container">
-            <h2 className="welcome-intro">{this.props.welcomeIntro}</h2>
-            <br/>
-            <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
-            <div className="welcome-message">{this.props.welcomeMessage}</div>
-          </div>
+          <h2 className="welcome-intro">{this.props.welcomeIntro}</h2>
+          <br />
+          <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+          <div className="welcome-message">{this.props.welcomeMessage}</div>  
           <br/>
           <label>
             <input
@@ -98,6 +90,5 @@ class SessionForm extends React.Component {
     );
   }
 }
-
 
 export default withRouter(SessionForm);

@@ -1,23 +1,22 @@
+.welcome-main-container {
+    width: 678px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .welcome-container {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .welcome-intro {
   color: rgb(241, 97, 56);
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .welcome-message {
-
-  margin-top: 0px;
-  margin-right: 100px;
-  padding-top: 0px;
   font-family: 'Raleway', sans-serif;
   line-height: 1.8em;
 }
