@@ -17,14 +17,21 @@ class Welcome extends React.Component {
   }
 
   render() {
-    const sessionLinks = () => (
-      <nav className="welcome-buttons">
-        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
-        <Link className="signin-button" to="/login">SIGN IN</Link>
-        <Link className="signup-button" to='/signup'>SIGN UP</Link>
-        <button type="button" className="demo-button" onClick={this.handleDemoLogin}>DEMO</button>
-      </nav>
-    );
+    const sessionLinks = () => <nav className="welcome-buttons">
+      <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+      <Link className="coffee-times-nav-button" to="/coffee-times">
+          COFFEE TIMES
+        </Link>
+        <Link className="signin-button" to="/login">
+          SIGN IN
+        </Link>
+        <Link className="signup-button" to="/signup">
+          SIGN UP
+        </Link>
+        <button type="button" className="demo-button" onClick={this.handleDemoLogin}>
+          DEMO
+        </button>
+      </nav>;
 
     const personalWelcome = () => (
       <nav className="header">

@@ -1,12 +1,24 @@
 .welcome-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  width: 400px;
+  width: 546px;
   height: 76px;
   color: white;
   font-family: 'Poppins', sans-serif;
   margin-right: 50px;
+}
+
+.coffee-times-nav-button {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 4px;
+  border: none;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  padding: 8px 24px;
 }
 
 .signin-button {
