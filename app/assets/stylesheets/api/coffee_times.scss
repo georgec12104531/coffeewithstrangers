@@ -37,9 +37,12 @@
 }
 
 .ct-page-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: 'Nunito Sans', sans-serif;
+    height: 165px;
+    justify-content: center;
   font-style: 'Nunito Sans', sans-serif;
   .ct-page-header {
     padding-top: 50px;
