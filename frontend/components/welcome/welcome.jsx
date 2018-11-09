@@ -21,7 +21,6 @@ class Welcome extends React.Component {
       <nav className="welcome-buttons">
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
         <Link className="signin-button" to="/login">SIGN IN</Link>
-        &emsp;&emsp;
         <Link className="signup-button" to='/signup'>SIGN UP</Link>
         <button type="button" className="demo-button" onClick={this.handleDemoLogin}>DEMO</button>
       </nav>
