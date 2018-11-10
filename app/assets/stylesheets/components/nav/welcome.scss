@@ -18,7 +18,7 @@
   border: 2px solid white;
   color: white;
   text-decoration: none;
-  padding: 8px 24px;
+  padding: 8px 16px;
 }
 
 .coffee-times-nav-button:hover {
@@ -68,7 +68,7 @@
   border: 2px solid white;
   color: white;
   text-decoration: none;
-  padding: 8px 24px;
+  padding: 8px 20px;
 }
 
 .demo-button[type=button]:focus {
@@ -96,12 +96,16 @@
   color: white;
   text-decoration: none;
   transition-duration: 0.1s;
+  border: 2px solid white;
+  padding: 10px 19px;
+  border-radius: 4px;
 }
 
 
 
 .signout-button:hover {
-  font-size: 16px;
+  color: rgba(247,191,77,0.87);
+  background: white;
 }
 
 .signout-button[type=button]:focus {
