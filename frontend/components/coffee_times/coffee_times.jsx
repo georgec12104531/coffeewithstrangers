@@ -52,17 +52,15 @@ class CoffeeTimes extends React.Component {
             </div>
           </div>
 
-          <div className="test">
-            {this.props.coffeeTimesSF.map(coffeeTime => <div>
-                {coffeeTime.date}
-                <br />
-                {coffeeTime.address}
-                <br />
-                {coffeeTime.introduction}
-                <br />
-                {coffeeTime.capacity}
-                <br />
-              </div>)}
+          <div className="city-container">
+            {this.props.coffeeTimesSF.map(coffeeTime => 
+            <div className="coffeeTime">
+              <div className="ct-date">{coffeeTime.date}</div>
+              <br />
+              <div className="ct">{coffeeTime.address}</div>
+              <br />
+              {coffeeTime.capacity}
+            </div>)}
           </div>
         </div>
       </div>;

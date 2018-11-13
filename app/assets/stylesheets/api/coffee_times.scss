@@ -49,6 +49,11 @@
   text-transform: uppercase;
 }
 
+.location-nav:hover {
+  background-color: rgb(254, 193, 34);
+  color: white;
+}
+
 .ct-background-film {
   background: rgba(247,191,77,0.87);
   opacity: 1.2;
@@ -87,19 +92,30 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-style: 'Nunito Sans', sans-serif;
-    height: 165px;
     justify-content: center;
-    font-style: 'Nunito Sans', sans-serif;
+    height: 165px;
   .ct-page-header {
-    padding-top: 50px;
+    padding-top: 16px;
     font-size: 29px;
     color: rgb(255, 85, 0);
-
   }
 
   .ct-page-intro-message {
     width: 640px;
-    line-height:1.7;
+    line-height: 1.9;
   }
 }
+
+.city-container {
+  overflow: auto;
+  clear: both; 
+  width: 987px; 
+}
+
+.coffeeTime {
+  
+}
+
+
+
+
