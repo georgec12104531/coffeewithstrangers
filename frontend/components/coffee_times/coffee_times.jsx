@@ -21,6 +21,12 @@ class CoffeeTimes extends React.Component {
         </Link>
       ));
 
+
+    // Add city and coffee times in the city
+    const locationItems = () => this.props.locations
+
+
+
     return <div>
         <div className="index-container">
           <div className="ct-background-film">
@@ -62,6 +68,8 @@ class CoffeeTimes extends React.Component {
               {coffeeTime.capacity}
             </div>)}
           </div>
+
+
         </div>
       </div>;
   }
