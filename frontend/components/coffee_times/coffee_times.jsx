@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 class CoffeeTimes extends React.Component {
   constructor(props) {
@@ -20,12 +21,6 @@ class CoffeeTimes extends React.Component {
           <div className="location-nav">{location.name}</div>
         </Link>
       ));
-
-
-    // Add city
-    // Add coffee times in that specific city
-    
-    // const locationItems = () => this.props.locations
 
     return <div>
         <div className="index-container">
@@ -63,18 +58,15 @@ class CoffeeTimes extends React.Component {
           <div className="city-container">
             {this.props.coffeeTimesSF.map(coffeeTime => (
               <div className="coffeeTime">
-              <div className="ct-date">
-                {coffeeTime.date}
-              </div>
-                <br />
-                <div>
-                  {coffeeTime.start_time}-
-                  {coffeeTime.end_time}  
+                <div className="ct-date">
+                  {moment(coffeeTime.date).format("dddd Do MMMM Do YYYY")}
                 </div>
                 <br />
                 <div>
-                  {coffeeTime.host_name}
+                  {coffeeTime.start_time}-{coffeeTime.end_time}
                 </div>
+                <br />
+                <div>{coffeeTime.host_name}</div>
                 <br />
                 <div className="ct">
                   {coffeeTime.address}
