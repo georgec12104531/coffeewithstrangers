@@ -5,7 +5,7 @@
 #  id           :bigint(8)        not null, primary key
 #  date         :date             not null
 #  address      :string           not null
-#  introduction :string           not null
+#  topics :string           not null
 #  capacity     :integer
 #  host_id      :integer          not null
 #  location_id  :integer          not null
@@ -16,7 +16,7 @@
 
 class CoffeeTime < ApplicationRecord
 
-  validates :date, :address, :introduction, :host_id, :location_id, presence: true
+  validates :date, :address, :topics, :host_id, :location_id, presence: true
 
   belongs_to :host,
   foreign_key: :host_id,

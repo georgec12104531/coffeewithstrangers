@@ -22,7 +22,9 @@ class CoffeeTimes extends React.Component {
       ));
 
 
-    // Add city and coffee times in the city
+    // Add city
+    // Add coffee times in that specific city
+    
     const locationItems = () => this.props.locations
 
 

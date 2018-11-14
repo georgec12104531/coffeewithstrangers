@@ -35,7 +35,7 @@ class Api::CoffeeTimesController < ApplicationController
   end
 
   def coffee_time_params
-    params.require(:coffee_time).permit(:date, :address, :introduction, :host_id, :location_id)
+    params.require(:coffee_time).permit(:date, :address, :topics, :host_id, :location_id)
   end
 
 end

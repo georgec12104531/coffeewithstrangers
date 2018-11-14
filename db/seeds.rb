@@ -27,4 +27,5 @@ User.create("username": "Michael123", "password": "password", "name": "Michael",
 # User.create("username": "Derek Douglas", "password": "password")
 
 # CoffeeTimes
-CoffeeTime.create("date": "2018-12-07", "address": "825 Battery Street", "introduction": "Hi, Welcome!", "capacity": 5, "host_id": 40, "location_id": 19, "seats_left": 5, "start_time": "2pm", "end_time": "4pm")  
+
+CoffeeTime.create("date": "2018-12-07", "address": "825 Battery Street", "topics": "We might talk about our favorite childhood breakfast cereals, running routes in SF, Bob's Burgers, your favorite places to travel, what makes you happy, what makes you sad, techniques for peeling an orange in one piece, self awareness, good books you've read recently, favorite random activities you've discovered in the city...The options are pretty endless.", "capacity": 5, "host_id": 40, "location_id": 19, "seats_left": 5, "start_time": "2pm", "end_time": "4pm")  
