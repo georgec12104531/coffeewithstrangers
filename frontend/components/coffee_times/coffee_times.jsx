@@ -17,7 +17,7 @@ class CoffeeTimes extends React.Component {
 
     const locations = () => this.props.locations.map((location, i) => (
         <Link key={i} to={`/coffee-times/${location.name}`}>
-        <div className="location-nav">{location.name}</div>
+          <div className="location-nav">{location.name}</div>
         </Link>
       ));
 
@@ -25,9 +25,7 @@ class CoffeeTimes extends React.Component {
     // Add city
     // Add coffee times in that specific city
     
-    const locationItems = () => this.props.locations
-
-
+    // const locationItems = () => this.props.locations
 
     return <div>
         <div className="index-container">
@@ -55,23 +53,40 @@ class CoffeeTimes extends React.Component {
 
           <div className="locations-container">
             <div className="locations-nav-container">
-              <div className="locations-message">JUMP TO YOUR CITY'S COFFEE TIMES</div>
+              <div className="locations-message">
+                JUMP TO YOUR CITY'S COFFEE TIMES
+              </div>
               <div className="locations">{locations()}</div>
             </div>
           </div>
 
           <div className="city-container">
-            {this.props.coffeeTimesSF.map(coffeeTime => 
-            <div className="coffeeTime">
-              <div className="ct-date">{coffeeTime.date}</div>
-              <br />
-              <div className="ct">{coffeeTime.address}</div>
-              <br />
-              {coffeeTime.capacity}
-            </div>)}
+            {this.props.coffeeTimesSF.map(coffeeTime => (
+              <div className="coffeeTime">
+              <div className="ct-date">
+                {coffeeTime.date}
+              </div>
+                <br />
+                <div>
+                  {coffeeTime.start_time}-
+                  {coffeeTime.end_time}  
+                </div>
+                <br />
+                <div>
+                  {coffeeTime.host_name}
+                </div>
+                <br />
+                <div className="ct">
+                  {coffeeTime.address}
+                  {coffeeTime.address2}
+                </div>
+                <div />
+                <br />
+                {coffeeTime.capacity}
+                <br />
+              </div>
+            ))}
           </div>
-
-
         </div>
       </div>;
   }

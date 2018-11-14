@@ -26,7 +26,7 @@ class User < ApplicationRecord
 
   has_many :coffee_times,
   through: :attendance,
-  class_name: :coffee_time
+  class_name: :CoffeeTime
 
   has_many :attendance,
   foreign_key: :user_id,
