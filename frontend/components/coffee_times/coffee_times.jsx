@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import CoffeeTimeItem from "./coffee_time_item";
-import moment from 'moment';
+
 
 class CoffeeTimes extends React.Component {
   constructor(props) {
@@ -22,6 +22,16 @@ class CoffeeTimes extends React.Component {
           <div key={i} className="location-nav">{location.name}</div>
         </Link>
       ));
+
+    const locationCoffeeTimes = () => (
+        
+      
+        this.props.coffeeTimesSF.map((coffeeTimes, i) => (
+          <div key={i}>
+            <CoffeeTimeItem coffeeTimes={coffeeTimes} />
+          </div>
+        ))
+    );
 
     return <div>
         <div className="index-container">
@@ -55,15 +65,8 @@ class CoffeeTimes extends React.Component {
               <div className="locations">{locations()}</div>
             </div>
           </div>
-
           <div className="city-container">
-            {this.props.coffeeTimesSF.map((coffeeTimes, i) => (
-              <div key={i}>
-                <CoffeeTimeItem
-              coffeeTimes={coffeeTimes}
-              />
-              </div>
-            ))}
+            {locationCoffeeTimes()}
           </div>
         </div>
       </div>;

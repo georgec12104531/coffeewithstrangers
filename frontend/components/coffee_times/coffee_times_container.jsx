@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import CoffeeTimes from './coffee_times';
 import { fetchLocations } from '../../actions/location_actions';

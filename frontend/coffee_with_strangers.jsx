@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { login, logout, signup } from './actions/session_actions';
 
-import { receiveCoffeeTime, fetchCoffeeTimes, fetchCoffeeTime, createCoffeeTime, updateCoffeeTime, deleteCoffeeTime } from './actions/coffee_time_actions';
-import { createAttendance, updateAttendance, deleteAttendance} from './actions/attendance_actions';
+// import { receiveCoffeeTime, fetchCoffeeTimes, fetchCoffeeTime, createCoffeeTime, updateCoffeeTime, deleteCoffeeTime } from './actions/coffee_time_actions';
+// import { createAttendance, updateAttendance, deleteAttendance} from './actions/attendance_actions';
 import configureStore from './store/store';
 import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
-
   let store;
   if (window.currentUser) {
     const preloadedState = {
