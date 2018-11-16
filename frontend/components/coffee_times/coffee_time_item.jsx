@@ -5,26 +5,34 @@ import moment from "moment";
 class CoffeeTimeItem extends React.Component {
   
   render() {
+
     return <div className="coffeeTime">
         <div className="ct-date">
-          <h6 className="ct-weekday">{moment(this.props.coffeeTimes.date).format("dddd")}</h6>
-          <h3 className="ct-month-day">{moment(this.props.coffeeTimes.date).format("MMM D")}</h3>
+          <h6 className="ct-weekday">
+            {moment(this.props.coffeeTime.date).format("dddd")}
+          </h6>
+          <h3 className="ct-month-day">
+            {moment(this.props.coffeeTime.date).format("MMM D")}
+          </h3>
+          <div className="ct-time">
+            {this.props.coffeeTime.start_time} - {this.props.coffeeTime.end_time}
+          </div>
         </div>
-        <br />
-        <div>
-          {this.props.coffeeTimes.start_time}-{this.props.coffeeTimes.end_time}
+        <div className="ct-host-container">
+          <div className="ct-host">
+            Hosted By: {this.props.coffeeTime.host_name}
+          </div>
         </div>
-        <br />
-        <div>{this.props.coffeeTimes.host_name}</div>
-        <br />
-        <div className="coffeeTimes">
-          {this.props.coffeeTimes.address}
-          {this.props.coffeeTimes.address2}
+        <div className="ct-address"> 
+        
+          {this.props.coffeeTime.address}
+          <br />
+          {this.props.coffeeTime.address2}
         </div>
-        <div />
+        <div className="ct-line">__________________________</div> 
         <br />
-        {this.props.coffeeTimes.seats_left}
-        <br />
+        <div>{this.props.coffeeTime.seats_left}</div>
+        
       </div>;
   }
 }

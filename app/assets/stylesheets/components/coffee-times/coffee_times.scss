@@ -112,12 +112,6 @@
   width: 987px; 
 }
 
-
-.city-item-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .coffeeTime {
   margin-top: 1em;
   margin-right: 20px;
@@ -142,6 +136,14 @@
   text-align: center;
   color: #EF6236;
 }
+
+.hi {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
 
 
 

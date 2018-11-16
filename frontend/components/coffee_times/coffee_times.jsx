@@ -22,13 +22,22 @@ class CoffeeTimes extends React.Component {
           <div key={i} className="location-nav">{location.name}</div>
         </Link>
       ));
-
-    const ctSF = this.props.coffeeTimesSF.map((coffeeTime, i) => (
-      <div key={i}>
-        <CoffeeTimeItem coffeeTimes={coffeeTime}/>
-      </div>
-    ))
+    // const ctSF = this.props.coffeeTimesSF.map((coffeeTime, i) => (
+    //   <div key={i}>
+    //     <CoffeeTimeItem coffeeTimes={coffeeTime}/>
+    //   </div>
+    // ))
       
+    const locationCoffeeTimes = this.props.locations.map((location, idx) => {
+      return (
+        <div key={idx} className="hi">
+          <h2 className="city">{location.name}</h2>
+          {location.coffee_times.map((coffeeTime, i) => (
+            <CoffeeTimeItem key={i} coffeeTime={coffeeTime} />
+          ))}
+        </div>
+      )
+    })
     
     return <div>
         <div className="index-container">
@@ -40,7 +49,6 @@ class CoffeeTimes extends React.Component {
             </div>
           </div>
         </div>
-
         <div className="ct-page-container">
           <div className="ct-page-intro">
             <div className="ct-page-header">
@@ -53,7 +61,6 @@ class CoffeeTimes extends React.Component {
               point.
             </div>
           </div>
-
           <div className="locations-container">
             <div className="locations-nav-container">
               <div className="locations-message">
@@ -64,10 +71,7 @@ class CoffeeTimes extends React.Component {
           </div>
           <div className="city-container">
             <div className="city-item-container">
-                <div className="city">San Francisco</div>
-                <div>
-                  {ctSF}
-                </div>
+              {locationCoffeeTimes}
             </div>
           </div>
         </div>
