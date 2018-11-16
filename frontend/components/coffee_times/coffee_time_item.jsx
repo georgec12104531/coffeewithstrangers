@@ -19,16 +19,16 @@ class CoffeeTimeItem extends React.Component {
           </div>
         </div>
         <div className="ct-host-container">
-          <div className="ct-host">
-            Hosted By: {this.props.coffeeTime.host_name}
-          </div>
+          <h4 className="ct-host">
+            HOSTED BY : {this.props.coffeeTime.host_name}
+          </h4>
         </div>
-        <div className="ct-address"> 
+        <h4 className="ct-address"> 
         
           {this.props.coffeeTime.address}
           <br />
           {this.props.coffeeTime.address2}
-        </div>
+        </h4>
         <div className="ct-line">__________________________</div> 
         <br />
         <div>{this.props.coffeeTime.seats_left}</div>
