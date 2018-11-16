@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import moment from "moment";
+import ProgressBar from './progress_bar';
 
 class CoffeeTimeItem extends React.Component {
   
@@ -31,6 +32,7 @@ class CoffeeTimeItem extends React.Component {
         </h4>
         <div className="ct-line">__________________________</div> 
         <br />
+        <ProgressBar coffeeTime={this.props.coffeeTime} />
         <div>{this.props.coffeeTime.seats_left}</div>
         
       </div>;
