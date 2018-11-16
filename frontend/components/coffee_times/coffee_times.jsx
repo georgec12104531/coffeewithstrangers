@@ -23,16 +23,13 @@ class CoffeeTimes extends React.Component {
         </Link>
       ));
 
-    const locationCoffeeTimes = () => (
-        
+    const ctSF = this.props.coffeeTimesSF.map((coffeeTime, i) => (
+      <div key={i}>
+        <CoffeeTimeItem coffeeTimes={coffeeTime}/>
+      </div>
+    ))
       
-        this.props.coffeeTimesSF.map((coffeeTimes, i) => (
-          <div key={i}>
-            <CoffeeTimeItem coffeeTimes={coffeeTimes} />
-          </div>
-        ))
-    );
-
+    
     return <div>
         <div className="index-container">
           <div className="ct-background-film">
@@ -66,7 +63,12 @@ class CoffeeTimes extends React.Component {
             </div>
           </div>
           <div className="city-container">
-            {locationCoffeeTimes()}
+            <div className="city-item-container">
+                <div className="city">San Francisco</div>
+                <div>
+                  {ctSF}
+                </div>
+            </div>
           </div>
         </div>
       </div>;

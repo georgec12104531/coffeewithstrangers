@@ -5,12 +5,10 @@ import moment from "moment";
 class CoffeeTimeItem extends React.Component {
   
   render() {
-    return (
-      <div className="coffeeTime">
+    return <div className="coffeeTime">
         <div className="ct-date">
-          {moment(this.props.coffeeTimes.date).format("dddd")}
-          <br />
-          {moment(this.props.coffeeTimes.date).format("MMM Do")}
+          <h6 className="ct-weekday">{moment(this.props.coffeeTimes.date).format("dddd")}</h6>
+          <h3 className="ct-month-day">{moment(this.props.coffeeTimes.date).format("MMM D")}</h3>
         </div>
         <br />
         <div>
@@ -27,8 +25,7 @@ class CoffeeTimeItem extends React.Component {
         <br />
         {this.props.coffeeTimes.seats_left}
         <br />
-      </div>
-    )
+      </div>;
   }
 }
 
