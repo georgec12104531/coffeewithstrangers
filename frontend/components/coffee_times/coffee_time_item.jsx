@@ -32,9 +32,7 @@ class CoffeeTimeItem extends React.Component {
         </h4>
         <div className="ct-line">__________________________</div> 
         <br />
-        <ProgressBar coffeeTime={this.props.coffeeTime} />
-        <div>{this.props.coffeeTime.seats_left}</div>
-        
+        <ProgressBar coffeeTime={this.props.coffeeTime} />    
       </div>;
   }
 }

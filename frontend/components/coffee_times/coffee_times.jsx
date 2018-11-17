@@ -21,11 +21,6 @@ class CoffeeTimes extends React.Component {
           <div key={i} className="location-nav">{location.name}</div>
         </Link>
       ));
-    // const ctSF = this.props.coffeeTimesSF.map((coffeeTime, i) => (
-    //   <div key={i}>
-    //     <CoffeeTimeItem coffeeTimes={coffeeTime}/>
-    //   </div>
-    // ))
       
     const locationCoffeeTimes = this.props.locations.map((location, idx) => {
       return (
