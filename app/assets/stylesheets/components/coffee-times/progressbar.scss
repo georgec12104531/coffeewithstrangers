@@ -1,0 +1,25 @@
+.progress-bar {
+  height: 12px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 3px;
+}
+
+.closed-bar {
+  height: 100%;
+  width: 30px;
+  background-color: #F7BF4D;
+  border-left: 1px solid #FEFEFE;
+}
+
+.open-bar {
+  height: 100%;
+  width: 30px;
+  background-color: #929292;
+  border-left: 1px solid #FEFEFE;
+}
+
+.bar-container {
+  display: flex;
+}
