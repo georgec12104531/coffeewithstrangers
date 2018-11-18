@@ -25,7 +25,6 @@ class CoffeeTimeItem extends React.Component {
           </h4>
         </div>
         <h4 className="ct-address"> 
-        
           {this.props.coffeeTime.address}
           <br />
           {this.props.coffeeTime.address2}

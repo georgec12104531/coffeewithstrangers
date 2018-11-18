@@ -23,3 +23,15 @@
 .bar-container {
   display: flex;
 }
+
+.progress-bar-container {
+  height: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bar-message {
+  color: #929292;
+}
