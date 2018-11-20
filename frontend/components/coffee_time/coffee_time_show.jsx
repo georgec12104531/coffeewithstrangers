@@ -6,7 +6,7 @@ class CoffeeTime extends React.Component {
   render() {
     return(
       <div>
-        "asdf"
+        "Welcome to the coffee time show page"
       </div>
     )
   }

@@ -8,7 +8,7 @@ class CoffeeTimeItem extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handJoin = this.handleJoin.bind(this)
+    this.handleJoin = this.handleJoin.bind(this)
   }
 
   handleJoin(e) {
@@ -19,7 +19,7 @@ class CoffeeTimeItem extends React.Component {
   render() {
 
     return(
-      <div className="coffee-time-containeronClick={this.handJoin}" onClick={this.handJoin}>
+      <div className="coffee-time-container onClick={this.handleJoin}" onClick={this.handleJoin}>
 
           <div className="coffeeTime">
             <div className="ct-date">

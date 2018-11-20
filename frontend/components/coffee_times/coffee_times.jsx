@@ -7,11 +7,17 @@ import CoffeeTimeItem from "./coffee_time_item";
 class CoffeeTimes extends React.Component {
   constructor(props) {
     super(props);
+    this.handleHost = this.handleHost.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchLocations();
     this.props.fetchCoffeeTimes();
+  }
+
+  handleHost(e) {
+    e.preventDefault();
+    this.props.history.push(`/${location.name}/${location.id}/host`)
   }
 
   render (){
@@ -23,14 +29,16 @@ class CoffeeTimes extends React.Component {
       ));
       
     const locationCoffeeTimes = this.props.locations.map((location, idx) => {
-      return (
-        <div key={idx} className="hi">
+      return <div key={idx} className="location">
           <h2 className="city">{location.name}</h2>
           {location.coffee_times.map((coffeeTime, i) => (
             <CoffeeTimeItem key={i} coffeeTime={coffeeTime} />
           ))}
-        </div>
-      )
+          <div className="add-coffee-time-button-container" onClick={this.handleHost}>
+            <div className="add-coffee-time-button">+</div>
+          </div>
+            
+        </div>;
     })
     
     return <div>
@@ -65,7 +73,7 @@ class CoffeeTimes extends React.Component {
           </div>
           <div className="city-container">
             <div className="city-item-container">
-              {locationCoffeeTimes}
+              <div>{locationCoffeeTimes}</div>
             </div>
           </div>
         </div>
