@@ -120,6 +120,8 @@
   border: 1px solid #DDD;
   padding: 0.75em 0.75em 1em 0.75em;
   position: relative;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .city {
@@ -129,7 +131,7 @@
   padding-right: 25px;
   justify-content: center;
   align-items: center;
-  margin-top: 1em;
+  margin-top: 2.5em;
   margin-right: 20px;
   padding-left: 25px;
   border: 2px solid #f5997d;
@@ -142,10 +144,4 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-
-
-
-
-
 
