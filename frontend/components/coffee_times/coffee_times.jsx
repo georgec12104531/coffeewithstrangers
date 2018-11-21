@@ -17,11 +17,10 @@ class CoffeeTimes extends React.Component {
 
   handleHost(e) {
     e.preventDefault();
-    this.props.history.push(`/${location.name}/${location.id}/host`)
+    this.props.history.push('/locations/host')
   }
 
   render (){
-
     const locations = () => this.props.locations.map((location, i) => (
         <Link key={i} to={`/coffee-times/${location.name}`}>
           <div key={i} className="location-nav">{location.name}</div>
@@ -37,7 +36,6 @@ class CoffeeTimes extends React.Component {
           <div className="add-coffee-time-button-container" onClick={this.handleHost}>
             <div className="add-coffee-time-button">+</div>
           </div>
-            
         </div>;
     })
     

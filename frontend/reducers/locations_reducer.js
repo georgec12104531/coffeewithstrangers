@@ -1,13 +1,12 @@
-import {
-  RECEIVE_LOCATIONS
-} from '../actions/location_actions';
-
 import merge from 'lodash/merge';
+import {
+  RECEIVE_LOCATIONS,
+} from '../actions/location_actions';
 
 
 export default (state = {}, action) => {
   Object.freeze(state);
-  switch(action.type) {
+  switch (action.type) {
     case RECEIVE_LOCATIONS:
       return merge({}, state, action.locations);
     default:

@@ -1,8 +1,5 @@
 import React from 'react';
 
-
-
-
 class ProgressBar extends React.Component {
 
 
