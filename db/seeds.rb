@@ -30,10 +30,14 @@ User.create("username": "Stranger", "password": "password")
 
 # CoffeeTimes
 
-CoffeeTime.create("date": "2018-12-07", "address": "Haus Coffee", "address2": "3086 24th St", "topics": "We might talk about our favorite childhood breakfast cereals, running routes in SF, Bob's Burgers, your favorite places to travel, what makes you happy, what makes you sad, techniques for peeling an orange in one piece, self awareness, good books you've read recently, favorite random activities you've discovered in the city...The options are pretty endless.", "capacity": 5, "host_id": 40, "location_id": 19, "seats_left": 5, "start_time": "2pm", "end_time": "4pm", "zip": "94110", "city": "San Francisco", "state": "CA")  
-CoffeeTime.create("date": "2018-12-23", "address": "Sightglass Coffee", "address2": "270 7th St", "topics": "I'm interested in whatever you have a strong opinion on or are an expert in, so really anything's game. But here's a barrage of questions to get us started: What's on your bookshelf? What's the most formative criticism you've received? What compliments are you most proud of? What's one professed value that you sometimes struggle with? How does your job shape who you are? What's the difference between doing what is effective vs what's efficient? How do you use your social media? Where's your name from? What have you had to forgive yourself for? Who are the five top people in your life and what do you learn from them? Standard operating procedures: what routines keep you grounded when everything in your life scatters? And vice versa, what habits keep you open and exploring when you're grounded?", "capacity": 5, "host_id": 33, "location_id": 19, "seats_left": 5, "start_time": "8am", "end_time": "10am", "zip": "94103", "city": "San Francisco", "state": "CA")  
-CoffeeTime.create("date": "2018-12-23", "address": "Sightglass Coffee", "address2": "270 7th St", "topics": "I'm interested in whatever you have a strong opinion on or are an expert in, so really anything's game. But here's a barrage of questions to get us started: What's on your bookshelf? What's the most formative criticism you've received? What compliments are you most proud of? What's one professed value that you sometimes struggle with? How does your job shape who you are? What's the difference between doing what is effective vs what's efficient? How do you use your social media? Where's your name from? What have you had to forgive yourself for? Who are the five top people in your life and what do you learn from them? Standard operating procedures: what routines keep you grounded when everything in your life scatters? And vice versa, what habits keep you open and exploring when you're grounded?", "capacity": 5, "host_id": 33, "location_id": 19, "seats_left": 5, "start_time": "8am", "end_time": "10am", "zip": "94103", "city": "San Francisco", "state": "CA")  
 
+#SF CoffeeTime
+CoffeeTime.create("date": "2018-12-07", "address": "Haus Coffee", "address2": "3086 24th St", "topics": "We might talk about our favorite childhood breakfast cereals, running routes in SF, Bob's Burgers, your favorite places to travel, what makes you happy, what makes you sad, techniques for peeling an orange in one piece, self awareness, good books you've read recently, favorite random activities you've discovered in the city...The options are pretty endless.", "capacity": 5, "host_id": 40, "location_id": 19, "seats_left": 5, "start_time": "2pm", "end_time": "4pm", "zip": "94110", "city": "San Francisco", "state": "CA")  
+CoffeeTime.create("date": "2018-12-23", "address": "Sightglass Coffee", "address2": "270 7th St", "topics": "I'm interested in whatever you have a strong opinion on or are an expert in, so really anything's game. But here's a barrage of questions to get us started: What's on your bookshelf? What's the most formative criticism you've received? What compliments are you most proud of? What's one professed value that you sometimes struggle with? How does your job shape who you are? What's the difference between doing what is effective vs what's efficient? How do you use your social media? Where's your name from? What have you had to forgive yourself for? Who are the five top people in your life and what do you learn from them? Standard operating procedures: what routines keep you grounded when everything in your life scatters? And vice versa, what habits keep you open and exploring when you're grounded?", "capacity": 5, "host_id": 33, "location_id": 19, "seats_left": 5, "start_time": "8am", "end_time": "10am", "zip": "94103", "city": "San Francisco", "state": "CA")    
+
+
+#NY CoffeeTime
+CoffeeTime.create("date": "2018-12-14", "address": "Crumbs & Coffee", "address2": "423 5th Ave", "topics": "Whatever you want! Missed connections, food inspiration, hidden talents, random observations, rogue family members, the best city spots, everyday challenges, your quirks, lifestyle, art house cinema, adventures, stories from your travels, failed attempts, events, random trivia, Toronto street style, books you've read, my love of salsa dancing, our goals and dreams, your childhood best friend, and of course your deepest secrets ;). Or none of these. There’s almost no topic or theme that’s off the table!", "capacity": 5, "host_id": 34, "location_id": 20, "seats_left": 5, "start_time": "11am", "end_time": "1pm", "zip": "11215", "city": "Brooklyn", "state": "NY")    
 
 #CoffeeTimeAttendance
 
@@ -44,6 +48,11 @@ CoffeeTimeAttendance.create("user_id": 31, "coffee_time_id": 53)
 CoffeeTimeAttendance.create("user_id": 32, "coffee_time_id": 53)
 CoffeeTimeAttendance.create("user_id": 40, "coffee_time_id": 53)
 
-
 #Rachel
 CoffeeTimeAttendance.create("user_id": 33, "coffee_time_id": 55)
+
+
+#NY 
+#Bob
+
+CoffeeTimeAttendance.create("user_id": 34, "coffee_time_id": 56)
