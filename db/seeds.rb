@@ -39,6 +39,11 @@ CoffeeTime.create("date": "2018-12-23", "address": "Sightglass Coffee", "address
 #NY CoffeeTime
 CoffeeTime.create("date": "2018-12-14", "address": "Crumbs & Coffee", "address2": "423 5th Ave", "topics": "Whatever you want! Missed connections, food inspiration, hidden talents, random observations, rogue family members, the best city spots, everyday challenges, your quirks, lifestyle, art house cinema, adventures, stories from your travels, failed attempts, events, random trivia, Toronto street style, books you've read, my love of salsa dancing, our goals and dreams, your childhood best friend, and of course your deepest secrets ;). Or none of these. There’s almost no topic or theme that’s off the table!", "capacity": 5, "host_id": 34, "location_id": 20, "seats_left": 5, "start_time": "11am", "end_time": "1pm", "zip": "11215", "city": "Brooklyn", "state": "NY")    
 
+#Boston
+CoffeeTime.create("date": "2018-12-11", "address": "Polcari’s Coffee", "address2": "105 Salem St", "topics": "Currently, I am super interested in how people interact with the relationships, friendships, romantic relationships, relationships with relatives etc, in their lives, so I might ask you questions like: what’s been the most influential relationship you’ve had? How do you determine what a good relationship is for yourself? Remember what I said about questions that are maybe a bit too much for normal conversation? Really, I’m game to talk about anything, especially things that have no answer and are difficult to understand, so please come with all the questions you’ve ever wanted to ask a stranger and all the things you ever wanted to share. Otherwise, I’m not the best at small talk, so if you reaaaallly wanted to talk about the weather, I’m sure I could use some practice… See ya!", "capacity": 5, "host_id": 36, "location_id": 21, "seats_left": 5, "start_time": "4pm", "end_time": "6pm", "zip": "02113", "city": "Massachusetts", "state": "BST")    
+CoffeeTime.create("date": "2018-12-01", "address": "Render Coffee", "address2": "563 Columbus Ave", "topics": "We could talk about life in Boston, books, board games, travels both past and future, language, history, the color purple, storytelling, the optimal consistency of a blueberry muffin, life, love and our respective ways of pursuing happiness.", "capacity": 5, "host_id": 37, "location_id": 21, "seats_left": 5, "start_time": "8am", "end_time": "10am", "zip": "02118", "city": "Massachusetts", "state": "BST")    
+
+
 #CoffeeTimeAttendance
 
 #SF
@@ -47,6 +52,7 @@ CoffeeTimeAttendance.create("user_id": 30, "coffee_time_id": 53)
 CoffeeTimeAttendance.create("user_id": 31, "coffee_time_id": 53)
 CoffeeTimeAttendance.create("user_id": 32, "coffee_time_id": 53)
 CoffeeTimeAttendance.create("user_id": 40, "coffee_time_id": 53)
+CoffeeTimeAttendance.create("user_id": 40, "coffee_time_id": 53)
 
 #Rachel
 CoffeeTimeAttendance.create("user_id": 33, "coffee_time_id": 55)
@@ -54,5 +60,16 @@ CoffeeTimeAttendance.create("user_id": 33, "coffee_time_id": 55)
 
 #NY 
 #Bob
-
 CoffeeTimeAttendance.create("user_id": 34, "coffee_time_id": 56)
+CoffeeTimeAttendance.create("user_id": 35, "coffee_time_id": 56)
+
+#BST
+#Frances
+CoffeeTimeAttendance.create("user_id": 36, "coffee_time_id": 57)
+
+#Leslie
+CoffeeTimeAttendance.create("user_id": 37, "coffee_time_id": 58)
+CoffeeTimeAttendance.create("user_id": 38, "coffee_time_id": 58)
+CoffeeTimeAttendance.create("user_id": 39, "coffee_time_id": 58)
+
+
