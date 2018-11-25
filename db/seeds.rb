@@ -17,10 +17,11 @@ User.create("username": "Rex123", "password": "password", "name": "Rex", "email"
 User.create("username": "Frances123", "password": "password", "name": "Frances", "email": "frances@frances.com", "phone_number": "1231231234")
 User.create("username": "Leslie123", "password": "password", "name": "Leslie", "email": "leslie@leslie.com", "phone_number": "1231231234")
 User.create("username": "Michael123", "password": "password", "name": "Michael", "email": "michael@michael.com", "phone_number": "1231231234")
-# User.create("username": "Bob Dylan", "password": "password")
-# User.create("username": "Bonnie Chung", "password": "password")
-# User.create("username": "Rex Grant", "password": "password")
-# User.create("username": "Frances Green", "password": "password")
+User.create("username": "Bonnie123", "password": "password", "name": "Bonnie", "email": "bonnie@bonnie.com", "phone_number": "1231231234")
+User.create("username": "Derek123", "password": "password", "name": "Derek", "email": "derek@derek.com", "phone_number": "1231231234")
+User.create("username": "Lily123", "password": "password", "name": "Lily", "email": "lily@lily.com", "phone_number": "1231231234")
+
+
 # User.create("username": "Leslie Cranston", "password": "password")
 # User.create("username": "Michael Nguyen", "password": "password")
 # User.create("username": "Derek Douglas", "password": "password")
@@ -43,6 +44,12 @@ CoffeeTime.create("date": "2018-12-14", "address": "Crumbs & Coffee", "address2"
 CoffeeTime.create("date": "2018-12-11", "address": "Polcari’s Coffee", "address2": "105 Salem St", "topics": "Currently, I am super interested in how people interact with the relationships, friendships, romantic relationships, relationships with relatives etc, in their lives, so I might ask you questions like: what’s been the most influential relationship you’ve had? How do you determine what a good relationship is for yourself? Remember what I said about questions that are maybe a bit too much for normal conversation? Really, I’m game to talk about anything, especially things that have no answer and are difficult to understand, so please come with all the questions you’ve ever wanted to ask a stranger and all the things you ever wanted to share. Otherwise, I’m not the best at small talk, so if you reaaaallly wanted to talk about the weather, I’m sure I could use some practice… See ya!", "capacity": 5, "host_id": 36, "location_id": 21, "seats_left": 5, "start_time": "4pm", "end_time": "6pm", "zip": "02113", "city": "Massachusetts", "state": "BST")    
 CoffeeTime.create("date": "2018-12-01", "address": "Render Coffee", "address2": "563 Columbus Ave", "topics": "We could talk about life in Boston, books, board games, travels both past and future, language, history, the color purple, storytelling, the optimal consistency of a blueberry muffin, life, love and our respective ways of pursuing happiness.", "capacity": 5, "host_id": 37, "location_id": 21, "seats_left": 5, "start_time": "8am", "end_time": "10am", "zip": "02118", "city": "Massachusetts", "state": "BST")    
 
+#London
+CoffeeTime.create("date": "2018-12-29", "address": "Monmouth Coffee", "address2": "27 Monmouth Street", "topics": "Life stories. Tea time with me will feel like a story time where strangers get to share their life experiences and/or talk about things on their mind that they need perspective on. I’m not a big fan of structure and rules and this and that. I just like to chill, let the conversation flow naturally, none of these pre-set topics. My only rule is be respectful and be you.", "capacity": 5, "host_id": 46, "location_id": 22, "seats_left": 5, "start_time": "4pm", "end_time": "6pm", "zip": "WC2H 9EU", "city": "London", "state": "UK")    
+CoffeeTime.create("date": "2018-12-04", "address": "Kaffeine", "address2": "66 Great Titchfield Street", "topics": "anything you'd like except politics - culture // journeys in spirituality // history // your favourite adventure // the most embarrassing thing that's happened to you // what do you hold most true? // kindness // empathy // why are we even here? // salsa dancing // your favorite city in the world // music // podcast discoveries // cooking adventures // interior decoration tips // economics // science // sushi // yoga // your favorite gym routine // ", "capacity": 5, "host_id": 51, "location_id": 23, "seats_left": 5, "start_time": "3pm", "end_time": "5pm", "zip": "W1W 7QJ", "city": "London", "state": "UK")    
+
+#Chicago
+CoffeeTime.create("date": "2018-12-28", "address": "The Wormhole Coffee", "address2": "1462 N Milwaukee Ave", "topics": "Anything and everything! I am happy to listen, share or just drink coffee silently until one of us has to go. Company is nice too :)", "capacity": 5, "host_id": 51 , "location_id": 23, "seats_left": 5, "start_time": "12pm", "end_time": "2pm", "zip": "60622", "city": "Chicago", "state": "IL")    
 
 #CoffeeTimeAttendance
 
@@ -57,7 +64,6 @@ CoffeeTimeAttendance.create("user_id": 40, "coffee_time_id": 53)
 #Rachel
 CoffeeTimeAttendance.create("user_id": 33, "coffee_time_id": 55)
 
-
 #NY 
 #Bob
 CoffeeTimeAttendance.create("user_id": 34, "coffee_time_id": 56)
@@ -70,6 +76,19 @@ CoffeeTimeAttendance.create("user_id": 36, "coffee_time_id": 57)
 #Leslie
 CoffeeTimeAttendance.create("user_id": 37, "coffee_time_id": 58)
 CoffeeTimeAttendance.create("user_id": 38, "coffee_time_id": 58)
-CoffeeTimeAttendance.create("user_id": 39, "coffee_time_id": 58)
+CoffeeTimeAttendance.create("user_id": 40, "coffee_time_id": 58)
+
+#London
+#Bonnie
+CoffeeTimeAttendance.create("user_id": 46, "coffee_time_id": 59)
+#Derek
+CoffeeTimeAttendance.create("user_id": 50, "coffee_time_id": 61)
+
+#Chicago
+#Lily
+CoffeeTimeAttendance.create("user_id": 51, "coffee_time_id": 62)
+
+
+
 
 
