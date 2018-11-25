@@ -24,10 +24,8 @@ class CoffeeTimes extends React.Component {
   render (){
     const locations = () => this.props.locations.map((location, i) => (
         <Link key={i} to={`/coffee-times/${location.name}`}>
-          <div key={i} className="location-nav">{location.name}</div>
+          <div key={i} className="location-nav">{location.name}</div>          
         </Link>
-
-
       ));
       
     const locationCoffeeTimes = this.props.locations.map((location, idx) => {

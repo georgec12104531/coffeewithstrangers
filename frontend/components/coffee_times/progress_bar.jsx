@@ -7,8 +7,8 @@ class ProgressBar extends React.Component {
 
     const closed_seats = () => {
       let closed = [];
-      this.props.coffeeTime.coffee_time_attendees.forEach((attendee) => {
-        closed.push(<div className="closed-bar"></div>)
+      this.props.coffeeTime.coffee_time_attendees.forEach((attendee, i) => {
+        closed.push(<div key={i} className="closed-bar"></div>)
       });
       return closed;
     }
@@ -18,7 +18,7 @@ class ProgressBar extends React.Component {
     const open_seats = () => {
       let open = [];
       for (let i = 0; i < open_seats_count; i++) {
-        open.push(<div className="open-bar"></div>)
+        open.push(<div key={i} className="open-bar"></div>)
       }
       return open;
     }
