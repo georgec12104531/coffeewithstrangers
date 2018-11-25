@@ -8,9 +8,7 @@ class HostForm extends React.Component {
       <div>
         "this is the host form"
       </div>
-
     )
-
   }
 }
 

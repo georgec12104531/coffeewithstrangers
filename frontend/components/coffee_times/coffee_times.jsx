@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { HashLink} from 'react-router-hash-link';
 import CoffeeTimeItem from "./coffee_time_item";
 
 
@@ -25,6 +26,8 @@ class CoffeeTimes extends React.Component {
         <Link key={i} to={`/coffee-times/${location.name}`}>
           <div key={i} className="location-nav">{location.name}</div>
         </Link>
+
+
       ));
       
     const locationCoffeeTimes = this.props.locations.map((location, idx) => {

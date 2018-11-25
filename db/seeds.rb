@@ -20,6 +20,8 @@ User.create("username": "Michael123", "password": "password", "name": "Michael",
 User.create("username": "Bonnie123", "password": "password", "name": "Bonnie", "email": "bonnie@bonnie.com", "phone_number": "1231231234")
 User.create("username": "Derek123", "password": "password", "name": "Derek", "email": "derek@derek.com", "phone_number": "1231231234")
 User.create("username": "Lily123", "password": "password", "name": "Lily", "email": "lily@lily.com", "phone_number": "1231231234")
+User.create("username": "Ariana123", "password": "password", "name": "Ariana", "email": "ariana@ariana.com", "phone_number": "1231231234")
+User.create("username": "Drew123", "password": "password", "name": "Drew", "email": "drew@drew.com", "phone_number": "1231231234")
 
 
 # User.create("username": "Leslie Cranston", "password": "password")
@@ -50,6 +52,12 @@ CoffeeTime.create("date": "2018-12-04", "address": "Kaffeine", "address2": "66 G
 
 #Chicago
 CoffeeTime.create("date": "2018-12-28", "address": "The Wormhole Coffee", "address2": "1462 N Milwaukee Ave", "topics": "Anything and everything! I am happy to listen, share or just drink coffee silently until one of us has to go. Company is nice too :)", "capacity": 5, "host_id": 51 , "location_id": 23, "seats_left": 5, "start_time": "12pm", "end_time": "2pm", "zip": "60622", "city": "Chicago", "state": "IL")    
+
+#Seattle
+CoffeeTime.create("date": "2018-12-20", "address": "Storyville Coffee Company", "address2": "94 Pike St", "topics": "I like to find discussion topics that are specific to the people I'm talking with. I care about drawing out truths of experience. Dancing in introspection with curiosity and humor is my goal. A sense of awkwardness is acceptable for me, as it indicates there's an unknown or unexplored idea.", "capacity": 5, "host_id": 52 , "location_id": 24, "seats_left": 5, "start_time": "1pm", "end_time": "3pm", "zip": "98101", "city": "Seattle", "state": "WA")    
+
+#Los Angeles
+CoffeeTime.create("date": "2018-12-19", "address": "Café de Leche", "address2": "5000 York Blvd", "topics": "Anything is fair game! Let's talk about things that people don't like talking about like why we're so scared to be alone and why we are the way we are. Honestly, anything is fair game as long as everyone is respectful and has a good attitude!", "capacity": 5, "host_id": 53 , "location_id": 25, "seats_left": 5, "start_time": "10am", "end_time": "12pm", "zip": "90042", "city": "Los Angeles", "state": "CA")    
 
 #CoffeeTimeAttendance
 
@@ -86,9 +94,14 @@ CoffeeTimeAttendance.create("user_id": 50, "coffee_time_id": 61)
 
 #Chicago
 #Lily
-CoffeeTimeAttendance.create("user_id": 51, "coffee_time_id": 62)
+CoffeeTimeAttendance.create("user_id": 51, "coffee_time_id": 63)
 
+#Seattle
+#Ariana
+CoffeeTimeAttendance.create("user_id": 52, "coffee_time_id": 64)
 
+#Los Angeles
+CoffeeTimeAttendance.create("user_id": 53, "coffee_time_id": 65)
 
 
 
