@@ -1,1 +1,1 @@
-json.extract! @coffee_time, :date, :address, :introduction, :host_id, :location_id
+json.extract! @coffee_time, :id, :date, :address, :location_id, :host, :users, :coffee_time_attendees

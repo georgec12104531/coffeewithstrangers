@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import CoffeeTimeShow from './coffee_time_show';
+import { fetchCoffeeTime } from "../../actions/coffee_time_actions";
 
 export const msp = (state, ownProps) => ({
-   attendances: state.entities.attendances,
-    })
+  id: ownProps.match.params.coffeeTimeId,
+});
 
 export const mdp = dispatch => ({
-    fetchLocations: () => dispatch(fetchLocations()),
-    fetchCoffeeTime: (id) => dispatch(fetchCoffeeTimes(id))
+  fetchCoffeeTime: id => dispatch(fetchCoffeeTime(id)),
 });
 
 export default connect(

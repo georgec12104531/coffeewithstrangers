@@ -18,7 +18,7 @@ class Api::CoffeeTimesController < ApplicationController
   def update
     @coffee_time = CoffeeTime.find(params[:id])
     if @coffee_time.update_attributes(coffee_time_params)
-      render "/api/coffee_times/show"
+      render :show
     else
       render json: @coffee_time.errors.full_messages, status: 422
     end
@@ -26,7 +26,6 @@ class Api::CoffeeTimesController < ApplicationController
 
   def show
     @coffee_time = CoffeeTime.find(params[:id])
-    render :show
   end
 
   def destroy
