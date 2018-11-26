@@ -8,5 +8,5 @@ export default combineReducers({
   attendances: attendancesReducer,
   coffeeTimes: coffeeTimesReducer,
   users: usersReducer,
-  locations: locationsReducer
+  locations: locationsReducer,
 });

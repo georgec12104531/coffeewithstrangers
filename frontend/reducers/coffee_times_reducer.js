@@ -12,7 +12,7 @@ export default ( state = {}, action) => {
     case RECEIVE_COFFEE_TIMES:
       return merge({}, state, action.coffeeTimes);
     case RECEIVE_COFFEE_TIME:
-      return merge({}, state, {[action.coffeeTime.id]: action.coffeeTime});
+      return merge({}, state, { [action.coffeeTime.id]: action.coffeeTime });
     case REMOVE_COFFEE_TIME:
       const newState = merge({}, state);
       delete newState[action.coffeeTimeId];
