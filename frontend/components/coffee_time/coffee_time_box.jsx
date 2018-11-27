@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from "moment";
 import ProgressBar from '../coffee_times/progress_bar';
+import calendarLogo from './calendar.png';
 
 
 class CoffeeTimeBox extends React.Component {
@@ -23,8 +24,9 @@ class CoffeeTimeBox extends React.Component {
 
     return (
       <div className="coffee-time-box-container">
-          <div>
-            <div>{this.props.coffeeTime.host_name}</div>
+          <div className="host-name-container">
+          <img src={calendarLogo} alt="Logo"/>
+            <div>Join {this.props.coffeeTime.host_name}'s Coffee Time!</div>
           </div>
           <div className="ct-line">__________________________</div>
           <div className="ct-box-date-container">

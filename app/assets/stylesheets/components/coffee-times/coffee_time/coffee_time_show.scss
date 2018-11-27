@@ -15,10 +15,21 @@
 .coffee-time-box-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 50px;
   background-color: #FEFEFE;
   height: 358px;
   width: 100%;
   padding: 10px;
   border: 1px solid #DDD;
+}
+
+.host-name-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 150px;
+}
+
+.ct-box-date-container {
+  display: flex;
 }
