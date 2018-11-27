@@ -4,38 +4,52 @@ import ProgressBar from '../coffee_times/progress_bar';
 
 
 class CoffeeTimeBox extends React.Component {
-  
 
 
+  componentDidMount() {
+    this.props.fetchCoffeeTime(this.props.id);
+  }
+
+  componentWillMount() {
+    this.props.fetchCoffeeTime(this.props.id);
+  }
 
   render() {
-    return (
-      // <div>{this.props.coffeeTime.id}</div>
-      <div className="coffee-time-box-container">
-          <div className="ct-date">
+    if (this.props.coffeeTime.host_name === undefined) {
+      return <div>
+        LOADING...
+      </div>
+    }
 
+    return (
+      <div className="coffee-time-box-container">
+          <div>
+            <div>{this.props.coffeeTime.host_name}</div>
+          </div>
+          <div className="ct-line">__________________________</div>
+          <div className="ct-box-date-container">
+            {/* date logo */}
             <h3 className="ct-box-date">
-              {moment(this.props.coffeeTime.date).format("dddd")}, &nbsp;
+              {moment(this.props.coffeeTime.date).format("dddd")}, {" "}
               {moment(this.props.coffeeTime.date).format("MMM D")}
             </h3>
+          </div>
+          <div className="ct-time-container">
+            {/* time logo */}
             <div className="ct-time">
               {this.props.coffeeTime.start_time} -{" "}
-              {this.props.coffeeTime.end_time}
+              {this.props.coffeeTime.end_time}  
             </div>
           </div>
-          <div className="ct-host-container">
-            <h4 className="ct-host">
-              {/* HOSTED BY : {this.props.coffeeTime.host.name} */}
+          <div>
+            <h4 className="ct-address">
+              {this.props.coffeeTime.address}
+              <br />
+              {this.props.coffeeTime.address2}
             </h4>
           </div>
-          <h4 className="ct-address">
-            {this.props.coffeeTime.address}
-            <br />
-            {this.props.coffeeTime.address2}
-          </h4>
-          <div className="ct-line">__________________________</div>
           <br />
-          {/* <ProgressBar coffeeTime={this.props.coffeeTime} /> */}
+          {/* <ProgressBar coffeeTime={this.props.coffeeTime} />  */}
       </div>
     );
   }

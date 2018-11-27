@@ -9,16 +9,16 @@
 .coffee-time-side-bar-container {
   display: flex;
   flex-direction: column;
+  width: 300px;
 }
 
 .coffee-time-box-container {
+  display: flex;
+  flex-direction: column;
   margin-top: 50px;
   background-color: #FEFEFE;
   height: 358px;
   width: 100%;
-  padding: 13.4px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+  padding: 10px;
   border: 1px solid #DDD;
 }

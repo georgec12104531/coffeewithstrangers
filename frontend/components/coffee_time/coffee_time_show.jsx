@@ -6,7 +6,7 @@ class CoffeeTime extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchCoffeeTime(this.props.id);
   }
 
@@ -16,13 +16,11 @@ class CoffeeTime extends React.Component {
         LOADING...
       </div>
     }
-    return (
-      <div className="show-page-container">
+    return <div className="show-page-container">
         <div className="coffee-time-side-bar-container">
-          <CoffeeTimeBox coffeeTime={this.props.coffeeTime} />
+          <CoffeeTimeBox coffeeTime={this.props.coffeeTime} fetchCoffeeTime={this.props.fetchCoffeeTime} id={this.props.id}/>
         </div>
-      </div>
-    );
+      </div>;
   }
 }
 
