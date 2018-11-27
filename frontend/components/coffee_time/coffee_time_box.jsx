@@ -2,6 +2,7 @@ import React from 'react';
 import moment from "moment";
 import ProgressBar from '../coffee_times/progress_bar';
 import calendarLogo from './calendar.png';
+import clock from './clock.png';
 
 
 class CoffeeTimeBox extends React.Component {
@@ -22,38 +23,34 @@ class CoffeeTimeBox extends React.Component {
       </div>
     }
 
-    return (
-      <div className="coffee-time-box-container">
-          <div className="host-name-container">
-          <img src={calendarLogo} alt="Logo"/>
-            <div>Join {this.props.coffeeTime.host_name}'s Coffee Time!</div>
+    return <div className="coffee-time-box-container">
+        <div className="host-name-container">
+          <h2 className="host-name">Join {this.props.coffeeTime.host_name} for Coffee Time!</h2>
+        </div>
+        <div className="ct-box-line"></div>
+        <div className="ct-box-date-container">
+          <img src={calendarLogo} alt="Logo" className="calendar-logo" />
+          <h3 className="ct-box-date">
+           {moment(this.props.coffeeTime.date).format("dddd")}, {moment(this.props.coffeeTime.date).format("MMM D")}
+          </h3>
+          
+        </div>
+        <div className="ct-time-container">
+          <img src={clock}/>
+          <div className="ct-time">
+            {this.props.coffeeTime.start_time} - {this.props.coffeeTime.end_time}
           </div>
-          <div className="ct-line">__________________________</div>
-          <div className="ct-box-date-container">
-            {/* date logo */}
-            <h3 className="ct-box-date">
-              {moment(this.props.coffeeTime.date).format("dddd")}, {" "}
-              {moment(this.props.coffeeTime.date).format("MMM D")}
-            </h3>
-          </div>
-          <div className="ct-time-container">
-            {/* time logo */}
-            <div className="ct-time">
-              {this.props.coffeeTime.start_time} -{" "}
-              {this.props.coffeeTime.end_time}  
-            </div>
-          </div>
-          <div>
-            <h4 className="ct-address">
-              {this.props.coffeeTime.address}
-              <br />
-              {this.props.coffeeTime.address2}
-            </h4>
-          </div>
-          <br />
-          {/* <ProgressBar coffeeTime={this.props.coffeeTime} />  */}
-      </div>
-    );
+        </div>
+        <div>
+          <h4 className="ct-address">
+            {this.props.coffeeTime.address}
+            <br />
+            {this.props.coffeeTime.address2}
+          </h4>
+        </div>
+        <br />
+        {/* <ProgressBar coffeeTime={this.props.coffeeTime} />  */}
+      </div>;
   }
 }
 

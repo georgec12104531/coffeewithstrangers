@@ -26,10 +26,36 @@
 
 .host-name-container {
   display: flex;
-  justify-content: flex-start;
-  width: 150px;
+  justify-content: center;
+  width: 294px;
+  text-align: center;
+}
+
+.host-name {
+  color: rgb(255, 86, 0);
+  text-transform: uppercase;
+  font-size: 1.1em;
 }
 
 .ct-box-date-container {
   display: flex;
+  justify-content: flex-start;
+  width: 290px;
+}
+
+.ct-box-line {
+  width: 294px;
+  border-top: 1px solid ;
+  margin-bottom: 20px;
+  color: #929292;
+}
+
+.calendar-logo {
+  margin-right: 10px;
+}
+
+.ct-box-date {
+  height: 20px;
+  margin-top: 12px;
+  margin-bottom: 5px;
 }
