@@ -3,7 +3,9 @@ import React from 'react';
 class ProgressBar extends React.Component {
 
   render() {
-
+    if (this.props.coffeeTime.coffee_time_attendees === undefined) {
+      return null;
+    }
     const closed_seats = () => {
       let closed = [];
       this.props.coffeeTime.coffee_time_attendees.forEach((attendee, i) => {
@@ -12,7 +14,7 @@ class ProgressBar extends React.Component {
       return closed;
     }
     
-    let open_seats_count = 6 - (Object.keys(this.props.coffeeTime.coffee_time_attendees).length)
+    let open_seats_count = 6 - this.props.coffeeTime.coffee_time_attendees.length;
 
     const open_seats = () => {
       let open = [];

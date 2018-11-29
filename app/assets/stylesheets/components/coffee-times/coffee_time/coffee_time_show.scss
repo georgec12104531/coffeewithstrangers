@@ -41,6 +41,7 @@
   display: flex;
   justify-content: flex-start;
   width: 290px;
+  margin-bottom: 10px;
 }
 
 .ct-box-line {
@@ -51,11 +52,39 @@
 }
 
 .calendar-logo {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .ct-box-date {
   height: 20px;
   margin-top: 12px;
   margin-bottom: 5px;
+}
+
+.ct-box-time-container {
+  display: flex;
+  width: 290px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.ct-box-time {
+  margin-top: 12px;
+  height: 24px;
+}
+
+.clock-logo {
+  margin-right: 20px;
+}
+
+.ct-box-address-container {
+  display: flex;
+  width: 290px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.ct-box-address {
+  margin-top: 5px;
+  height: 24px;
 }

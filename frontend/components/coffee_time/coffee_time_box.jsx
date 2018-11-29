@@ -3,18 +3,10 @@ import moment from "moment";
 import ProgressBar from '../coffee_times/progress_bar';
 import calendarLogo from './calendar.png';
 import clock from './clock.png';
+import map from './map.png';
 
 
 class CoffeeTimeBox extends React.Component {
-
-
-  componentDidMount() {
-    this.props.fetchCoffeeTime(this.props.id);
-  }
-
-  componentWillMount() {
-    this.props.fetchCoffeeTime(this.props.id);
-  }
 
   render() {
     if (this.props.coffeeTime.host_name === undefined) {
@@ -35,21 +27,26 @@ class CoffeeTimeBox extends React.Component {
           </h3>
           
         </div>
-        <div className="ct-time-container">
-          <img src={clock}/>
-          <div className="ct-time">
+        <div className="ct-box-time-container">
+          <img src={clock} className="clock-logo"/>
+          <h3 className="ct-box-time" >
             {this.props.coffeeTime.start_time} - {this.props.coffeeTime.end_time}
-          </div>
+          </h3>
         </div>
-        <div>
-          <h4 className="ct-address">
-            {this.props.coffeeTime.address}
-            <br />
-            {this.props.coffeeTime.address2}
+        <div className="ct-box-address-container">
+          <img src={map} className="logo"/>
+          <h4 className="ct-box-address">
+            {this.props.coffeeTime.address},{" "}
+            {this.props.coffeeTime.address2},{" "}
+            {this.props.coffeeTime.city}{" "}
+            {this.props.coffeeTime.state},{" "}
+            {this.props.coffeeTime.zip}
           </h4>
         </div>
+        <br/>
         <br />
-        {/* <ProgressBar coffeeTime={this.props.coffeeTime} />  */}
+        <div className="ct-box-line"></div>
+        <ProgressBar coffeeTime={this.props.coffeeTime} /> 
       </div>;
   }
 }
