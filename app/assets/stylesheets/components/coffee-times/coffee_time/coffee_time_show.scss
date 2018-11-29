@@ -4,19 +4,20 @@
   // justify-content: center;
   margin-left: 15%;
   margin-right: 15%;
+  margin-top: 3%;
 }
 
 .coffee-time-side-bar-container {
   display: flex;
   flex-direction: column;
   width: 300px;
+  justify-content: space-evenly;
 }
 
 .coffee-time-box-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
   background-color: #FEFEFE;
   height: 358px;
   width: 100%;
@@ -48,7 +49,7 @@
   width: 294px;
   border-top: 1px solid ;
   margin-bottom: 20px;
-  color: #929292;
+  color:rgb(221, 221, 221);
 }
 
 .calendar-logo {
@@ -87,4 +88,44 @@
 .ct-box-address {
   margin-top: 5px;
   height: 24px;
+}
+
+.coffee-time-side-bar-button {
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+  padding: 1em 4.5em;
+  letter-spacing: 2px;
+  text-decoration: none;
+  width: 322px;
+  background-color: rgb(254, 201, 63);
+  border: 1px rgb(254, 193, 34) solid;
+  transition-duration: 0.1s;
+}
+
+button:focus {outline:0;}
+
+.coffee-time-side-bar-button:hover {
+  background-color: hsl(39, 92%, 51%);
+}
+
+.coffee-time-side-bar-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  background: rgb(241, 235, 194);
+  padding: 2em 2em 1em;
+  width: 260px;
+  color: hsl(39, 92%, 51%);
+}
+  
+p {
+  font-weight: 350;
+  font-size: 15px;
+  margin-top: 6px;
 }

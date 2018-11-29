@@ -43,7 +43,6 @@ class CoffeeTimeBox extends React.Component {
             {this.props.coffeeTime.zip}
           </h4>
         </div>
-        <br/>
         <br />
         <div className="ct-box-line"></div>
         <ProgressBar coffeeTime={this.props.coffeeTime} /> 

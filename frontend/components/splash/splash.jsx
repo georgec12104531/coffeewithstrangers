@@ -18,7 +18,7 @@ class Splash extends React.Component {
               </h2>
               <Link className="tea-time-button" to="/coffee-times">
                 LET'S GET COFFEE
-              </Link>
+              </Link>/
             </div>
           </div>
         </div>
