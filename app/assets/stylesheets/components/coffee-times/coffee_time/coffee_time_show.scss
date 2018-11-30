@@ -1,7 +1,6 @@
 .show-page-container {
   display: flex;
   height: 1000px;
-  // justify-content: center;
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 3%;
@@ -10,7 +9,7 @@
 .coffee-time-side-bar-container {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 324px;
   justify-content: space-evenly;
 }
 
@@ -20,7 +19,7 @@
   align-items: center;
   background-color: #FEFEFE;
   height: 358px;
-  width: 100%;
+  width: 93%;
   padding: 10px;
   border: 1px solid #DDD;
 }
@@ -52,8 +51,21 @@
   color:rgb(221, 221, 221);
 }
 
+.ct-side-bar-info-line {
+  width: 120px;
+  border-top: 1px solid ;
+  margin-bottom: 20px;
+  background-color: hsl(39, 92%, 51%);
+}
+
 .calendar-logo {
   margin-right: 20px;
+}
+
+.coffee-cup {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 8px;
 }
 
 .ct-box-date {
@@ -88,6 +100,10 @@
 .ct-box-address {
   margin-top: 5px;
   height: 24px;
+}
+
+.coffee-time-side-bar-info-intro {
+  margin: 0px;
 }
 
 .coffee-time-side-bar-button {
@@ -128,4 +144,39 @@ p {
   font-weight: 350;
   font-size: 15px;
   margin-top: 6px;
+}
+
+.meet-your-host-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.host-intro {
+  font-size: 2.0em;
+  color: #EF6236;
+}
+
+.host-intro-message {
+  margin-top: .5em;
+  color: #929292;
+  line-height: 1.5em;
+  font-size: 15px;
+}
+
+.host-intro-container {
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-pic {
+  background-image: url(https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png);
+  background-size: cover;                      /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;    
+  height: 250px;
+  width: 250px;
 }
