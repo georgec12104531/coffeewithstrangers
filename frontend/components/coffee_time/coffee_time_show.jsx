@@ -15,11 +15,10 @@ class CoffeeTime extends React.Component {
 
   render() {
     if (this.props.coffeeTime === undefined) {
-      return <div>
-        LOADING...
-      </div>
+      return null
     }
-    return <div className="show-page-container">
+    return <div className="show-page-main-container"> 
+    <div className="show-page-container">
         <div className="coffee-time-side-bar-container">
           <CoffeeTimeBox coffeeTime={this.props.coffeeTime} fetchCoffeeTime={this.props.fetchCoffeeTime} id={this.props.id} />
           <button className="coffee-time-side-bar-button">
@@ -32,7 +31,7 @@ class CoffeeTime extends React.Component {
             <img className="coffee-cup" src={coffeeone} />
             <div className="ct-side-bar-info-line" />
             <p>
-              Tea Time is where five-ish strangers sit at a cafe with a Host
+              Coffee Time is where five-ish strangers sit at a cafe with a Host
               to have a two hour conversation. It's not about anything in
               particular.
             </p>
@@ -53,9 +52,13 @@ class CoffeeTime extends React.Component {
             <h5 className="host-intro-message">(It'll be helpful to know what they look like when you're looking for a group of confused strangers at the cafe.)</h5>
           </div>
           <div className="profile-pic"></div>
-          <div className="host-box-info-container"></div>
+          <div className="host-box-info-container">
+            <h3>What's your story?</h3>
+            
+          </div>
         </div>
       </div>;
+    </div>
   }
 }
 
