@@ -12,7 +12,10 @@ User.create("username": "Allison123", "password": "password", "name": "Allison",
 User.create("username": "Ali123", "password": "password", "name": "Ali", "email": "ali@ali.com", "phone_number": "1231231234")
 User.create("username": "Earl123", "password": "password", "name": "Earl", "email": "earl@earl.com", "phone_number": "1231231234")
 User.create("username": "Rachel123", "password": "password", "name": "Rachel", "email": "rachel@rachel.com", "phone_number": "1231231234")
+
 User.create("username": "Bob123", "password": "password", "name": "Bob", "email": "bob@bob.com", "phone_number": "1231231234")
+User.find(34).update!(introduction: "Hi there,  I love listening, talking, discussing, debating, storytelling, deliberating, conversing and all the other varieties of thought exchange between people. I am looking forward to meeting you!", story: "I've been in Berlin for over 2 years and I prefer all the things I am by choice over those I am by birth, but since I've heard you cannot become a Berliner by choice, I'll go with ""I am from Central Europe"". I love stories, cold and green countries, books, mental models, the Guilty Feminist podcast, my Pocket account, technology, slightly crazy singer-songwriters, dogs, mountains and I absolutely cannot cook. Professionally, I build companies, products and services for other, larger companies, and I went to art school, which probably shaped some of my thinking. I also have a loud and talkative family, which shaped other parts of my thinking and the volume at which I speak.")
+
 User.create("username": "Rex123", "password": "password", "name": "Rex", "email": "rex@rex.com", "phone_number": "1231231234")
 User.create("username": "Frances123", "password": "password", "name": "Frances", "email": "frances@frances.com", "phone_number": "1231231234")
 User.create("username": "Leslie123", "password": "password", "name": "Leslie", "email": "leslie@leslie.com", "phone_number": "1231231234")
@@ -102,6 +105,7 @@ CoffeeTimeAttendance.create("user_id": 52, "coffee_time_id": 64)
 
 #Los Angeles
 CoffeeTimeAttendance.create("user_id": 53, "coffee_time_id": 65)
+
 
 
 
