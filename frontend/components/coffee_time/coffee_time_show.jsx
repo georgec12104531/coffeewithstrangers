@@ -11,6 +11,7 @@ class CoffeeTime extends React.Component {
 
   componentWillMount() {
     this.props.fetchCoffeeTime(this.props.id);
+    window.scrollTo(0, 0);
   }
 
   render() {
