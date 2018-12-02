@@ -5,6 +5,7 @@ import { fetchCoffeeTime } from '../../actions/coffee_time_actions';
 export const msp = (state, ownProps) => ({
   id: ownProps.match.params.coffeeTimeId,
   coffeeTime: state.entities.coffeeTimes[ownProps.match.params.coffeeTimeId],
+  currentUser: state.entities.users[state.session.id],
 });
 
 export const mdp = dispatch => ({
