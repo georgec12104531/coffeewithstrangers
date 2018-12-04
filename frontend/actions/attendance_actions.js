@@ -1,4 +1,5 @@
 import * as APIUtil from '../api_util/attendance_api_util';
+import { fetchCoffeeTime } from '../actions/coffee_time_actions';
 
 export const RECEIVE_ATTENDANCE = 'RECEIVE_ATTENDANCE';
 export const REMOVE_ATTENDANCE = 'REMOVE_ATTENDANCE';
@@ -21,7 +22,8 @@ export const receiveAttendanceErrors = errors => ({
 
 export const createAttendance = attendance => dispatch => (
   APIUtil.createAttendance(attendance).then(attendanceBack => (
-    dispatch(receiveAttendance(attendanceBack))
+    dispatch(fetchCoffeeTime(attendanceBack.coffee_time_id))
+    // dispatch(receiveAttendance(attendanceBack));
   ), error => (
     dispatch(receiveAttendanceErrors(error.responseJSON))
   ))

@@ -9,7 +9,6 @@ class CoffeeTime extends React.Component {
     super(props);
     this.handleCreateAttendance = this.handleCreateAttendance.bind(this);
     this.handleDeleteAttendance = this.handleDeleteAttendance.bind(this);
-    this.state = { attending: false };
   }
 
   componentDidMount() {
@@ -20,8 +19,7 @@ class CoffeeTime extends React.Component {
   handleCreateAttendance(e) {
     e.preventDefault();
     this.props.createAttendance({ user_id: this.props.currentUserId, coffee_time_id: this.props.id})
-    this.setState({ attending: true , function(){}}
-    )}
+   }
 
   handleDeleteAttendance(e) {
     e.preventDefault();

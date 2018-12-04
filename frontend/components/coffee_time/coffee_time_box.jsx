@@ -5,7 +5,6 @@ import calendarLogo from './calendar.png';
 import clock from './clock.png';
 import map from './map.png';
 
-
 class CoffeeTimeBox extends React.Component {
 
   render() {

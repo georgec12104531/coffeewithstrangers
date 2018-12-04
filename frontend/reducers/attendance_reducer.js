@@ -1,10 +1,12 @@
+import merge from "lodash/merge";
+
 import {
   RECEIVE_ATTENDANCE,
   RECEIVE_ATTENDANCE_ERRORS,
   REMOVE_ATTENDANCE,
 } from "../actions/attendance_actions";
 
-export default (state = [], action) => {
+export default (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ATTENDANCE:
@@ -17,3 +19,5 @@ export default (state = [], action) => {
       return state;
   }
 };
+
+
