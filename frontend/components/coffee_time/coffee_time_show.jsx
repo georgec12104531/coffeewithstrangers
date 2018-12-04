@@ -1,17 +1,31 @@
 import React from 'react';
 import CoffeeTimeBox from './coffee_time_box';
 import coffeeone from './coffeeone.png';
-import profile from './profile.png';
-import asdf from './asdf.jpg';
-import image from './image.png';
+
+
 class CoffeeTime extends React.Component {
+
   constructor(props) {
     super(props);
+    this.handleCreateAttendance = this.handleCreateAttendance.bind(this);
+    this.handleDeleteAttendance = this.handleDeleteAttendance.bind(this);
+    this.state = { attending: false };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchCoffeeTime(this.props.id);
     window.scrollTo(0, 0);
+  }
+
+  handleCreateAttendance(e) {
+    e.preventDefault();
+    this.props.createAttendance({ user_id: this.props.currentUserId, coffee_time_id: this.props.id})
+    this.setState({ attending: true , function(){}}
+    )}
+
+  handleDeleteAttendance(e) {
+    e.preventDefault();
+    this.props.deleteAttendance(50);
   }
 
   render() {
@@ -27,8 +41,11 @@ class CoffeeTime extends React.Component {
         <div className="show-page-container">
           <div className="coffee-time-side-bar-container">
             <CoffeeTimeBox coffeeTime={this.props.coffeeTime} fetchCoffeeTime={this.props.fetchCoffeeTime} id={this.props.id} />
-            <button className="coffee-time-side-bar-button">
+            <button onClick={this.handleCreateAttendance} className="coffee-time-side-bar-button">
               Sign me Up
+            </button>
+            <button onClick={this.handleDeleteAttendance}>
+              unsign me up!
             </button>
             <div className="coffee-time-side-bar-info-container">
               <h5 className="coffee-time-side-bar-info-intro">
@@ -72,7 +89,9 @@ class CoffeeTime extends React.Component {
                 {this.props.coffeeTime.host.story}
               </p>
               <h3>What might we talk about?</h3>
-              <p className="host-intro-paragraph">{this.props.coffeeTime.topics}</p>
+              <p className="host-intro-paragraph">
+                {this.props.coffeeTime.topics}
+              </p>
             </div>
           </div>
         </div>;

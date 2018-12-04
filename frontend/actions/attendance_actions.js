@@ -16,7 +16,7 @@ export const removeAttendance = id => ({
 
 export const receiveAttendanceErrors = errors => ({
   type: RECEIVE_ATTENDANCE_ERRORS,
-  errors
+  errors,
 });
 
 export const createAttendance = attendance => dispatch => (

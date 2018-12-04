@@ -15,17 +15,17 @@ export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
 export const receiveCurrentUser = (currentUser) => {
   return {
     type: RECEIVE_CURRENT_USER,
-    currentUser
+    currentUser,
   };
 };
 
 export const logoutCurrentUser = () => {
   return {
-    type: LOGOUT_CURRENT_USER
+    type: LOGOUT_CURRENT_USER,
   };
 };
 
-//receiveSessionErrors will take an array
+// receiveSessionErrors will take an array
 export const receiveSessionErrors = (errors) => {
   return {
     type: RECEIVE_SESSION_ERRORS,
