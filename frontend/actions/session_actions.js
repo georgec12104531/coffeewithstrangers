@@ -47,6 +47,10 @@ export const signup = user => dispatch => (
   ))
 );
 
+// export const update = (user) => dispatch => (
+//   APIUtil.
+// )
+
 export const login = user => dispatch => (
   APIUtil.login(user).then(userFromServer => (
     dispatch(receiveCurrentUser(userFromServer))

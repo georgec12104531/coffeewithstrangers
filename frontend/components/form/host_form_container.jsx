@@ -1,18 +1,14 @@
 import { connect } from 'react-redux';
 import HostForm from './host_form';
 
-const mSP = (state) => {
-  return {
+const mSP = state => ({
 
-  };
-}
+});
 
 
-const mDP = (props) => {
-  return {
+const mDP = props => ({
 
-  };
-}
+})
 
 export default connect(
   mSP, 

@@ -8,7 +8,7 @@ class CoffeeTime extends React.Component {
   constructor(props) {
     super(props);
     this.handleCreateAttendance = this.handleCreateAttendance.bind(this);
-    this.handleDeleteAttendance = this.handleDeleteAttendance.bind(this);
+    // this.handleDeleteAttendance = this.handleDeleteAttendance.bind(this);
   }
 
   componentDidMount() {
@@ -21,10 +21,10 @@ class CoffeeTime extends React.Component {
     this.props.createAttendance({ user_id: this.props.currentUserId, coffee_time_id: this.props.id})
    }
 
-  handleDeleteAttendance(e) {
-    e.preventDefault();
-    this.props.deleteAttendance(50);
-  }
+  // handleDeleteAttendance(e) {
+  //   e.preventDefault();
+  //   this.props.deleteAttendance(84);
+  // }
 
   render() {
     if (this.props.coffeeTime === undefined) {
@@ -42,9 +42,9 @@ class CoffeeTime extends React.Component {
             <button onClick={this.handleCreateAttendance} className="coffee-time-side-bar-button">
               Sign me Up
             </button>
-            <button onClick={this.handleDeleteAttendance}>
+            {/* <button onClick={this.handleDeleteAttendance}>
               unsign me up!
-            </button>
+            </button> */}
             <div className="coffee-time-side-bar-info-container">
               <h5 className="coffee-time-side-bar-info-intro">
                 WHAT IS COFFEE TIME EXACTLY?

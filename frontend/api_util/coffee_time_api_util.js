@@ -17,7 +17,7 @@ export const createCoffeeTime = (coffee_time) => {
   return $.ajax({
     method: 'POST',
     url: "/api/coffee_times",
-    data: { coffee_time }
+    data: { coffee_time },
   });
 };
 
