@@ -36,7 +36,7 @@ const App = () => (
         {/* <Redirect to="/splash"/>  */}
         <Route exact path="/coffee-times" component={CoffeeTimesContainer}/>
         <Route exact path="/coffee-times/:coffeeTimeId" component={CoffeeTimeShowContainer}/>
-        <Route exact path="/locations/host" component={HostForm}/>
+        <Route exact path="/locations/:locationIdhost/host" component={HostForm}/>
         <Redirect to="/splash"/>
     </Switch>
   </div>

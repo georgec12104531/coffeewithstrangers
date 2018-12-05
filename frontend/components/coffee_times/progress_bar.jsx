@@ -3,9 +3,6 @@ import React from 'react';
 class ProgressBar extends React.Component {
 
   render() {
-
-
-    console.log(this.props.coffeeTime.coffee_time_attendees);
     
     if (this.props.coffeeTime.coffee_time_attendees === undefined) {
       return null;
