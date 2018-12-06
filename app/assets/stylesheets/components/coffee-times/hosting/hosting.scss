@@ -3,8 +3,12 @@
   background-color: #faf8e5;
   height: 100%;
   padding-top: 22px;
-  padding-left: 175px;
-  padding-right: 175px;
+  padding-left: 220px;
+  padding-right: 220px;
+}
+
+.coffee-time-hosting-form-container {
+  color: rgb(75, 75, 75)
 }
 
 .hosting-form-container {
@@ -12,6 +16,7 @@
   flex-direction: column;
   height: 900px;
   justify-content: space-around;
+  font-size: 17px;
 }
 
 .coffee-time-hosting-form-intro {
@@ -61,4 +66,22 @@ select:focus, input:focus, textarea:focus { outline: none; }
   height:  262px;
   width:  450px;
   border: 1px solid rgb(204, 204, 204); 
+  margin-top: 7px;
+  
+}
+
+.coffee-time-hosting-form-item-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.coffee-time-hosting-form-title {
+  margin: 0px;
+  padding: 0px;
+}
+
+.coffee-time-host-profile-container {
+  height: 1000px;
+  width: 800px;
 }

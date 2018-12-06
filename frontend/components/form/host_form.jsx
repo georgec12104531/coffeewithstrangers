@@ -49,7 +49,7 @@ class HostForm extends React.Component {
           </h2>
           <form className="hosting-form-container">
             <div>
-              <div className="coffee-time-hosting-form-title">Date</div>
+              Date
               <br />
               <input type="date" className="host-form-date" />
             </div>
@@ -70,40 +70,42 @@ class HostForm extends React.Component {
                 </select>
               </div>
             </div>
-            <div>
+            <div className="coffee-time-hosting-form-item-container">
               Address 1
               <br />
               <input type="text" />
             </div>
-            <div>
+            <div className="coffee-time-hosting-form-item-container">
               Address 2
               <br />
               <input type="text" />
             </div>
-            <div>
+            <div className="coffee-time-hosting-form-item-container">
               City
               <br />
               <input type="text" />
             </div>
-            <div>
+            <div className="coffee-time-hosting-form-item-container">
               State
               <br />
               <input type="text" />
             </div>
-            <div>
+            <div className="coffee-time-hosting-form-item-container">
               Zip
               <br />
               <input type="text" />
             </div>
-            <div>
-              What might you talk about?
+            <div className="coffee-time-hosting-form-item-container">
+              What might we talk about?
               <br />
               <textarea type="text" className="coffee-time-hosting-form-topics" />
             </div>
           </form>
         </div>
         <div className="coffee-time-host-profile-container">
-          <div>hi</div>
+          <h2 className="coffee-time-hosting-form-intro">
+            A Little About You...
+          </h2>
         </div>
       </div>;
   }
