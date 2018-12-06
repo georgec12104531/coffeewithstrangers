@@ -1,0 +1,40 @@
+.coffee-time-hosting-form-main-container {
+  display: flex;
+  background-color: rgb(250, 248, 229); 
+  height: 800px;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+.hosting-form-container {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: space-around;
+}
+
+.coffee-time-hosting-form-intro {
+  text-align: center;
+  color: #ff5600;
+  font-size: 27px;
+  margin-bottom: 7px;
+  width: 410px;
+}
+
+input[type=text] {
+  border: 1px solid rgb(204, 204, 204); 
+  height: 27px;
+  width: 400px;
+  padding-left: 6px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.host-form-date {
+  height: 27px;
+  width: 400px;
+  padding-left: 6px;
+}
+
