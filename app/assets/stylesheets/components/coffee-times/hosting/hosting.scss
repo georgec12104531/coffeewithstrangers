@@ -1,17 +1,16 @@
 .coffee-time-hosting-form-main-container {
   display: flex;
-  background-color: rgb(250, 248, 229); 
-  height: 800px;
-  width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
-
+  background-color: #faf8e5;
+  height: 100%;
+  padding-top: 22px;
+  padding-left: 175px;
+  padding-right: 175px;
 }
 
 .hosting-form-container {
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: 900px;
   justify-content: space-around;
 }
 
@@ -23,13 +22,17 @@
   width: 410px;
 }
 
-input[type=text] {
+input[type=text],input[type=date] {
   border: 1px solid rgb(204, 204, 204); 
-  height: 27px;
-  width: 400px;
+  height: 30px;
+  width: 441px;
   padding-left: 6px;
   margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 17px;
+  padding-left: 12px;
+  font-family: 'Raleway', sans-serif;
+  height: 33px;
 }
 
 .host-form-date {
@@ -38,3 +41,24 @@ input[type=text] {
   padding-left: 6px;
 }
 
+.coffee-time-hosting-form-time-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  width: 450px;
+}
+
+.coffee-time-hosting-form-time {
+  height: 38px;
+  width: 180px;
+  font-size: 16px;
+}
+
+select:focus, input:focus, textarea:focus { outline: none; }
+
+.coffee-time-hosting-form-topics {
+  height:  262px;
+  width:  450px;
+  border: 1px solid rgb(204, 204, 204); 
+}

@@ -39,6 +39,7 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  text-decoration: none;
 }
 
 button,
