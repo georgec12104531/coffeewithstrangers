@@ -20,3 +20,4 @@ export default connect(
   msp,
   mdp,
 )(CoffeeTime);
+

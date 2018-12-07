@@ -1,14 +1,14 @@
 export const fetchCoffeeTimes = () => {
   return $.ajax ({
     method: 'GET',
-    url: "/api/coffee_times"
+    url: "/api/coffee_times",
   });
 };
 
 export const fetchCoffeeTime = (id) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/coffee_times/${id}`
+    url: `/api/coffee_times/${id}`,
   });
 };
 
