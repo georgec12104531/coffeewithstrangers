@@ -16,6 +16,9 @@ class HostForm extends React.Component {
       introduction: "",
       story: ""
     }
+
+    this.handUpdate = this.handleUpdate.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleUpdate(field) {
@@ -28,8 +31,25 @@ class HostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // createCoffeeTime
-    // updateUser
+    this.props.createCoffeeTime({
+      host_id: this.props.currentUserId,
+      location_id: this.props.locationId,
+      date: this.state.date,
+      start_time: this.state.start_time,
+      end_time: this.state.end_time, 
+      address: this.state.address,
+      address2: this.state.address2,
+      city: this.state.city,
+      state: this.state.state,
+      zip: this.state.zip,
+      topics: this.state.topics
+    })
+
+    this.props.updateUser({
+      id: this.props.currentUserId,
+      introduction: this.state.introduction,
+      story: this.state.story
+    })
   }
 
   componentDidMount() {
@@ -41,6 +61,8 @@ class HostForm extends React.Component {
     if (this.props.currentUser === undefined) {
       return <div>loading...</div>;
     }
+
+    console.log()
 
     const fromTimes = [
       "8:00AM",
@@ -234,8 +256,9 @@ class HostForm extends React.Component {
               <textarea className="coffee-time-host-profile-intro" onChange={this.handleUpdate("story")} value={this.state.story}/>
             </div>
           </div>
+        <button className="coffee-time-host-submit" onClick={this.handleSubmit}>Submit</button>
         </div>
-        
+      
       </div>;
   }
 }
