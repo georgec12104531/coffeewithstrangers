@@ -83,7 +83,6 @@ class SessionForm extends React.Component {
           <br/>
           <input className="form-submit" type="submit" value={this.props.formType}/>
           <br/>
-          {/* {this.props.formType} */}
           <div className="session-form-alt-signup-main">{this.props.navLink}</div>
         </form>
       </div>

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import HostForm from './host_form';
-import { fetchUser } from '../../actions/user_actions';
+import { fetchUser, updateUser } from '../../actions/user_actions';
+import { createCoffeeTime } from '../../actions/coffee_time_actions';
 
 export const msp = state => ({
   currentUser: state.entities.users[state.session.id],
@@ -9,6 +10,8 @@ export const msp = state => ({
 
 export const mdp = dispatch => ({
   fetchUser: id => dispatch(fetchUser(id)),
+  updateUser: user => dispatch(updateUser(user)),
+  createCoffeeTime: coffeeTime => dispatch(createCoffeeTime(coffeeTime)),
 });
 
 export default connect(

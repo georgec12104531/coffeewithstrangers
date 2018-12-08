@@ -77,12 +77,13 @@ class CoffeeTime extends React.Component {
                 looking for a group of confused strangers at the cafe.)
               </h5>
             </div>
-            <div className="hosting-profile-pic" />
+            <div className="profile-pic" />
             <div className="host-box-info-container">
+              <h3>A little about me...</h3>
               <p className="host-intro-paragraph">
                 {this.props.coffeeTime.host.introduction}
               </p>
-              <h3>What's your story?</h3>
+              <h3>What's my story?</h3>
               <p className="host-intro-paragraph">
                 {this.props.coffeeTime.host.story}
               </p>

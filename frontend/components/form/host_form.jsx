@@ -1,9 +1,35 @@
 import React from 'react';
 
-
 class HostForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      date: "",
+      start_time: "",
+      end_time: "",
+      address: "",
+      address2: "",
+      city: "",
+      state: "",
+      zip: "",
+      topics: "",
+      introduction: "",
+      story: ""
+    }
+  }
+
+  handleUpdate(field) {
+    return (e) => {
+      this.setState({
+      [field]: e.currentTarget.value
+      })
+    }
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    // createCoffeeTime
+    // updateUser
   }
 
   componentDidMount() {
@@ -127,8 +153,7 @@ class HostForm extends React.Component {
       "10:00PM"
     ];
 
-    return (
-      <div className="coffee-time-hosting-form-main-container">
+    return <div className="coffee-time-hosting-form-main-container">
         <div className="coffee-time-hosting-form-container">
           <h2 className="coffee-time-hosting-form-intro">
             Plan Your Coffee Time
@@ -137,18 +162,18 @@ class HostForm extends React.Component {
             <div>
               Date
               <br />
-              <input type="date" className="host-form-date" />
+              <input type="date" className="host-form-date" onChange={this.handleUpdate("date")} value={this.state.date} />
             </div>
             <div>
               <div className="coffee-time-hosting-form-time-container">
-                <select size="1" className="coffee-time-hosting-form-time">
+                <select size="1" className="coffee-time-hosting-form-time" onChange={this.handleUpdate("start_time")} value={this.state.start_time}>
                   <option value="disabled">Select Start Time</option>
                   {fromTimes.map((time, idx) => (
                     <option key={idx}>{time}</option>
                   ))}
                 </select>
                 to
-                <select size="1" className="coffee-time-hosting-form-time">
+                <select size="1" className="coffee-time-hosting-form-time" onChange={this.handleUpdate("end_time")} value={this.state.end_time}>
                   <option value="disabled">Select End Time</option>
                   {toTimes.map((time, idx) => (
                     <option key={idx}>{time}</option>
@@ -159,35 +184,33 @@ class HostForm extends React.Component {
             <div className="coffee-time-hosting-form-item-container">
               Address 1
               <br />
-              <input type="text" />
+              <input type="text" onChange={this.handleUpdate("address")} value={this.state.address} />
             </div>
             <div className="coffee-time-hosting-form-item-container">
               Address 2
               <br />
-              <input type="text" />
+              <input type="text" onChange={this.handleUpdate("address2")} value={this.state.address2} />
             </div>
             <div className="coffee-time-hosting-form-item-container">
               City
               <br />
-              <input type="text" />
+              <input type="text" onChange={this.handleUpdate("city")} value={this.state.city} />
             </div>
             <div className="coffee-time-hosting-form-item-container">
               State
               <br />
-              <input type="text" />
+              <input type="text" onChange={this.handleUpdate("state")} value={this.state.state} />
             </div>
             <div className="coffee-time-hosting-form-item-container">
               Zip
               <br />
-              <input type="text" />
+              <input type="text" onChange={this.handleUpdate("zip")} value={this.state.zip} />
+            
             </div>
             <div className="coffee-time-hosting-form-item-container">
               What might we talk about?
               <br />
-              <textarea
-                type="text"
-                className="coffee-time-hosting-form-topics"
-              />
+              <textarea type="text" className="coffee-time-hosting-form-topics" onChange={this.handleUpdate("topics")} value={this.state.topics} />
             </div>
           </form>
         </div>
@@ -195,23 +218,25 @@ class HostForm extends React.Component {
           <h2 className="coffee-time-hosting-form-intro">
             A Little About You...
           </h2>
-          <h4 className="coffee-time-host-profile-name">{this.props.currentUser.name}</h4>
+          <h3 className="coffee-time-host-profile-name">
+            {this.props.currentUser.name}
+          </h3>
           <div className="hosting-profile-pic" />
           <div className="coffee-time-host-profile-sub-container">
             <div>
               A Brief Introduction
               <br />
-              <textarea className="coffee-time-host-profile-intro" />
+              <textarea className="coffee-time-host-profile-intro" onChange={this.handleUpdate("introduction")} value={this.state.introduction} />
             </div>
             <div>
               Your Story
               <br />
-              <textarea className="coffee-time-host-profile-intro" />
+              <textarea className="coffee-time-host-profile-intro" onChange={this.handleUpdate("story")} value={this.state.story}/>
             </div>
           </div>
         </div>
-      </div>
-    );
+        
+      </div>;
   }
 }
 

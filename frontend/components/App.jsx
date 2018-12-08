@@ -31,13 +31,13 @@ const App = () => (
         {/* auth routes only seen when not logged in*/}
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <AuthRoute exact path="/splash" component={Splash} />
+        <Route exact path="/splash" component={Splash} />
         {/* protected routes only seen when logged in*/}
         {/* <Redirect to="/splash"/>  */}
         <Route exact path="/coffee-times" component={CoffeeTimesContainer}/>
         <Route exact path="/coffee-times/:coffeeTimeId" component={CoffeeTimeShowContainer}/>
         <Route exact path="/locations/:locationIdhost/host" component={HostFormContainer}/>
-        <Redirect to="/splash"/>
+        {/* <Redirect to="/splash"/> */}
     </Switch>
   </div>
 );
