@@ -16,6 +16,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import CoffeeTimesContainer from './coffee_times/coffee_times_container';
 import CoffeeTimeShowContainer from './coffee_time/coffee_time_show_container';
 import HostFormContainer from './form/host_form_container';
+import DashboardContainer from './dashboard/dashboard_container';
 
 const App = () => (
   <div>
@@ -31,6 +32,7 @@ const App = () => (
         {/* auth routes only seen when not logged in*/}
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <Route exact path='/dashboard' component={DashboardContainer} />
         <Route exact path="/splash" component={Splash} />
         {/* protected routes only seen when logged in*/}
         {/* <Redirect to="/splash"/>  */}
