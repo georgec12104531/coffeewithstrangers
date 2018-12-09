@@ -175,90 +175,92 @@ class HostForm extends React.Component {
       "10:00PM"
     ];
 
-    return <div className="coffee-time-hosting-form-main-container">
-        <div className="coffee-time-hosting-form-container">
-          <h2 className="coffee-time-hosting-form-intro">
-            Plan Your Coffee Time
-          </h2>
-          <form className="hosting-form-container">
-            <div>
-              Date
-              <br />
-              <input type="date" className="host-form-date" onChange={this.handleUpdate("date")} value={this.state.date} />
-            </div>
-            <div>
-              <div className="coffee-time-hosting-form-time-container">
-                <select size="1" className="coffee-time-hosting-form-time" onChange={this.handleUpdate("start_time")} value={this.state.start_time}>
-                  <option value="disabled">Select Start Time</option>
-                  {fromTimes.map((time, idx) => (
-                    <option key={idx}>{time}</option>
-                  ))}
-                </select>
-                to
-                <select size="1" className="coffee-time-hosting-form-time" onChange={this.handleUpdate("end_time")} value={this.state.end_time}>
-                  <option value="disabled">Select End Time</option>
-                  {toTimes.map((time, idx) => (
-                    <option key={idx}>{time}</option>
-                  ))}
-                </select>
+    return <div className="coffee-time-hosting-form-super-main-container">
+        <div className="coffee-time-hosting-form-main-container">
+          <div className="coffee-time-hosting-form-container">
+            <h2 className="coffee-time-hosting-form-intro">
+              Plan Your Coffee Time
+            </h2>
+            <form className="hosting-form-container">
+              <div>
+                Date
+                <br />
+                <input type="date" className="host-form-date" onChange={this.handleUpdate("date")} value={this.state.date} />
+              </div>
+              <div>
+                <div className="coffee-time-hosting-form-time-container">
+                  <select size="1" className="coffee-time-hosting-form-time" onChange={this.handleUpdate("start_time")} value={this.state.start_time}>
+                    <option value="disabled">Select Start Time</option>
+                    {fromTimes.map((time, idx) => (
+                      <option key={idx}>{time}</option>
+                    ))}
+                  </select>
+                  to
+                  <select size="1" className="coffee-time-hosting-form-time" onChange={this.handleUpdate("end_time")} value={this.state.end_time}>
+                    <option value="disabled">Select End Time</option>
+                    {toTimes.map((time, idx) => (
+                      <option key={idx}>{time}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="coffee-time-hosting-form-item-container">
+                Address 1
+                <br />
+                <input type="text" onChange={this.handleUpdate("address")} value={this.state.address} />
+              </div>
+              <div className="coffee-time-hosting-form-item-container">
+                Address 2
+                <br />
+                <input type="text" onChange={this.handleUpdate("address2")} value={this.state.address2} />
+              </div>
+              <div className="coffee-time-hosting-form-item-container">
+                City
+                <br />
+                <input type="text" onChange={this.handleUpdate("city")} value={this.state.city} />
+              </div>
+              <div className="coffee-time-hosting-form-item-container">
+                State
+                <br />
+                <input type="text" onChange={this.handleUpdate("state")} value={this.state.state} />
+              </div>
+              <div className="coffee-time-hosting-form-item-container">
+                Zip
+                <br />
+                <input type="text" onChange={this.handleUpdate("zip")} value={this.state.zip} />
+              </div>
+              <div className="coffee-time-hosting-form-item-container">
+                What might we talk about?
+                <br />
+                <textarea type="text" className="coffee-time-hosting-form-topics" onChange={this.handleUpdate("topics")} value={this.state.topics} />
+              </div>
+            </form>
+          </div>
+          <div className="coffee-time-host-profile-container">
+            <h2 className="coffee-time-hosting-form-intro">
+              A Little About You...
+            </h2>
+            <h3 className="coffee-time-host-profile-name">
+              {this.props.currentUser.name}
+            </h3>
+            <div className="hosting-profile-pic" />
+            <div className="coffee-time-host-profile-sub-container">
+              <div>
+                A Brief Introduction
+                <br />
+                <textarea className="coffee-time-host-profile-intro" onChange={this.handleUpdate("introduction")} value={this.state.introduction} />
+              </div>
+              <div>
+                Your Story
+                <br />
+                <textarea className="coffee-time-host-profile-intro" onChange={this.handleUpdate("story")} value={this.state.story} />
               </div>
             </div>
-            <div className="coffee-time-hosting-form-item-container">
-              Address 1
-              <br />
-              <input type="text" onChange={this.handleUpdate("address")} value={this.state.address} />
-            </div>
-            <div className="coffee-time-hosting-form-item-container">
-              Address 2
-              <br />
-              <input type="text" onChange={this.handleUpdate("address2")} value={this.state.address2} />
-            </div>
-            <div className="coffee-time-hosting-form-item-container">
-              City
-              <br />
-              <input type="text" onChange={this.handleUpdate("city")} value={this.state.city} />
-            </div>
-            <div className="coffee-time-hosting-form-item-container">
-              State
-              <br />
-              <input type="text" onChange={this.handleUpdate("state")} value={this.state.state} />
-            </div>
-            <div className="coffee-time-hosting-form-item-container">
-              Zip
-              <br />
-              <input type="text" onChange={this.handleUpdate("zip")} value={this.state.zip} />
-            
-            </div>
-            <div className="coffee-time-hosting-form-item-container">
-              What might we talk about?
-              <br />
-              <textarea type="text" className="coffee-time-hosting-form-topics" onChange={this.handleUpdate("topics")} value={this.state.topics} />
-            </div>
-          </form>
-        </div>
-        <div className="coffee-time-host-profile-container">
-          <h2 className="coffee-time-hosting-form-intro">
-            A Little About You...
-          </h2>
-          <h3 className="coffee-time-host-profile-name">
-            {this.props.currentUser.name}
-          </h3>
-          <div className="hosting-profile-pic" />
-          <div className="coffee-time-host-profile-sub-container">
-            <div>
-              A Brief Introduction
-              <br />
-              <textarea className="coffee-time-host-profile-intro" onChange={this.handleUpdate("introduction")} value={this.state.introduction} />
-            </div>
-            <div>
-              Your Story
-              <br />
-              <textarea className="coffee-time-host-profile-intro" onChange={this.handleUpdate("story")} value={this.state.story}/>
-            </div>
           </div>
-        <button className="coffee-time-host-submit" onClick={this.handleSubmit}>Submit</button>
         </div>
-      
+        <button className="coffee-time-host-submit" onClick={this.handleSubmit}>
+          LET'S BOOGIE
+        </button>
       </div>;
   }
 }

@@ -1,8 +1,16 @@
+.coffee-time-hosting-form-super-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #faf8e5;
+  height: 1100px;
+}
+
+   
 .coffee-time-hosting-form-main-container {
   display: flex;
   justify-content: center;
-  background-color: #faf8e5;
-  height: 100%;
+  height: 950px;
   padding-top: 22px;
   padding-left: 220px;
   padding-right: 220px;
@@ -11,12 +19,13 @@
 .coffee-time-hosting-form-container {
   color: rgb(75, 75, 75);
   width: 500px;
+  height: 900px;
 }
 
 .hosting-form-container {
   display: flex;
   flex-direction: column;
-  height: 852px;
+  height: 816px;
   justify-content: space-around;
   font-size: 17px;
   width: 456px;
@@ -95,7 +104,7 @@ select:focus, input:focus, textarea:focus { outline: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 1000px;
+  height: 924px;
   width: 500px;
   color: rgb(75, 75, 75);
 }
@@ -112,9 +121,9 @@ select:focus, input:focus, textarea:focus { outline: none; }
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 320px;
-    width: 320px;
-    margin-bottom: 17px;
+    height: 350px;
+    width: 350px;
+    margin-bottom: 35pcpx;
 }
 
 
@@ -133,9 +142,16 @@ select:focus, input:focus, textarea:focus { outline: none; }
 
 
 .coffee-time-host-submit {
-  height: 20px;
-  width: 100px;
-  background-color: orangered;
+  height: 55px;
+  width: 381px;
+  border-radius: 10px;
+  border-radius: -r;
+  color: white;
+  background-color: #ff5600;
+  font-size: 18px;
 }
 
-   
+.coffee-time-host-submit:hover {
+  background-color: rgb(216, 40, 0);
+}
+
