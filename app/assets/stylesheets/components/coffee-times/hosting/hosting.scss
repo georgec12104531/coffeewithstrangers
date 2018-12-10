@@ -130,7 +130,7 @@ select:focus, input:focus, textarea:focus { outline: none; }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 494px;
+  height: 509px;
   justify-content: space-evenly;
 }
 
@@ -148,6 +148,7 @@ select:focus, input:focus, textarea:focus { outline: none; }
   color: white;
   background-color: #ff5600;
   font-size: 18px;
+  border: none;
 }
 
 .coffee-time-host-submit:hover {

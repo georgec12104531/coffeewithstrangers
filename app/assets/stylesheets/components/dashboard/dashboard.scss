@@ -1,0 +1,18 @@
+.dashboard-nav-main-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 60px;
+  background-color: #fce6b8;
+}
+
+.dashboard-nav {
+  height: 60px;
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;  
+  align-items: center;
+}
+
+.dashboard-nav-bar {
+  color: rgb(70, 74, 82);
+}
