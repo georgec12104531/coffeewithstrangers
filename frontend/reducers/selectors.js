@@ -7,11 +7,8 @@
 
 export const myAttendances = state => (
   Object.values(state.entities.attendances).filter(attendance => attendance.user_id === state.session.id).map( el => el.coffee_time_id)
-)
+);
 
-export const myCoffeeTimesObjects = state => {
-        const coffees = Object.values(state.entities.coffeeTimes).filter(coffeeTime => 
-          myAttendances(state).includes(coffeeTime.id));
-      return coffees
-    }
-
+export const myCoffeeTimes = state => (
+  Object.values(state.entities.coffeeTimes).filter(coffeeTime => myAttendances(state).includes(coffeeTime.id))
+);
