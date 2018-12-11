@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       resources :coffee_time_attendances, only: [:create]
     end
 
-    resources :coffee_time_attendances, only: [:update, :destroy]
+    resources :coffee_time_attendances, only: [:update, :destroy, :index]
 
   end
 

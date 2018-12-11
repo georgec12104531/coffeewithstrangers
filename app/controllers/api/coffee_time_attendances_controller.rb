@@ -1,5 +1,10 @@
 class Api::CoffeeTimeAttendancesController < ApplicationController
 
+  def index
+    @coffee_time_attendances = CoffeeTimeAttendance.all 
+    render "api/coffee_time_attendance/index"
+  end
+
   def create
     @coffee_time_attendance = CoffeeTimeAttendance.new(coffee_time_attendance_params)
 

@@ -1,3 +1,10 @@
+export const fetchAttendances = () => {
+  return $.ajax({ 
+    method: 'GET', 
+    url: '/api/coffee_time_attendances', 
+  });
+};
+
 export const createAttendance = (attendance) => {
   return $.ajax({
     method: 'POST',
