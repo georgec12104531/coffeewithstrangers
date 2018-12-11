@@ -2,10 +2,13 @@ import { connect } from 'react-redux';
 import Dashboard from './dashboard';
 import { fetchCoffeeTimes } from '../../actions/coffee_time_actions';
 import { fetchAttendances } from '../../actions/attendance_actions';
+import { myAttendances, myCoffeeTimesObjects } from "../../reducers/selectors";
 
 
 export const msp = state => ({ 
-  myAttendances: Object.values(state.entities.attendances),
+  coffeeTimes: Object.values(state.entities.coffeeTimes),
+  myAttendances: myAttendances(state),
+  myCoffeeTimesObjects: myCoffeeTimesObjects(state),
 });
 
 

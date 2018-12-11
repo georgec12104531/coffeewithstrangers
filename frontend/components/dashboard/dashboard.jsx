@@ -18,13 +18,13 @@ class Dashboard extends React.Component {
 
   render() {
     
-   
-
-    const coffeeTimes = () => {
-      return(
-        <div>"This will be all the coffeeTimes you you are attending</div>
-      )
+    if (this.props.coffeeTimes === undefined) {
+      return <div>Loading...</div>
     }
+
+    console.log("this is attendances", this.props.myAttendances)
+
+    console.log(this.props.myCoffeeTimesObjects);
 
     return <div className="dashboard-main-container">
         <div className="dashboard-nav-main-container">
