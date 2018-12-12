@@ -2,10 +2,14 @@
   display: flex;
   margin-left: 314px;
   margin-right: 314px;
+  justify-content: center;
 }
 
 .my-coffeeTimes-container {
   width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dashboard-nav-main-container {
@@ -64,12 +68,9 @@
   flex-direction: column;
   align-items: flex-start;
   background-color: #FEFEFE;
-  margin: 30px;
+  margin: 11px;
   height: 157px;
   width: 357px;
   border: 1px solid #DDD;
 }
 
-.my-ct-address {
-  font-size: 19px;
-}

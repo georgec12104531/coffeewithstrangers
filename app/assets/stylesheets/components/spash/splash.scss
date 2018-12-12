@@ -14,7 +14,7 @@ body {
 }
 
 .background-film {
-  background: rgba(247,191,77,0.87);
+  background: rgba(247,191,77,0.3);
   opacity: 1.2;
   height: 411px;
 }
@@ -64,13 +64,14 @@ body {
   display: flex;
   justify-content: space-evenly;
   background: #F3ECCE;
-  height: 143px;
+  height: 179px;
 }
 
 .description-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .description-header {
@@ -80,6 +81,7 @@ body {
   font-size: 30px;
   height: 30px;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .description-message {

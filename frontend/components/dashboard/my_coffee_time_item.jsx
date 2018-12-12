@@ -18,7 +18,6 @@ const myCoffeeTimeItem = (props) => {
         {props.coffeeTime.address},{" "} 
         {props.coffeeTime.address2}
       </h4>
-      
     </div>
     <div className="my-coffeeTimes-cancel-button">
       CANCEL MY SPOT
