@@ -1,0 +1,36 @@
+.my-ct-weekday {
+  color: #929292;
+}
+
+.my-ct-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 355px;
+  justify-content: space-evenly;
+  margin: 14px;
+}
+
+.my-ct-month-day {
+  font-size: 24px;  
+}
+
+.my-ct-time {
+  font-size: 19px;
+}
+
+.my-ct-address {
+  font-size: 17px;
+  margin: 0px;
+}
+
+.my-coffeeTimes-cancel-button {
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  border-top: 1px solid  #DDD;
+  width: 96%;
+  font-size: 12px;
+  color: #EF6236;
+  font-weight: bold;
+}

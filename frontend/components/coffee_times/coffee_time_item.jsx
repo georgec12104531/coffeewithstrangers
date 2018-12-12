@@ -1,10 +1,9 @@
 import React from 'react';
 import { withRouter, Link } from "react-router-dom";
-import moment from "moment";
+import moment from 'moment';
 import ProgressBar from './progress_bar';
 
 class CoffeeTimeItem extends React.Component {
-
 
   constructor(props) {
     super(props);
