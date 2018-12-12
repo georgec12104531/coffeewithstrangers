@@ -27,37 +27,29 @@ form {
   border-radius: 8px;
 }
 
-.username-form {
+input.username-form[type=text] {
   height: 50px;
   width: 661px;
   border-radius: 4px;
-}
-
-
-.password-form {
-  height: 50px;
-  width: 661px;
-  border-radius: 4px;
-}
-
-
-input[type=text] {
   font-size: 17px;
   padding-left: 12px;
   font-family: 'Raleway', sans-serif;
 }
 
-input[type=text]:focus {
+input.username-form[type=text]:focus {
   outline: none;
 }
 
-input[type=password] {
+input.password-form[type=password] {
   font-size: 17px;
   padding-left: 12px;
   font-family: 'Raleway', sans-serif;
+  height: 50px;
+  width: 661px;
+  border-radius: 4px;
 }
 
-input[type=password]:focus {
+input.password-form[type=password]:focus {
   outline: none;
 }
 
