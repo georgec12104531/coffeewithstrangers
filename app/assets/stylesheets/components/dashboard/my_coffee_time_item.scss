@@ -32,4 +32,10 @@
   font-size: 12px;
   color: #EF6236;
   font-weight: bold;
+  // cursor: pointer;
+}
+
+.my-coffeeTimes-cancel-button:hover {
+  color: rgb(216, 40, 0);
+  cursor: pointer;
 }

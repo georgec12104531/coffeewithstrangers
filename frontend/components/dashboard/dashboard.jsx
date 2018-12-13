@@ -1,6 +1,6 @@
 import React from 'react';
 import MyCoffeeTimeItem from './my_coffee_time_item';
-import MyHostCoffeeTimeItem from './my_coffee_time_item';
+import MyHostCoffeeTimeItem from './my_host_coffee_time_item';
 
 class Dashboard extends React.Component {
 
@@ -38,7 +38,7 @@ class Dashboard extends React.Component {
 
     const hostedCoffeeTimes = this.props.myHostedCoffeeTimes.map((coffeeTime, idx) => {
       return <div key={idx}>
-        <MyHostCoffeeTimeItem coffeeTime={coffeeTime} myAttendances={this.props.myAttendances} />
+        <MyHostCoffeeTimeItem coffeeTime={coffeeTime}/>
         </div>;
     })
     

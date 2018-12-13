@@ -2,8 +2,6 @@ import React from 'react';
 import moment from "moment";
 
 const MyHostCoffeeTimeItem = (props) => {
-  
-
   return <div className="my-coffee-time-item-container">
     <div className="my-ct-date">
       <div className="my-ct-weekday">
