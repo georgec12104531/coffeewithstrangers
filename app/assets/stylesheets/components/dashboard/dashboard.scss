@@ -1,8 +1,12 @@
 .my-coffeeTimes-main-container {
   display: flex;
-  margin-left: 314px;
-  margin-right: 314px;
+  margin-left: 77px;
+  margin-right: 77px;
   justify-content: center;
+}
+
+.dashboard-main-container {
+  background-color: #faf7e6;
 }
 
 .my-coffeeTimes-container {
@@ -56,8 +60,13 @@
   color: white;
   display: inline-block;
   letter-spacing: 2px;
-  text-decoration: none;
+  border: none;
 }  
+
+.my-coffeeTimes-button:hover {
+  background-color: #d82800;
+} 
+
 
 .my-coffeeTimes-title {
   color: #464a51
@@ -69,7 +78,7 @@
   align-items: flex-start;
   background-color: #FEFEFE;
   margin: 11px;
-  height: 157px;
+  height: 155px;
   width: 357px;
   border: 1px solid #DDD;
 }

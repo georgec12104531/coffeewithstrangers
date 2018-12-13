@@ -50,6 +50,10 @@ class HostForm extends React.Component {
       introduction: this.state.introduction,
       story: this.state.story
     })
+
+    //Need to add attendance as well
+
+    this.props.history.push('/dashboard')
   }
 
   componentDidMount() {

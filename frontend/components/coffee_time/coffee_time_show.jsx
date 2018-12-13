@@ -19,6 +19,7 @@ class CoffeeTime extends React.Component {
   handleCreateAttendance(e) {
     e.preventDefault();
     this.props.createAttendance({ user_id: this.props.currentUserId, coffee_time_id: this.props.id})
+    setTimeout(() => this.props.history.push('/dashboard'), 1000);
    }
 
   // handleDeleteAttendance(e) {

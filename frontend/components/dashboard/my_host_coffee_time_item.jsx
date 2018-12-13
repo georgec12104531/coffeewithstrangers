@@ -1,14 +1,8 @@
 import React from 'react';
-import moment from 'moment';
+import moment from "moment";
 
-const myCoffeeTimeItem = (props) => {
-
-  if (props.myAttendances === undefined) {
-    return <div>Loading My Attendances...</div>;
-  }
- 
-  const myAttendance = props.myAttendances.filter(attendance => attendance.coffee_time_id === props.coffeeTime.id)
-  console.log(myAttendance)
+const MyHostCoffeeTimeItem = (props) => {
+  
 
   return <div className="my-coffee-time-item-container">
     <div className="my-ct-date">
@@ -22,8 +16,8 @@ const myCoffeeTimeItem = (props) => {
         {props.coffeeTime.start_time} - {props.coffeeTime.end_time}
       </div>
       <h4 className="my-ct-address">
-        {props.coffeeTime.address},{" "} 
-        {props.coffeeTime.address2} 
+        {props.coffeeTime.address},{" "}
+        {props.coffeeTime.address2}
       </h4>
     </div>
     <div className="my-coffeeTimes-cancel-button" >
@@ -33,4 +27,4 @@ const myCoffeeTimeItem = (props) => {
   </div>;
 }
 
-export default myCoffeeTimeItem;
+export default MyHostCoffeeTimeItem;

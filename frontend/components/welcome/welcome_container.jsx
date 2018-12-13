@@ -7,7 +7,7 @@ import Welcome from './welcome';
 
 const mSP = (state) => {
   return {
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
   };
 };
 

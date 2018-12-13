@@ -1,5 +1,6 @@
 import React from 'react';
 import MyCoffeeTimeItem from './my_coffee_time_item';
+import MyHostCoffeeTimeItem from './my_coffee_time_item';
 
 class Dashboard extends React.Component {
 
@@ -9,6 +10,8 @@ class Dashboard extends React.Component {
       coffeeTimes: false,
       profile: true 
     }
+
+    this.handleCoffeeTimes = this.handleCoffeeTimes.bind(this);
   }
 
   componentDidMount() {
@@ -16,26 +19,32 @@ class Dashboard extends React.Component {
     this.props.fetchAttendances();
   }
 
-  handleCoffeeTimesButton(e) {
+  handleCoffeeTimes(e) {
     e.preventDefault();
     this.props.history.push(`/coffee-times`);
   }
 
   render() {
+    
+    console.log("My Hosted Coffee Tmes", this.props.myHostedCoffeeTimes);
 
     const coffeeTimes = this.props.myCoffeeTimes.map((coffeeTime, idx) => {
       return (
         <div key={idx}>
-          <MyCoffeeTimeItem coffeeTime={coffeeTime} />  
+          <MyCoffeeTimeItem coffeeTime={coffeeTime} deleteAttendance={this.props.deleteAttendance} myAttendances={this.props.myAttendances} />  
         </div>
       )
     })
+
+    const hostedCoffeeTimes = this.props.myHostedCoffeeTimes.map((coffeeTime, idx) => {
+      return <div key={idx}>
+        <MyHostCoffeeTimeItem coffeeTime={coffeeTime} myAttendances={this.props.myAttendances} />
+        </div>;
+    })
     
     if (this.props.coffeeTimes === undefined) {
-      return <div>Loading...</div>
+      return <div>Loading Coffee Times...</div>
     }
-
-    console.log(this.props.myCoffeeTimes);
 
     return <div className="dashboard-main-container">
         <div className="dashboard-nav-main-container">
@@ -45,20 +54,24 @@ class Dashboard extends React.Component {
           </div>
         </div>
         {this.state.coffeeTimes ? <div>
-            Hi
+            Profile Page
           </div> : <div className="my-coffeeTimes-main-container">
             <div className="my-coffeeTimes-sidebar-container">
               <h2 className="my-coffeeTimes-welcome-message">
                 Welcome Home, Stranger!{" "}
               </h2>
               <h2>What are you grateful today?</h2>
-              <button className="my-coffeeTimes-button">
+              <button className="my-coffeeTimes-button" onClick={this.handleCoffeeTimes}>
                 Sign Up For A Coffee Time!
               </button>
             </div>
             <div className="my-coffeeTimes-container">
               <h2 className="my-coffeeTimes-title">Coffee Times You Have Coming up...</h2>
               {coffeeTimes}
+            </div>
+            <div className="my-coffeeTime-container">
+              <h2 className="my-coffeeTimes-title">Coffee Times You Are Hosting...</h2>
+              {hostedCoffeeTimes}
             </div>
           </div>}
       </div>;

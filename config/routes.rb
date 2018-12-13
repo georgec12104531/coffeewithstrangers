@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     end
 
     resources :coffee_time_attendances, only: [:update, :destroy, :index]
-
   end
 
   root to: "static_pages#root"

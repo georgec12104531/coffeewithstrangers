@@ -9,6 +9,7 @@ class Welcome extends React.Component {
     this.handleDemoLogin = this.handleDemoLogin.bind(this);
     this.handleCoffeeTimes = this.handleCoffeeTimes.bind(this);
     this.handleDashboard = this.handleDashboard.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   handleDemoLogin(e) {
@@ -26,6 +27,12 @@ class Welcome extends React.Component {
   handleDashboard(e) {
     e.preventDefault();
     this.props.history.push('/dashboard');
+  }
+
+  handleLogout(e) {
+    e.preventDefault();
+    this.props.logout();
+    this.props.history.push('/coffee-times');
   }
 
   render() {
@@ -52,7 +59,7 @@ class Welcome extends React.Component {
         <button type="button" className="personal-welcome-button" onClick={this.handleDashboard}>
           DASHBOARD
         </button>
-        <button type="button" className="personal-welcome-button" onClick={this.props.logout}>
+        <button type="button" className="personal-welcome-button" onClick={this.handleLogout}>
           SIGN OUT
         </button>
       </nav>;
