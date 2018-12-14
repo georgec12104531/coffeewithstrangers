@@ -12,7 +12,6 @@ export const fetchCoffeeTime = (id) => {
   });
 };
 
-
 export const createCoffeeTime = (coffee_time) => {
   return $.ajax({
     method: 'POST',
@@ -30,8 +29,8 @@ export const updateCoffeeTime = (coffeeTime) => {
 };
 
 export const deleteCoffeeTime = (id) => {
-  $.ajax({
+  return $.ajax({
     method: 'DELETE',
-    url: `/api/coffee_times/${id}`
+    url: `/api/coffee_times/${id}`,
   });
 };

@@ -2,6 +2,8 @@ import React from 'react';
 import moment from "moment";
 
 const MyHostCoffeeTimeItem = (props) => {
+
+  console.log(props.coffeeTime.id)
   return <div className="my-coffee-time-item-container">
     <div className="my-ct-date">
       <div className="my-ct-weekday">
@@ -18,9 +20,8 @@ const MyHostCoffeeTimeItem = (props) => {
         {props.coffeeTime.address2}
       </h4>
     </div>
-    <div className="my-coffeeTimes-cancel-button" >
-      {/* onClick={() => props.deleteAttendance()}   */}
-      CANCEL MY SPOT
+    <div className="my-coffeeTimes-cancel-button" onClick={() => props.deleteCoffeeTime(props.coffeeTime.id)} >
+      CANCEL COFFEE TIME
     </div>
   </div>;
 }

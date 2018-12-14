@@ -52,5 +52,4 @@ class CoffeeTimeItem extends React.Component {
   }
 }
 
-
 export default withRouter(CoffeeTimeItem)

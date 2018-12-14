@@ -17,6 +17,7 @@ class Dashboard extends React.Component {
   componentDidMount() {
     this.props.fetchCoffeeTimes();
     this.props.fetchAttendances();
+    window.scrollTo(0, 0);
   }
 
   handleCoffeeTimes(e) {
@@ -38,7 +39,7 @@ class Dashboard extends React.Component {
 
     const hostedCoffeeTimes = this.props.myHostedCoffeeTimes.map((coffeeTime, idx) => {
       return <div key={idx}>
-        <MyHostCoffeeTimeItem coffeeTime={coffeeTime}/>
+          <MyHostCoffeeTimeItem coffeeTime={coffeeTime} deleteCoffeeTime={this.props.deleteCoffeeTime}/>
         </div>;
     })
     
@@ -69,7 +70,7 @@ class Dashboard extends React.Component {
               <h2 className="my-coffeeTimes-title">Coffee Times You Have Coming up...</h2>
               {coffeeTimes}
             </div>
-            <div className="my-coffeeTime-container">
+            <div className="my-coffeeTimes-container">
               <h2 className="my-coffeeTimes-title">Coffee Times You Are Hosting...</h2>
               {hostedCoffeeTimes}
             </div>

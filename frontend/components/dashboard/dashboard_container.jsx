@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Dashboard from './dashboard';
-import { fetchCoffeeTimes } from '../../actions/coffee_time_actions';
+import { fetchCoffeeTimes, deleteCoffeeTime } from '../../actions/coffee_time_actions';
 import { fetchAttendances, deleteAttendance } from '../../actions/attendance_actions';
 import { myCoffeeTimes, myHostedCoffeeTimes } from '../../reducers/selectors';
 
@@ -15,6 +15,7 @@ export const mdp = dispatch => ({
   fetchCoffeeTimes: () => dispatch(fetchCoffeeTimes()),
   fetchAttendances: () => dispatch(fetchAttendances()),
   deleteAttendance: (id, coffeeTimeId) => dispatch(deleteAttendance(id, coffeeTimeId)),
+  deleteCoffeeTime: id => dispatch(deleteCoffeeTime(id)),
 });
 
 export default connect(msp, mdp)(Dashboard);

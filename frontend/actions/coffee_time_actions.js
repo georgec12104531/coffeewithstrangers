@@ -66,3 +66,4 @@ export const deleteCoffeeTime = id => dispatch => (
     dispatch(receiveCoffeeTimeErrors(err.responseJSON))
   ))
 );
+
