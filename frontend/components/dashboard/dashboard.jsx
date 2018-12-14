@@ -12,6 +12,7 @@ class Dashboard extends React.Component {
     }
 
     this.handleCoffeeTimes = this.handleCoffeeTimes.bind(this);
+    this.handleShowCoffeeTime = this.handleShowCoffeeTime.bind(this);
   }
 
   componentDidMount() {
@@ -20,18 +21,23 @@ class Dashboard extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  handleCoffeeTimes(e) {
+  handleCoffeeTimes() {
     e.preventDefault();
     this.props.history.push(`/coffee-times`);
   }
 
+  handleShowCoffeeTime(coffeeTime) {
+    return e => {
+      e.preventDefault();
+      this.props.history.push(`/coffee-times/${coffeeTime.id}`)
+    }
+  }
+
   render() {
-    
-    console.log("My Hosted Coffee Tmes", this.props.myHostedCoffeeTimes);
 
     const coffeeTimes = this.props.myCoffeeTimes.map((coffeeTime, idx) => {
       return (
-        <div key={idx}>
+        <div key={idx} onClick={this.handleShowCoffeeTime(coffeeTime)}>
           <MyCoffeeTimeItem coffeeTime={coffeeTime} deleteAttendance={this.props.deleteAttendance} myAttendances={this.props.myAttendances} />  
         </div>
       )

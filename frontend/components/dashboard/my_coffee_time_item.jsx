@@ -1,39 +1,44 @@
 import React from 'react';
 import moment from 'moment';
 
-const MyCoffeeTimeItem = (props) => {
+class MyCoffeeTimeItem extends React.Component {
 
-  if (props.myAttendances === undefined) {
-    return <div>Loading My Attendances...</div>;
+  constructor(props) {
+    super(props);
   }
- 
-  const myAttendance = props.myAttendances.filter(attendance => attendance.coffee_time_id === props.coffeeTime.id)[0]
 
-  if (myAttendance === undefined) {
-    return <div> null</div>
+  render() {
+
+  if (this.props.coffeeTime === undefined) {
+    return "loading..."
   }
-  console.log("this is my attendance id", myAttendance.id)
+
+  const myAttendance = this.props.myAttendances.filter(attendance => attendance.coffee_time_id === this.props.coffeeTime.id)[0];
 
   return <div className="my-coffee-time-item-container">
     <div className="my-ct-date">
       <div className="my-ct-weekday">
-        {moment(props.coffeeTime.date).format("dddd")}
+        {moment(this.props.coffeeTime.date).format("dddd")}
       </div>
       <div className="my-ct-month-day">
-        {moment(props.coffeeTime.date).format("MMM D")}
+        {moment(this.props.coffeeTime.date).format("MMM D")}
       </div>
       <div className="my-ct-time">
-        {props.coffeeTime.start_time} - {props.coffeeTime.end_time}
+        {this.props.coffeeTime.start_time} - {this.props.coffeeTime.end_time}
       </div>
       <h4 className="my-ct-address">
-        {props.coffeeTime.address},{" "} 
-        {props.coffeeTime.address2} 
+        {this.props.coffeeTime.address},{" "}
+        {this.props.coffeeTime.address2}
       </h4>
     </div>
-    <div className="my-coffeeTimes-cancel-button" onClick={() => props.deleteAttendance(myAttendance.id, props.coffeeTime.id)} >
+    <div className="my-coffeeTimes-cancel-button" onClick={() => this.props.deleteAttendance(myAttendance.id, this.props.coffeeTime.id)} >
       CANCEL MY SPOT
     </div>
   </div>;
-}
+
+  }
+
+  
+};
 
 export default MyCoffeeTimeItem;
