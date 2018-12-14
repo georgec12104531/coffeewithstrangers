@@ -49,8 +49,8 @@ export const updateAttendance = attendance => dispatch => (
   ))
 );
 
-export const deleteAttendance = id => dispatch => (
-  APIUtil.deleteAttendance(id).then(() => (
+export const deleteAttendance = (id, coffeeTimeId) => dispatch => (
+  APIUtil.deleteAttendance(id).then(() => dispatch(fetchCoffeeTime(coffeeTimeId))).then(() => (
     dispatch(removeAttendance(id))
   ), error => (
     dispatch(receiveAttendanceErrors(error.responseJSON))

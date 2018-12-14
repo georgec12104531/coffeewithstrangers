@@ -16,25 +16,19 @@ export default (state = {}, action) => {
     case RECEIVE_COFFEE_TIMES:
       return merge({}, state, action.coffeeTimes);
     case RECEIVE_COFFEE_TIME:
-      return merge({}, state, { [action.coffeeTime.id]: action.coffeeTime });
+      // return merge({}, state, { [action.coffeeTime.id]: action.coffeeTime });
+      console.log('AFTER RECEIVE_COFFEE_TIME', action.coffeeTime)
+      return {
+        ...state,
+        [action.coffeeTime.id]: action.coffeeTime,
+      };
     case REMOVE_COFFEE_TIME:
       const newState = merge({}, state);
       delete newState[action.coffeeTimeId];
       return newState;
-    // case RECEIVE_ATTENDANCE:
-    //   // return merge({}, state, {
-    //   //   [action.attendance.id]: action.attendance,
-    //   // });
-    //   return {
-    //     ...state,
-    //     [action.attendance.coffee_time_id]: {
-    //       ...state[action.attendance.coffee_time_id],
-    //       coffee_time_attendees: [
-    //         ...state[action.attendance.coffee_time_id].coffee_time_attendees,
-    //         action.attendance,
-    //       ],
-    //     },  
-    //   }
+    case RECEIVE_ATTENDANCE:
+    
+      
     default:
       return state;
   }

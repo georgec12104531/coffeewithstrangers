@@ -14,7 +14,7 @@ export const msp = state => ({
 export const mdp = dispatch => ({
   fetchCoffeeTimes: () => dispatch(fetchCoffeeTimes()),
   fetchAttendances: () => dispatch(fetchAttendances()),
-  deleteAttendance: id => dispatch(deleteAttendance(id)),
+  deleteAttendance: (id, coffeeTimeId) => dispatch(deleteAttendance(id, coffeeTimeId)),
 });
 
 export default connect(msp, mdp)(Dashboard);

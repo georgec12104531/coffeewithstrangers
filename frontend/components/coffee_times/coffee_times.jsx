@@ -10,6 +10,7 @@ class CoffeeTimes extends React.Component {
   componentDidMount() {
     this.props.fetchLocations();
     this.props.fetchCoffeeTimes();
+    this.props.fetchAttendances();
   }
 
   handleHost(location, e) {

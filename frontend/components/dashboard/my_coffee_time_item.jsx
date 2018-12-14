@@ -30,7 +30,7 @@ const MyCoffeeTimeItem = (props) => {
         {props.coffeeTime.address2} 
       </h4>
     </div>
-    <div className="my-coffeeTimes-cancel-button" onClick={() => props.deleteAttendance(myAttendance.id)} >
+    <div className="my-coffeeTimes-cancel-button" onClick={() => props.deleteAttendance(myAttendance.id, props.coffeeTime.id)} >
       CANCEL MY SPOT
     </div>
   </div>;

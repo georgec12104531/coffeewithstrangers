@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import CoffeeTime from './coffee_time_show';
-import { fetchCoffeeTime } from '../../actions/coffee_time_actions';
-import { createAttendance, deleteAttendance } from '../../actions/attendance_actions';
+import { fetchCoffeeTime, fetchCoffeeTimes } from '../../actions/coffee_time_actions';
+import { createAttendance, deleteAttendance, fetchAttendances } from '../../actions/attendance_actions';
 
 export const msp = (state, ownProps) => ({
   id: ownProps.match.params.coffeeTimeId,
@@ -12,8 +12,9 @@ export const msp = (state, ownProps) => ({
 
 export const mdp = dispatch => ({
   fetchCoffeeTime: id => dispatch(fetchCoffeeTime(id)),
+  fetchCoffeeTimes: () => dispatch(fetchCoffeeTimes()),
+  fetchAttendances: () => dispatch(fetchAttendances()),
   createAttendance: attendance => dispatch(createAttendance(attendance)),
-  deleteAttendance: id => dispatch(deleteAttendance(id)),
 });
 
 export default connect(
