@@ -7,12 +7,14 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      coffeeTimes: false,
-      profile: true 
+      coffeeTimes: true,
+      profile: false 
     }
 
     this.handleCoffeeTimes = this.handleCoffeeTimes.bind(this);
     this.handleShowCoffeeTime = this.handleShowCoffeeTime.bind(this);
+    this.handleToggleCoffeeTimes = this.handleToggleCoffeeTimes.bind(this);
+    this.handleToggleProfile = this.handleToggleProfile.bind(this)
   }
 
   componentDidMount() {
@@ -33,6 +35,20 @@ class Dashboard extends React.Component {
     }
   }
 
+  handleToggleCoffeeTimes() {
+    this.setState({
+      coffeeTimes: true,
+      profile: false
+    });
+  }
+
+  handleToggleProfile() {
+    this.setState({ 
+      coffeeTimes: false, 
+      profile: true 
+    });
+  }
+
   render() {
 
     const coffeeTimes = this.props.myCoffeeTimes.map((coffeeTime, idx) => {
@@ -44,8 +60,8 @@ class Dashboard extends React.Component {
     })
 
     const hostedCoffeeTimes = this.props.myHostedCoffeeTimes.map((coffeeTime, idx) => {
-      return <div key={idx}>
-          <MyHostCoffeeTimeItem coffeeTime={coffeeTime} deleteCoffeeTime={this.props.deleteCoffeeTime}/>
+      return <div key={idx} onClick={this.handleShowCoffeeTime(coffeeTime)}>
+          <MyHostCoffeeTimeItem coffeeTime={coffeeTime} deleteCoffeeTime={this.props.deleteCoffeeTime} />
         </div>;
     })
     
@@ -56,11 +72,11 @@ class Dashboard extends React.Component {
     return <div className="dashboard-main-container">
         <div className="dashboard-nav-main-container">
           <div className="dashboard-nav">
-            <div className="dashboard-nav-bar">Your Coffee Times</div>
-            <div className="dashboard-nav-bar">Profile</div>
+            <div className="dashboard-nav-bar" onClick={this.handleToggleCoffeeTimes}>Your Coffee Times</div>
+            <div className="dashboard-nav-bar" onClick={this.handleToggleProfile}>Profile</div>
           </div>
         </div>
-        {this.state.coffeeTimes ? <div>
+        {this.state.profile ? <div>
             Profile Page
           </div> : <div className="my-coffeeTimes-main-container">
             <div className="my-coffeeTimes-sidebar-container">
