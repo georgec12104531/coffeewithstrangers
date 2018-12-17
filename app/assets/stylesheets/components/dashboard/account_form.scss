@@ -1,0 +1,90 @@
+.my-account-details-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 868px;
+}
+
+.my-account-details-form-main-container {
+  background: #FEFEFE;
+  border: 1px solid #DDD;
+  border-color: #F7BF4D;
+  padding: 0 0 1em;
+}
+
+.my-account-details-edit-header {
+  color: #EF6236;
+}
+
+.my-account-form-header {
+  background: #f1e9c6;
+  border-bottom: 1px solid #F7BF4D;
+  padding: 1em;
+  clear: both;
+  margin: 0;
+  color: #464a51;
+}
+
+.my-account-form-row-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-account-form-row-container {
+  display: flex;
+  justify-content: center;
+  width: 678px;
+}
+
+.my-account-form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 648px;
+  margin: 16px;
+}
+
+.my-account-form-section-sub-header {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #464a51;
+}
+
+.my-account-form-row-input {
+  height: 36px;
+  padding-left: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 17px;
+}
+
+.my-account-form-row-large-input {
+  width: 618px;
+  height: 175px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.my-acccount-save-changes-button {
+  background-color: #ff5600;
+  border-radius: 14px;
+  color: white;
+  border: none;
+  width: 644px;
+  height: 60px;
+  font-size: 19px;
+}
+
+
+.my-profile-sidebar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 272px;
+}
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import moment from 'moment';
 import ProgressBar from './progress_bar';
 
@@ -19,7 +19,6 @@ class CoffeeTimeItem extends React.Component {
 
     return(
       <div className="coffee-time-container" onClick={this.handleJoin}>
-
           <div className="coffeeTime">
             <div className="ct-date">
               <h6 className="ct-weekday">

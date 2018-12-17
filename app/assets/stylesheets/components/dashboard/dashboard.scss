@@ -1,12 +1,13 @@
 .my-coffeeTimes-main-container {
-    display: flex;
-    margin-left: 150px;
-    margin-right: 150px;
-    justify-content: center;
+  display: flex;
+  margin-left: 150px;
+  margin-right: 150px;
+  justify-content: center;
 }
 
 .dashboard-main-container {
   background-color: #faf7e6;
+  min-height: 100vh;
 }
 
 .my-coffeeTimes-container {
@@ -18,9 +19,16 @@
 
 .dashboard-nav-main-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   height: 60px;
   background-color: #fce6b8;
+}
+
+.dashboard-nav-container {
+  display: flex;
+  justify-content: center;
+  width: 549px;
+  height: 60px;
 }
 
 .dashboard-nav {
@@ -33,6 +41,7 @@
 
 .dashboard-nav-bar {
   color: rgb(70, 74, 82);
+  font-weight: 500;
 }
 
 .my-coffeeTimes-sidebar-container {
@@ -84,3 +93,10 @@
   border: 1px solid #DDD;
 }
 
+.my-profile-main-container {
+  display: flex;
+  margin-left: 150px;
+  margin-right: 150px;
+  justify-content: center;
+  height: 1000px;
+}

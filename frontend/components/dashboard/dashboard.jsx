@@ -1,6 +1,7 @@
 import React from 'react';
 import MyCoffeeTimeItem from './my_coffee_time_item';
 import MyHostCoffeeTimeItem from './my_host_coffee_time_item';
+import AccountForm from './account_form';
 
 class Dashboard extends React.Component {
 
@@ -71,19 +72,27 @@ class Dashboard extends React.Component {
 
     return <div className="dashboard-main-container">
         <div className="dashboard-nav-main-container">
-          <div className="dashboard-nav">
-            <div className="dashboard-nav-bar" onClick={this.handleToggleCoffeeTimes}>Your Coffee Times</div>
-            <div className="dashboard-nav-bar" onClick={this.handleToggleProfile}>Profile</div>
+          <div className="dashboard-nav-container">
+            <div className="dashboard-nav">
+              <div className="dashboard-nav-bar" onClick={this.handleToggleCoffeeTimes}>Your Coffee Times</div>
+              <div className="dashboard-nav-bar" onClick={this.handleToggleProfile}>Profile</div>
+            </div>
           </div>
         </div>
-        {this.state.profile ? <div>
-            Profile Page
+      {this.state.profile ? <div className="my-profile-main-container">
+        <div className="my-profile-sidebar-container">
+          <h2 className="my-coffeeTimes-welcome-message">
+            Welcome Home, Stranger!{" "}
+          </h2>
+          <h2>What are you grateful for today?</h2>
+        </div>
+          <AccountForm />
           </div> : <div className="my-coffeeTimes-main-container">
             <div className="my-coffeeTimes-sidebar-container">
               <h2 className="my-coffeeTimes-welcome-message">
                 Welcome Home, Stranger!{" "}
               </h2>
-              <h2>What are you grateful today?</h2>
+              <h2>What are you grateful for today?</h2>
               <button className="my-coffeeTimes-button" onClick={this.handleCoffeeTimes}>
                 Sign Up For A Coffee Time!
               </button>

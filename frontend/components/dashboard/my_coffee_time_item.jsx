@@ -35,10 +35,7 @@ class MyCoffeeTimeItem extends React.Component {
       CANCEL MY SPOT
     </div>
   </div>;
-
   }
-
-  
 };
 
 export default MyCoffeeTimeItem;
