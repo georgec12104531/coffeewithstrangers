@@ -4,6 +4,13 @@ class AccountForm extends React.Component {
   
   constructor(props) {
     super(props);
+    this.state = {
+      
+    }
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   render() {

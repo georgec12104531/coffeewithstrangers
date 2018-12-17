@@ -86,7 +86,7 @@ class Dashboard extends React.Component {
           </h2>
           <h2>What are you grateful for today?</h2>
         </div>
-          <AccountForm />
+          <AccountForm  />
           </div> : <div className="my-coffeeTimes-main-container">
             <div className="my-coffeeTimes-sidebar-container">
               <h2 className="my-coffeeTimes-welcome-message">

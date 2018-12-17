@@ -5,13 +5,6 @@
   height: 76px;
 }
 
-.coffee-bean-logo {
-  padding-top: 18px;
-  padding-right: 3px;
-  height: 35px;
-  width: 35px;
-}
-
 .coffee-nav-link {
   text-decoration: none;
   display: flex;
@@ -27,3 +20,11 @@
   text-decoration: none;
   font-family: 'Shadows Into Light', cursive;
 }
+
+.coffee-main-logo-container {
+  display: flex;
+  justify-content: center;
+  width: 374px;
+}
+
+

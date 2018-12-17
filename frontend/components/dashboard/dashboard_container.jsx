@@ -9,6 +9,8 @@ export const msp = state => ({
   myCoffeeTimes: myCoffeeTimes(state),
   myHostedCoffeeTimes: myHostedCoffeeTimes(state),
   myAttendances: Object.values(state.entities.attendances).filter(attendance => attendance.user_id === state.session.id),
+  currentUser: state.entities.users[state.session.id],
+  currentUserId: state.session.id,
 });
 
 export const mdp = dispatch => ({
