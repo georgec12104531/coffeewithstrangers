@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
     });
   }
 
-  render() {
+  render() {  
 
     const coffeeTimes = this.props.myCoffeeTimes.map((coffeeTime, idx) => {
       return (
@@ -86,7 +86,7 @@ class Dashboard extends React.Component {
           </h2>
           <h2>What are you grateful for today?</h2>
         </div>
-          <AccountForm  />
+          <AccountForm currentUser={this.props.currentUser} updateUser={this.props.updateUser} />
           </div> : <div className="my-coffeeTimes-main-container">
             <div className="my-coffeeTimes-sidebar-container">
               <h2 className="my-coffeeTimes-welcome-message">
