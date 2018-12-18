@@ -13,7 +13,6 @@ class Dashboard extends React.Component {
     }
 
     this.handleCoffeeTimes = this.handleCoffeeTimes.bind(this);
-    this.handleShowCoffeeTime = this.handleShowCoffeeTime.bind(this);
     this.handleToggleCoffeeTimes = this.handleToggleCoffeeTimes.bind(this);
     this.handleToggleProfile = this.handleToggleProfile.bind(this)
   }
@@ -27,13 +26,6 @@ class Dashboard extends React.Component {
   handleCoffeeTimes() {
     e.preventDefault();
     this.props.history.push(`/coffee-times`);
-  }
-
-  handleShowCoffeeTime(coffeeTime) {
-    return e => {
-      e.preventDefault();
-      this.props.history.push(`/coffee-times/${coffeeTime.id}`)
-    }
   }
 
   handleToggleCoffeeTimes() {
@@ -54,14 +46,14 @@ class Dashboard extends React.Component {
 
     const coffeeTimes = this.props.myCoffeeTimes.map((coffeeTime, idx) => {
       return (
-        <div key={idx} onClick={this.handleShowCoffeeTime(coffeeTime)}>
+        <div key={idx}>
           <MyCoffeeTimeItem coffeeTime={coffeeTime} deleteAttendance={this.props.deleteAttendance} myAttendances={this.props.myAttendances} />  
         </div>
       )
     })
 
     const hostedCoffeeTimes = this.props.myHostedCoffeeTimes.map((coffeeTime, idx) => {
-      return <div key={idx} onClick={this.handleShowCoffeeTime(coffeeTime)}>
+      return <div key={idx}>
           <MyHostCoffeeTimeItem coffeeTime={coffeeTime} deleteCoffeeTime={this.props.deleteCoffeeTime} />
         </div>;
     })

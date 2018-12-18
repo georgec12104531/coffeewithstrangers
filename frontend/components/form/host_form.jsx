@@ -53,8 +53,6 @@ class HostForm extends React.Component {
       
     })
 
-    //Need to add attendance as well
-
     this.props.history.push('/dashboard')
   }
 
@@ -67,8 +65,6 @@ class HostForm extends React.Component {
     if (this.props.currentUser === undefined) {
       return <div>loading...</div>;
     }
-
-    console.log()
 
     const fromTimes = [
       "8:00AM",
