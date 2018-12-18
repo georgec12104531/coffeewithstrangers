@@ -82,7 +82,7 @@ class Dashboard extends React.Component {
       {this.state.profile ? <div className="my-profile-main-container">
         <div className="my-profile-sidebar-container">
           <h2 className="my-coffeeTimes-welcome-message">
-            Welcome Home, Stranger!{" "}
+            Welcome Home, {this.props.currentUser.name}!{" "}
           </h2>
           <h2>What are you grateful for today?</h2>
         </div>

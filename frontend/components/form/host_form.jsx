@@ -49,6 +49,8 @@ class HostForm extends React.Component {
       id: this.props.currentUserId,
       introduction: this.state.introduction,
       story: this.state.story
+
+      
     })
 
     //Need to add attendance as well

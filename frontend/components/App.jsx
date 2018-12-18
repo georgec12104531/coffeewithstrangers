@@ -34,7 +34,7 @@ const App = () => (
       <Route exact path="/coffee-times" component={CoffeeTimesContainer}/>
       <Route exact path="/coffee-times/:coffeeTimeId" component={CoffeeTimeShowContainer}/>
       <Route exact path="/locations/:locationIdhost/host" component={HostFormContainer}/>
-      <Redirect to="/splash"/>
+      <Redirect to="/splash" />
     </Switch>
   </div>
 );

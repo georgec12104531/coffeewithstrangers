@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { HashLink} from 'react-router-hash-link';
+import { HashLink as Link} from 'react-router-hash-link';
 import CoffeeTimeItem from "./coffee_time_item";
 
 
@@ -20,13 +19,13 @@ class CoffeeTimes extends React.Component {
 
   render (){
     const locations = () => this.props.locations.map((location, i) => (
-        <Link key={i} to={`/coffee-times/${location.name}`}>
-          <div key={i} className="location-nav">{location.name}</div>          
-        </Link>
+      <Link key={i} className="location-nav" to={`/coffee-times#${location.id}`}>
+        {location.name}      
+      </Link>
       ));
       
     const locationCoffeeTimes = this.props.locations.map((location, idx) => {
-      return <div key={idx} className="location">
+      return <div key={idx} className="location" id={location.id}>
           <h2 className="city">{location.name}</h2>
           {location.coffee_times.map((coffeeTime, i) => (
             <CoffeeTimeItem key={i} coffeeTime={coffeeTime} />
@@ -43,6 +42,7 @@ class CoffeeTimes extends React.Component {
             <div className="ct-background-text-group">
               <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" />
               <h1 className="ct-header-text">GOOD CONVERSATIONS</h1>
+              <a name="top">top</a>
               <h2 className="ct-header-2-text">THEY ARE HARD TO FIND.</h2>
             </div>
           </div>
