@@ -8,6 +8,7 @@ export const msp = state => ({
   coffeeTimes: Object.values(state.entities.coffeeTimes),
   attendances: state.entities.attendances,
   locations: Object.values(state.entities.locations),
+  currentUserId: state.session.id
 });
 
 export const mdp = dispatch => ({

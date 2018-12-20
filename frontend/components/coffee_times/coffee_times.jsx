@@ -21,11 +21,14 @@ class CoffeeTimes extends React.Component {
   handleHost(location) {
     return e => {
       e.preventDefault();
-      this.props.history.push(`/locations/${location.id}/host`)
+      return this.props.currentUserId ? 
+      this.props.history.push(`/locations/${location.id}/host`) :
+      this.props.history.push('/signup')
     }
   }
 
-  render (){
+render (){
+    
     const locations = () => this.props.locations.map((location, i) => (
       <Link key={i} className="location-nav" to={`/coffee-times#${location.id}`}>
         {location.name}      
