@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from "moment";
+import { withRouter } from 'react-router';
 
 class MyHostCoffeeTimeItem extends React.Component {
 
@@ -11,7 +12,7 @@ class MyHostCoffeeTimeItem extends React.Component {
 
   handleShowCoffeeTime(coffeeTime) {
     return e => {
-      e.preventDefault();
+    e.preventDefault();
       this.props.history.push(`/coffee-times/${coffeeTime.id}`);
     };
   }
@@ -41,4 +42,4 @@ class MyHostCoffeeTimeItem extends React.Component {
   }
 }
 
-export default MyHostCoffeeTimeItem;
+export default withRouter(MyHostCoffeeTimeItem);

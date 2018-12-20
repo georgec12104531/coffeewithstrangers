@@ -6,12 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#Locations
+Location.create("name": "San Francisco")
+Location.create("name": "New York")
+Location.create("name": "Boston")
+Location.create("name": "London")
+Location.create("name": "Chicago")
+Location.create("name": "Seattle")
+Location.create("name": "Los Angeles")
+
 # Users
+
+
+#host
+User.create("username": "Ali123", "password": "password", "name": "Ali", "email": "ali@ali.com", "phone_number": "1231231234")
+User.find(40).update!(introduction: "Get ready to step a little out of your comfort zone and meet people who will not stay strangers for long. We'll share and listen to others' experiences, ideas and jokes, and have a great time. See you soon!", story: "I was born and raised on a diet of meditation and kale in San Francisco, but spent most of my childhood dreaming of living in the UK. I somehow convinced my employer to make my dreams come true, and have lived in London for the past two years.")
+
 User.create("username": "James123", "password": "password", "name": "James", "email": "james@james.com", "phone_number": "1231231234")
 User.create("username": "Allison123", "password": "password", "name": "Allison", "email": "allison@allison.com", "phone_number": "1231231234")
 
-User.create("username": "Ali123", "password": "password", "name": "Ali", "email": "ali@ali.com", "phone_number": "1231231234")
-User.find(40).update!(introduction: "Get ready to step a little out of your comfort zone and meet people who will not stay strangers for long. We'll share and listen to others' experiences, ideas and jokes, and have a great time. See you soon!", story: "I was born and raised on a diet of meditation and kale in San Francisco, but spent most of my childhood dreaming of living in the UK. I somehow convinced my employer to make my dreams come true, and have lived in London for the past two years.")
+
 
 User.create("username": "Earl123", "password": "password", "name": "Earl", "email": "earl@earl.com", "phone_number": "1231231234")
 User.create("username": "Rachel123", "password": "password", "name": "Rachel", "email": "rachel@rachel.com", "phone_number": "1231231234")
@@ -26,6 +40,7 @@ User.find(36).update!(introduction: "Even if the world doesn't seem lonely from 
 
 User.create("username": "Leslie123", "password": "password", "name": "Leslie", "email": "leslie@leslie.com", "phone_number": "1231231234")
 User.find(37).update!(introduction:"At almost any moment in the UK, at least 1/3 of the population is either discussing the weather, has already discussed the weather, or is about to. So...let's not do that. Instead, let's grab tea, skip the temperature small talk, and share some stories. I've been told I'm a good listener*!", story: "I love finding new things to love. Routine is chill, but there's nothing like visiting a city for the first time, tasting your new favorite food, discovering a great song you've never heard before, or connecting with someone you just met.")
+
 User.create("username": "Michael123", "password": "password", "name": "Michael", "email": "michael@michael.com", "phone_number": "1231231234")
 User.create("username": "Bonnie123", "password": "password", "name": "Bonnie", "email": "bonnie@bonnie.com", "phone_number": "1231231234")
 User.create("username": "Derek123", "password": "password", "name": "Derek", "email": "derek@derek.com", "phone_number": "1231231234")

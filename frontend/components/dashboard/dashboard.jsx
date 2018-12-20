@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  handleCoffeeTimes() {
+  handleCoffeeTimes(e) {
     e.preventDefault();
     this.props.history.push(`/coffee-times`);
   }
