@@ -46,14 +46,13 @@ render (){
           </div>
         </div>;
     })
-    
+
     return <div>
         <div className="index-container">
           <div className="ct-background-film">
             <div className="ct-background-text-group">
               <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" />
               <h1 className="ct-header-text">GOOD CONVERSATIONS</h1>
-              <a name="top">top</a>
               <h2 className="ct-header-2-text">THEY ARE HARD TO FIND.</h2>
             </div>
           </div>

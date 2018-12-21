@@ -7,7 +7,6 @@ class Splash extends React.Component {
 
   render() {
     return <div>
-        {/*<a href="#cats">Link to cats</a> */}
         <div className="splash-container">
           <div className="background-film">
             <div className="background-text-group">
@@ -43,6 +42,7 @@ class Splash extends React.Component {
               That's it. No strings attached.
             </h3>
           </div>
+
       </div>
     </div>
   }

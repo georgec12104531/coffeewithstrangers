@@ -1,0 +1,33 @@
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(247, 191, 77, 0.87);
+  height: 267px;
+}
+
+.footer-icons-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 173px;
+}
+
+.footer-icon {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-paragraph {
+  color: white;
+  width: 700px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.footer-paragraph-container {  
+  display: flex;
+  flex-direction: column;
+}

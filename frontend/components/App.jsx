@@ -2,6 +2,9 @@ import React from 'react';
 import WelcomeContainer from './welcome/welcome_container';
 import CoffeeNav from './nav/coffee_nav';
 import Splash from './splash/splash';
+import Linkedin from './linkedin-button.png';
+
+
 import {
   Route,
   Switch,
@@ -36,6 +39,26 @@ const App = () => (
       <Route exact path="/locations/:locationIdhost/host" component={HostFormContainer}/>
       <Redirect to="/splash" />
     </Switch>
+
+    <footer className="footer-container">
+      <div className="footer-icons-container">
+        <a href="https://georgecharleschang.com" target="_blank" className="footer-icon">Portfolio</a>
+        <br/>
+        <a href="https://www.linkedin.com/in/george-chang-b76ab8ab/" target="_blank" className="footer-icon">Linkedin</a>
+        <br/>
+        <a href="https://github.com/georgec12104531" target="_blank" className="footer-icon">Github</a>
+      </div>
+      <div className="footer-paragraph-container">
+        <p className="footer-paragraph">
+          Coffee With Strangers is all about making our cities feel more like neighborhoods. We're more "connected" than ever before, but we're also more alone. And all we want to do is bring people together because, well, the world is better that way.
+        </p>
+        <p className="footer-paragraph">
+          We're not doing anything groundbreaking. We're creating something that would've been incredibly unnecessary 20 years ago. But while we get busier, it's easy to forget the value of a conversation for no reason. A conversation that's intentionally unintentional.
+        </p>  
+      </div>
+      
+      
+    </footer>
   </div>
 );
 
