@@ -37,7 +37,7 @@ class CoffeeTime extends React.Component {
     const signUpButton = () => {
       return this.props.coffeeTime.coffee_time_attendees.length < 5 ? 
       <button onClick={this.handleCreateAttendance} className="coffee-time-side-bar-button">
-              Sign me Up
+              Sign Me Up
       </button> : 
       <button className="coffee-time-side-bar-button">
         Full House

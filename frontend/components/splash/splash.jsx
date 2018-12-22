@@ -13,7 +13,7 @@ class Splash extends React.Component {
               <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" />
               <h1 className="header-text">Everyone is interesting</h1>
               <h2 className="header-2-text">
-                ...but you don't discover that when you're staring a screen
+                ...but you don't discover that when you're staring at a screen
               </h2>
               <Link className="tea-time-button" to="/coffee-times">
                 LET'S GET COFFEE
