@@ -17,6 +17,9 @@ class CoffeeTimeItem extends React.Component {
 
   render() {
 
+  
+    
+
     return(
       <div className="coffee-time-container" onClick={this.handleJoin}>
           <div className="coffeeTime">

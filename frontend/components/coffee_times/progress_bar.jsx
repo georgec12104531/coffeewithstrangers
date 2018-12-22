@@ -21,7 +21,7 @@ class ProgressBar extends React.Component {
       return closed;
     }
     
-    let open_seats_count = 4 - this.props.coffeeTime.coffee_time_attendees.length;
+    let open_seats_count = 5 - this.props.coffeeTime.coffee_time_attendees.length;
 
     const open_seats = () => {
       let open = [];

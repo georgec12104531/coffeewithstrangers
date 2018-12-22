@@ -17,12 +17,15 @@ class CoffeeTime extends React.Component {
   }
 
   handleCreateAttendance(e) {
-    e.preventDefault();
-    this.props.createAttendance({ user_id: this.props.currentUserId, coffee_time_id: this.props.id})
-    setTimeout(() => this.props.history.push('/dashboard'), 1000);
+    e.preventDefault(); 
+
+    this.props.currentUserId ? 
+    this.props.createAttendance({ user_id: this.props.currentUserId, coffee_time_id: this.props.id}, setTimeout(() => this.props.history.push('/dashboard'), 1000))
+    : this.props.history.push('/signup')
    }
 
   render() {
+
     if (this.props.coffeeTime === undefined) {
       return null
     }
@@ -31,13 +34,21 @@ class CoffeeTime extends React.Component {
       return null
     }
 
+    const signUpButton = () => {
+      return this.props.coffeeTime.coffee_time_attendees.length < 5 ? 
+      <button onClick={this.handleCreateAttendance} className="coffee-time-side-bar-button">
+              Sign me Up
+      </button> : 
+      <button className="coffee-time-side-bar-button">
+        Full House
+      </button>
+    }
+
     return <div className="show-page-main-container">
         <div className="show-page-container">
           <div className="coffee-time-side-bar-container">
             <CoffeeTimeBox coffeeTime={this.props.coffeeTime} fetchCoffeeTime={this.props.fetchCoffeeTime} id={this.props.id} />
-            <button onClick={this.handleCreateAttendance} className="coffee-time-side-bar-button">
-              Sign me Up
-            </button>
+            <div>{signUpButton()}</div>
             <div className="coffee-time-side-bar-info-container">
               <h5 className="coffee-time-side-bar-info-intro">
                 WHAT IS COFFEE TIME EXACTLY?
