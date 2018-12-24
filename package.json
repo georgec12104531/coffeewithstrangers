@@ -34,7 +34,7 @@
     "url-loader": "^1.1.2"
   },
   "scripts": {
-    "postinstall": "webpack --mode=production",
+    "postinstall": "webpack",
     "webpack": "webpack --mode=development --watch"
   },
   "repository": {

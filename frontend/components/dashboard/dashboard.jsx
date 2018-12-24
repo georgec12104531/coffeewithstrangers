@@ -90,7 +90,7 @@ class Dashboard extends React.Component {
               </button>
             </div>
             <div className="my-coffeeTimes-container">
-              <h2 className="my-coffeeTimes-title">Coffee Times You Have Coming up...</h2>
+              <h2 className="my-coffeeTimes-title">Coffee Times You Have Coming Up...</h2>
               {coffeeTimes}
             </div>
             <div className="my-coffeeTimes-container">

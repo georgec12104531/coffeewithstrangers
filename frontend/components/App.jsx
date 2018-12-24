@@ -2,8 +2,6 @@ import React from 'react';
 import WelcomeContainer from './welcome/welcome_container';
 import CoffeeNav from './nav/coffee_nav';
 import Splash from './splash/splash';
-import Linkedin from './linkedin-button.png';
-
 
 import {
   Route,

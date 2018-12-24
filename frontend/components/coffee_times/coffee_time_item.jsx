@@ -15,11 +15,9 @@ class CoffeeTimeItem extends React.Component {
     this.props.history.push(`/coffee-times/${this.props.coffeeTime.id}`)
   }
 
-  render() {
+  render() {  
 
-  
     
-
     return(
       <div className="coffee-time-container" onClick={this.handleJoin}>
           <div className="coffeeTime">

@@ -2,7 +2,6 @@ import React from 'react';
 import CoffeeTimeBox from './coffee_time_box';
 import coffeeone from './coffeeone.png';
 
-
 class CoffeeTime extends React.Component {
 
   constructor(props) {

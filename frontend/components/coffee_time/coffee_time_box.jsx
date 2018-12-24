@@ -13,9 +13,7 @@ class CoffeeTimeBox extends React.Component {
         LOADING...
       </div>
     }
-    if (this.props.coffeeTime.id === 53) {
-      console.log('COFFEE_TIME', this.props.coffeeTime);
-    }
+
     return <div className="coffee-time-box-container">
         <div className="host-name-container">
           <h2 className="host-name">Join {this.props.coffeeTime.host_name} for Coffee Time!</h2>

@@ -9,7 +9,7 @@ class Splash extends React.Component {
     return <div>
         <div className="splash-container">
           <div className="background-film">
-            <div className="background-text-group">
+            <div className="background-text-group"> 
               <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" />
               <h1 className="header-text">Everyone is interesting</h1>
               <h2 className="header-2-text">

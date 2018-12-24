@@ -11,8 +11,7 @@ class ProgressBar extends React.Component {
     if (this.props.coffeeTime.coffee_time_attendees === undefined) {
       return null;
     }
-    // console.log('COFFEE_TIME', this.props.coffeeTime);
-    // console.log('COFFEE_TIME_ATTENDEES', this.props.coffeeTime.coffee_time_attendees);
+
     const closed_seats = () => {
       let closed = [];
       this.props.coffeeTime.coffee_time_attendees.forEach((attendee, i) => {
