@@ -39,7 +39,7 @@ render (){
       return <div key={idx} className="location" id={location.id}>
           <h2 className="city">{location.name}</h2>
           {location.coffee_times.map((coffeeTime, i) => (
-            <CoffeeTimeItem key={i} coffeeTime={coffeeTime} />
+            <CoffeeTimeItem key={i} coffeeTime={coffeeTime} currentUserId={this.props.currentUserId} />
           ))}
           <div className="add-coffee-time-button-container" onClick={this.handleHost(location)}>
             <div className="add-coffee-time-button">+</div>

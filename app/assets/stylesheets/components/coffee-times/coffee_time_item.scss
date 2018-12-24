@@ -86,6 +86,26 @@
   background: rgba(247,191,77,0.87);
 }
 
+.attending-coffeetime-button {
+  border-radius: 0 0 5px 5px;
+  letter-spacing: 0;
+  font-size: 0.8em;
+  background: rgba(247,191,77,0.87);
+  color: white;
+  border-width: 1px;
+  width: 200pz;
+  width: 100%;
+  border-color: #F7BF4D;
+  width: 234px;
+  height: 44px;
+  font-size: 16px;
+}
+
+.attending-coffeetime-button:hover {
+  color: rgba(247,191,77,0.87);
+  background: #fcebc7;
+}
+
 
 .coffee-time-container {
   padding-bottom: 11px;

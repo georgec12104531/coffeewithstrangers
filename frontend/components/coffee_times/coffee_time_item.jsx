@@ -17,7 +17,26 @@ class CoffeeTimeItem extends React.Component {
 
   render() {  
 
+    const isAttending = () => {
+      return this.props.coffeeTime.coffee_time_attendees.some(coffeeTime => coffeeTime.user_id === this.props.currentUserId)
+    }
+
+    const isHosting = () => {
+      return this.props.coffeeTime.host_id === this.props.currentUserId
+    }
+
+    const status = () => {
+      if (isAttending()) {
+        return <button to='/coffee-times/`${this.props.coffeeTime.id}`' className="attending-coffeetime-button">YOU'RE GOING</button>
+      } else if (isHosting()) {
+        return <button to='/coffee-times/`${this.props.coffeeTime.id}`' className="attending-coffeetime-button">YOU'RE HOSTING</button>
+      } else {
+        return <button to='/coffee-times/`${this.props.coffeeTime.id}`' className="join-coffeetime-button">COUNT ME IN</button> 
+      }
+    }
+
     
+
     return(
       <div className="coffee-time-container" onClick={this.handleJoin}>
           <div className="coffeeTime">
@@ -46,7 +65,10 @@ class CoffeeTimeItem extends React.Component {
             <br />
             <ProgressBar coffeeTime={this.props.coffeeTime} />    
           </div>
-          <button to='/coffee-times/`${this.props.coffeeTime.id}`' className="join-coffeetime-button">COUNT ME IN</button>
+          <div>
+            {status()}
+          </div>
+          
         </div>
     ) 
   }
