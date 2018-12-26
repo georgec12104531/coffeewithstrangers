@@ -33,14 +33,32 @@ class CoffeeTime extends React.Component {
       return null
     }
 
+    const isAttending = () => {
+      return this.props.coffeeTime.coffee_time_attendees.some(coffeeTime => coffeeTime.user_id === this.props.currentUserId)
+    }
+
+    const isHosting = () => {
+      return this.props.coffeeTime.host.id === this.props.currentUserId
+    }
+
     const signUpButton = () => {
-      return this.props.coffeeTime.coffee_time_attendees.length < 5 ? 
-      <button onClick={this.handleCreateAttendance} className="coffee-time-side-bar-button">
+      if (isAttending()) {
+        return <button className="coffee-time-side-bar-button">
+          You're Going
+        </button>
+      } else if (isHosting()){
+        return <button className="coffee-time-side-bar-button">
+          You're Hosting  
+        </button>
+      } else if (this.props.coffeeTime.coffee_time_attendees.length === 5) {
+        return <button className="coffee-time-side-bar-button">
+          Full House
+        </button>
+      } else if (this.props.coffeeTime.coffee_time_attendees.length < 5) {
+        return <button onClick={this.handleCreateAttendance} className="coffee-time-side-bar-button">
               Sign Me Up
-      </button> : 
-      <button className="coffee-time-side-bar-button">
-        Full House
-      </button>
+        </button>
+      } 
     }
 
     return <div className="show-page-main-container">

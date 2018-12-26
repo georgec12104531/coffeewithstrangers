@@ -94,7 +94,7 @@ class Dashboard extends React.Component {
               {coffeeTimes}
             </div>
             <div className="my-coffeeTimes-container">
-              <h2 className="my-coffeeTimes-title">Coffee Times You Are Hosting...</h2>
+              <h2 className="my-coffeeTimes-title">Coffee Times You're Hosting...</h2>
               {hostedCoffeeTimes}
             </div>
           </div>}
