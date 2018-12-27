@@ -5,7 +5,7 @@ module.exports = {
   entry: './frontend/coffee_with_strangers.jsx',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['.js', '.jsx', '*']
@@ -19,7 +19,7 @@ module.exports = {
           loader: 'babel-loader',
           query: {
             presets: ['@babel/preset-env', '@babel/preset-react']
-          }
+          },
         },
       },
       {
@@ -28,11 +28,12 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 8000, // Convert images < 8kb to base64 strings
-            name: 'images/[hash]-[name].[ext]'
-          }
-        }]
-      }
-    ]
+            name: 'images/[hash]-[name].[ext]',
+          },
+        }],
+      },
+    ],
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  mode: 'none',
 };

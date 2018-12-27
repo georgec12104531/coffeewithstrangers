@@ -1,8 +1,6 @@
 import React from 'react';
 import {  withRouter } from 'react-router-dom';
 
-
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +12,8 @@ class SessionForm extends React.Component {
     this.updateUsername = this.updateUsername.bind(this);
     this.updatePassword = this.updatePassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
+    
   }
 
   componentDidMount() {
@@ -32,6 +32,13 @@ class SessionForm extends React.Component {
     e.preventDefault();
     let user = Object.assign({}, this.state);
     this.props.processForm( user ).then(() => (
+      this.props.history.push('/coffee-times')
+    ));
+  }
+
+  handleDemoLogin(e) {
+    const demoUser = {username: "Stranger", password: "password"};
+    this.props.login(demoUser).then(() => (
       this.props.history.push('/coffee-times')
     ));
   }
@@ -82,6 +89,8 @@ class SessionForm extends React.Component {
           <br/>
           <br/>
           <input className="form-submit" type="submit" value={this.props.formType}/>
+          <br/>
+          <button onClick={this.handleDemoLogin} className="form-submit">DEMO LOGIN</button>
           <br/>
           <div className="session-form-alt-signup-main">{this.props.navLink}</div>
         </form>

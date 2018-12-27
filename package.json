@@ -35,7 +35,7 @@
   },
   "scripts": {
     "postinstall": "webpack",
-    "webpack": "webpack --mode=development --watch"
+    "dev": "webpack --mode=development --watch"
   },
   "repository": {
     "type": "git",
@@ -47,7 +47,7 @@
     "url": "https://github.com/georgec12104531/coffeewithstrangers/issues"
   },
   "engines": {
-    "node": "8.4.0",
+    "node": "10.7.0",
     "npm": "6.1.0"
   },
   "homepage": "https://github.com/georgec12104531/coffeewithstrangers#readme",
