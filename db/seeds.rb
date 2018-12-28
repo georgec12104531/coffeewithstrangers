@@ -74,15 +74,22 @@ CoffeeTime.create("date": "2018-2-19", "address": "Café de Leche", "address2": 
 #CoffeeTimeAttendance
 
 
+
+
 CoffeeTimeAttendance.create("user_id": 11, "coffee_time_id": 1)
-CoffeeTimeAttendance.create("user_id": 1, "coffee_time_id": 5)
+CoffeeTimeAttendance.create("user_id": 6, "coffee_time_id": 1)
+CoffeeTimeAttendance.create("user_id": 12, "coffee_time_id": 2)
+CoffeeTimeAttendance.create("user_id": 7, "coffee_time_id": 3)
+CoffeeTimeAttendance.create("user_id": 8, "coffee_time_id": 3)
+CoffeeTimeAttendance.create("user_id": 9, "coffee_time_id": 3)
 CoffeeTimeAttendance.create("user_id": 1, "coffee_time_id": 4)
 CoffeeTimeAttendance.create("user_id": 2, "coffee_time_id": 4)
 CoffeeTimeAttendance.create("user_id": 3, "coffee_time_id": 4)
 CoffeeTimeAttendance.create("user_id": 4, "coffee_time_id": 4)
 CoffeeTimeAttendance.create("user_id": 5, "coffee_time_id": 4)
-CoffeeTimeAttendance.create("user_id": 12, "coffee_time_id": 2)
+CoffeeTimeAttendance.create("user_id": 1, "coffee_time_id": 5)
 CoffeeTimeAttendance.create("user_id": 13, "coffee_time_id": 5)
-CoffeeTimeAttendance.create("user_id": 14, "coffee_time_id": 7)
-CoffeeTimeAttendance.create("user_id": 15, "coffee_time_id": 8)
+CoffeeTimeAttendance.create("user_id": 3, "coffee_time_id": 7)
+CoffeeTimeAttendance.create("user_id": 4, "coffee_time_id": 7)
+CoffeeTimeAttendance.create("user_id": 2, "coffee_time_id": 8)
 CoffeeTimeAttendance.create("user_id": 16, "coffee_time_id": 10)

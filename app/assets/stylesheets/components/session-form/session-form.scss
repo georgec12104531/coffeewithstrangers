@@ -1,9 +1,10 @@
 .form-page-container {
   font-size: 17px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #faf9e9;
-  height: 555px;
+  height: 631px;
 }
 
 form {
@@ -67,6 +68,25 @@ input.password-form[type=password]:focus {
   background-color: rgb(216, 40, 0);
 }
 
+.form-demo-button {
+  height: 58px;
+  width: 678px;
+  border-radius: 10px;
+  background-color: rgb(241, 97, 56);
+  border: none;
+  transition-duration: 0.2s;
+  color: white;
+  font-size: 17px;
+  font-family: 'Raleway', sans-serif;
+  outline: none;
+}
+
+.form-demo-button:hover {
+  background-color: rgb(216, 40, 0);
+}
+
+
+
 input[type=submit] {
   color: white;
   font-size: 17px;
@@ -99,4 +119,13 @@ input[type=submit] {
 
 .session-form-alt-login:hover {
   color: rgb(216, 40, 0)
+}
+
+
+.session-form-alt-container {
+  display: flex;
+  flex-direction: column;
+  width: 679px;
+  height: 131px;
+  justify-content: space-evenly;
 }
