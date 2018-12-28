@@ -2,7 +2,6 @@ import React from 'react';
 import WelcomeContainer from './welcome/welcome_container';
 import CoffeeNav from './nav/coffee_nav';
 import Splash from './splash/splash';
-
 import {
   Route,
   Switch,
@@ -25,9 +24,6 @@ const App = () => (
     </nav>
 
     <Switch>
-      {/* //will have to replace render with */}
-      {/* auth routes only seen when not logged in*/}
-      {/* protected routes only seen when logged in*/}
       <AuthRoute exact path="/login" component={LoginFormContainer}/>
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <Route path='/dashboard' component={DashboardContainer} />
