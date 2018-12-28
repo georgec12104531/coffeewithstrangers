@@ -1,10 +1,17 @@
-.form-page-container {
+.form-page-main-container {
   font-size: 17px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
   background-color: #faf9e9;
-  height: 631px;
+  height: 680px;
+}
+
+.form-page-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 form {
