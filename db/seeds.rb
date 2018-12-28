@@ -73,9 +73,10 @@ CoffeeTime.create("date": "2018-2-19", "address": "Café de Leche", "address2": 
 
 #CoffeeTimeAttendance
 
-#SF
-#Ali
+
 CoffeeTimeAttendance.create("user_id": 11, "coffee_time_id": 1)
+CoffeeTimeAttendance.create("user_id": 1, "coffee_time_id": 5)
+CoffeeTimeAttendance.create("user_id": 1, "coffee_time_id": 4)
 CoffeeTimeAttendance.create("user_id": 12, "coffee_time_id": 2)
 CoffeeTimeAttendance.create("user_id": 13, "coffee_time_id": 5)
 CoffeeTimeAttendance.create("user_id": 14, "coffee_time_id": 7)
