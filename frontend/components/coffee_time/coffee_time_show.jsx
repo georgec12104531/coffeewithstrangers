@@ -1,6 +1,7 @@
 import React from 'react';
 import CoffeeTimeBox from './coffee_time_box';
 import coffeeone from './coffeeone.png';
+import profile from './profile.png';
 
 class CoffeeTime extends React.Component {
 
@@ -38,7 +39,7 @@ class CoffeeTime extends React.Component {
     }
 
     const isHosting = () => {
-      return this.props.coffeeTime.host.id === this.props.currentUserId
+      return this.props.coffeeTime.host.id === this.props.currentUserId;
     }
 
     const signUpButton = () => {
@@ -98,7 +99,8 @@ class CoffeeTime extends React.Component {
                 looking for a group of confused strangers at the cafe.)
               </h5>
             </div>
-            <div className="profile-pic" />
+            
+            <img src={profile} alt="Logo" className="profile-pic" />
             <div className="host-box-info-container">
               <h3>A little about me...</h3>
               <p className="host-intro-paragraph">
