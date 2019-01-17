@@ -115,14 +115,12 @@ select:focus, input:focus, textarea:focus { outline: none; }
   height: 150px;
 }
 
-.hosting-profile-pic {
-    background-image: url(https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 350px;
-    width: 350px;
-    margin-bottom: 35pcpx;
+.host-profile-pic {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 294px;
+  width: 294px;
+  margin-bottom: 35px;
 }
 
 

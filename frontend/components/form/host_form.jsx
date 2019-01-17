@@ -1,4 +1,5 @@
 import React from 'react';
+import profile from './profile.png';
 
 class HostForm extends React.Component {
   constructor(props) {
@@ -245,7 +246,7 @@ class HostForm extends React.Component {
             <h3 className="coffee-time-host-profile-name">
               {this.props.currentUser.name}
             </h3>
-            <div className="hosting-profile-pic" />
+            <img src={profile} alt="Logo" className="host-profile-pic" />
             <div className="coffee-time-host-profile-sub-container">
               <div>
                 A Brief Introduction
