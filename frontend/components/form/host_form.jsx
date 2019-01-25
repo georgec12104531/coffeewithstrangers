@@ -14,8 +14,8 @@ class HostForm extends React.Component {
       state: "",
       zip: "",
       topics: "",
-      introduction: "",
-      story: ""
+      introduction: this.props.currentUser.introduction,
+      story: this.props.currentUser.story
     }
 
     this.handUpdate = this.handleUpdate.bind(this);
@@ -50,11 +50,9 @@ class HostForm extends React.Component {
       id: this.props.currentUserId,
       introduction: this.state.introduction,
       story: this.state.story
-
-      
     })
 
-    this.props.history.push('/dashboard')
+    this.props.history.push('/dashboard');
   }
 
   componentDidMount() {
