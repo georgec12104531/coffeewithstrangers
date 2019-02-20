@@ -18,9 +18,12 @@ import DashboardContainer from './dashboard/dashboard_container';
 
 const App = () => (
   <div>
-    <nav className="nav">
+    <nav className="nav-main-container">
+      <div className="nav-container">
         <CoffeeNav/>
         <WelcomeContainer/>
+      </div>
+        
     </nav>
 
     <Switch>

@@ -79,23 +79,25 @@ class Dashboard extends React.Component {
           <h2>What are you grateful for today?</h2>
         </div>
           <AccountForm currentUser={this.props.currentUser} updateUser={this.props.updateUser} />
-          </div> : <div className="my-coffeeTimes-main-container">
-            <div className="my-coffeeTimes-sidebar-container">
-              <h2 className="my-coffeeTimes-welcome-message">
-                Welcome Home, Stranger!{" "}
-              </h2>
-              <h2>What are you grateful for today?</h2>
-              <button className="my-coffeeTimes-button" onClick={this.handleCoffeeTimes}>
-                Sign Up For A Coffee Time!
-              </button>
-            </div>
-            <div className="my-coffeeTimes-container">
-              <h2 className="my-coffeeTimes-title">Coffee Times You Have Coming Up...</h2>
-              {coffeeTimes}
-            </div>
-            <div className="my-coffeeTimes-container">
-              <h2 className="my-coffeeTimes-title">Coffee Times You're Hosting...</h2>
-              {hostedCoffeeTimes}
+          </div> : <div className="my-coffeeTimes-super-main-container">
+            <div className="my-coffeeTimes-main-container">
+              <div className="my-coffeeTimes-sidebar-container">
+                  <h2 className="my-coffeeTimes-welcome-message">
+                    Welcome Home, Stranger!{" "}
+                  </h2>
+                  <h2>What are you grateful for today?</h2>
+                  <button className="my-coffeeTimes-button" onClick={this.handleCoffeeTimes}>
+                    Sign Up For A Coffee Time!
+                  </button>
+                </div>
+                <div className="my-coffeeTimes-container">
+                  <h2 className="my-coffeeTimes-title">Coffee Times You Have Coming Up...</h2>
+                  {coffeeTimes}
+                </div>
+                <div className="my-coffeeTimes-container">
+                  <h2 className="my-coffeeTimes-title">Coffee Times You're Hosting...</h2>
+                  {hostedCoffeeTimes}
+                </div>
             </div>
           </div>}
       </div>;

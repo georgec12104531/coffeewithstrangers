@@ -1,8 +1,11 @@
+.my-coffeeTimes-super-main-container {  
+  display: flex;
+  justify-content: center;
+}
+
 .my-coffeeTimes-main-container {
   display: flex;
-  margin-left: 150px;
-  margin-right: 150px;
-  justify-content: center;
+  width: 900px;
 }
 
 .dashboard-main-container {
@@ -14,34 +17,36 @@
   width: 540px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .dashboard-nav-main-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   height: 60px;
   background-color: #fce6b8;
 }
 
 .dashboard-nav-container {
   display: flex;
-  justify-content: center;
-  width: 549px;
+  justify-content: flex-start;
+  width: 1020px;
   height: 60px;
 }
 
 .dashboard-nav {
   height: 60px;
-  width: 400px;
+  width: 351px;
   display: flex;
-  justify-content: space-evenly;  
+  justify-content: center;
   align-items: center;
 }
 
 .dashboard-nav-bar {
   color: rgb(70, 74, 82);
   font-weight: 500;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .my-coffeeTimes-sidebar-container {
@@ -78,8 +83,9 @@
 
 
 .my-coffeeTimes-title {
-  color: #464a51;
-  font-size: 20px;  
+  color: #7f8faa;
+  font-size: 20px;
+  margin: 13px;
 }
 
 .my-coffee-time-item-container {
